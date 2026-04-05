@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="vps-proxy-research — архив заметок">
+	<section class="card">
+		<div class="card__inner">
+			<div class="grid">
+				<div>
+					<h1>Чтобы не потерялось.</h1>
+					<p>
+						Этот сайт — статический архив ваших Obsidian‑заметок с акцентом на практику:
+						провайдеры, цены, IPv4/IPv6, риски, и что проверять в тесте.
+					</p>
+
+					<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
+						<span class="pill"><span class="dot"></span> VPS (EU): подбор под SSH</span>
+						<span class="pill"><span class="dot dot--blue"></span> Proxy (US): точка выхода</span>
+						<span class="pill">таблицы + фильтры</span>
+					</div>
+
+					<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+						<a class="nav__link" style="border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.06); color: rgba(255,255,255,.92);" href={`${Astro.base}/tables/`}>Открыть таблицы</a>
+						<a class="nav__link" href={`${Astro.base}/vps-eu/`}>Читать VPS (EU)</a>
+						<a class="nav__link" href={`${Astro.base}/proxy-us/`}>Читать Proxy (US)</a>
+					</div>
+				</div>
+
+				<aside class="card" style="box-shadow:none; background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.10);">
+					<div class="card__inner">
+						<h3 style="margin-top:0;">Как пользоваться</h3>
+						<ul style="margin:0; padding-left: 18px; color: rgba(255,255,255,.72);">
+							<li>начните с <a href={`${Astro.base}/tables/`}>таблиц</a> и отфильтруйте “что реально видно на странице”</li>
+							<li>откройте полный документ, чтобы увидеть нюансы и вопросы в пресейл</li>
+							<li>фиксируйте результат теста прямо в Obsidian и обновляйте Markdown</li>
+						</ul>
+						<p class="mini" style="margin-top:12px;">
+							Сайт не требует серверной части и подходит для GitHub Pages.
+						</p>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

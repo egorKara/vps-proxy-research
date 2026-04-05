@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getEntry, render } from "astro:content";
+
+const entry = await getEntry("docs", "us-proxy-market-research");
+if (!entry) throw new Error("Missing content: docs/us-proxy-market-research.md");
+const { Content } = await render(entry);
+---
+
+<BaseLayout title="Proxy (US) — точка выхода трафика">
+	<div class="card">
+		<div class="card__inner">
+			<h1 style="margin:0 0 6px;">Proxy (US)</h1>
+			<p style="margin:0;" class="muted">
+				Полный документ из Obsidian. Для сравнения вариантов — <a href={`${Astro.base}/tables/`}>таблицы</a>.
+			</p>
+		</div>
+	</div>
+
+	<section class="card" style="margin-top:16px;">
+		<div class="md">
+			<Content />
+		</div>
+	</section>
+</BaseLayout>

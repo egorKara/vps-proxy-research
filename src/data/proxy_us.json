@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "category": "Self-hosted (VPS)",
+    "provider": "DigitalOcean Droplets",
+    "ipType": "Datacenter IPv4",
+    "protocols": "Любые (вы контролируете стек)",
+    "pricing": "$4/mo (512MB) или $6/mo (1GB)",
+    "payg": "Да (помесячный cap, посекундно)",
+    "support": "Тикеты/саппорт платформы",
+    "notes": "Надёжная инфраструктура, но IP-пулы распознаются как DC.",
+    "url": "https://www.digitalocean.com/pricing/droplets"
+  },
+  {
+    "id": 2,
+    "category": "Self-hosted (VPS)",
+    "provider": "Linode (Akamai)",
+    "ipType": "Datacenter IPv4",
+    "protocols": "Любые (вы контролируете стек)",
+    "pricing": "≈$5/mo (Nanode-класс)",
+    "payg": "Зависит от плана",
+    "support": "Тикеты/саппорт платформы",
+    "notes": "Проверять включение IPv4 и наличие console/rebuild.",
+    "url": "https://cloudpricecheck.com/linode/linodes-pricing"
+  },
+  {
+    "id": 3,
+    "category": "Proxy provider",
+    "provider": "Proxy-Cheap (US)",
+    "ipType": "Datacenter IPv4 / Static Residential (в зависимости от тарифа)",
+    "protocols": "HTTP/SOCKS5",
+    "pricing": "от $1.49/mo (DC IPv4) или $2.12/mo (Static Residential IPv4)",
+    "payg": "Есть тарифы по GB на rotating",
+    "support": "Обычно тикеты/кабинет",
+    "notes": "Нужно тестировать конкретный IP/пул на 'чистоту' под ваш AI-сервис.",
+    "url": "https://www.proxy-cheap.com/locations/north-america/united-states"
+  },
+  {
+    "id": 4,
+    "category": "Proxy provider",
+    "provider": "Webshare (Static Residential / Dedicated ISP)",
+    "ipType": "Static ISP/Residential (shared или dedicated)",
+    "protocols": "HTTP/SOCKS5",
+    "pricing": "зависит от пакета (часто не '1 IP за $5')",
+    "payg": "Скорее подписка/пакеты",
+    "support": "Support / dashboard",
+    "notes": "Хорошо как 'чистый' тип IP, но бюджет $5 обычно не совпадает с 'dedicated'.",
+    "url": "https://www.webshare.io/static-residential-proxy"
+  }
+]
+
