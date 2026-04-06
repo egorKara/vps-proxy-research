@@ -20,16 +20,16 @@ const baseUrl = import.meta.env.BASE_URL;
 					</div>
 
 					<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
-						<a class="nav__link" style="border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.06); color: rgba(255,255,255,.92);" href={`${baseUrl}tables/`}>Открыть таблицы</a>
-						<a class="nav__link" href={`${baseUrl}vps-eu/`}>Читать VPS (EU)</a>
-						<a class="nav__link" href={`${baseUrl}proxy-us/`}>Читать Proxy (US)</a>
+						<a class="btn btn--primary" href={`${baseUrl}tables/`}>Открыть таблицы</a>
+						<a class="btn" href={`${baseUrl}vps-eu/`}>Читать VPS (EU)</a>
+						<a class="btn" href={`${baseUrl}proxy-us/`}>Читать Proxy (US)</a>
 					</div>
 				</div>
 
-				<aside class="card" style="box-shadow:none; background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.10);">
+				<aside class="card" style="box-shadow:none; background: var(--card2);">
 					<div class="card__inner">
 						<h3 style="margin-top:0;">Как пользоваться</h3>
-						<ul style="margin:0; padding-left: 18px; color: rgba(255,255,255,.72);">
+						<ul style="margin:0; padding-left: 18px; color: var(--muted);">
 							<li>начните с <a href={`${baseUrl}tables/`}>таблиц</a> и отфильтруйте “что реально видно на странице”</li>
 							<li>откройте полный документ, чтобы увидеть нюансы и вопросы в пресейл</li>
 							<li>фиксируйте результат теста прямо в Obsidian и обновляйте Markdown</li>

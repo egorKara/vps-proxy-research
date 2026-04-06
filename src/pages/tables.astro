@@ -28,8 +28,8 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 		<div class="card__inner">
 			<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
 				<div style="display:flex; gap:10px; flex-wrap:wrap;">
-					<button class="nav__link" id="tab-vps" style="border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.06); color: rgba(255,255,255,.92);">VPS (EU)</button>
-					<button class="nav__link" id="tab-proxy">Proxy (US)</button>
+					<button class="nav__link is-active" id="tab-vps" type="button">VPS (EU)</button>
+					<button class="nav__link" id="tab-proxy" type="button">Proxy (US)</button>
 				</div>
 				<div class="mini">Подсказка: клик по названию провайдера открывает первоисточник.</div>
 			</div>
@@ -66,18 +66,18 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 					</div>
 				</div>
 
-				<div style="overflow:auto; border-radius: var(--radius); border:1px solid rgba(255,255,255,.10);">
-					<table style="width:100%; border-collapse:collapse; min-width: 980px;">
+				<div class="table-scroll">
+					<table class="dataTable">
 						<thead>
-							<tr style="background: rgba(255,255,255,.06);">
-								<th style="padding:10px; text-align:left;">#</th>
-								<th style="padding:10px; text-align:left;">Локация</th>
-								<th style="padding:10px; text-align:left;">Провайдер</th>
-								<th style="padding:10px; text-align:left;">План</th>
-								<th style="padding:10px; text-align:left;">IPv4</th>
-								<th style="padding:10px; text-align:left;">Цена</th>
-								<th style="padding:10px; text-align:left;">Статус</th>
-								<th style="padding:10px; text-align:left;">Заметка</th>
+							<tr>
+								<th>#</th>
+								<th>Локация</th>
+								<th>Провайдер</th>
+								<th>План</th>
+								<th>IPv4</th>
+								<th>Цена</th>
+								<th>Статус</th>
+								<th>Заметка</th>
 							</tr>
 						</thead>
 						<tbody id="rows">
@@ -89,20 +89,19 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 									data-ipv4={x.ipv4}
 									data-availability={x.availability}
 									data-text={`${x.country} ${x.city} ${x.provider} ${x.plan} ${x.ipv4} ${x.price} ${x.notes}`.toLowerCase()}
-									style="border-top:1px solid rgba(255,255,255,.08);"
 								>
-									<td style="padding:10px; color: rgba(255,255,255,.7);">{x.id}</td>
-									<td style="padding:10px;">
+									<td class="cell-muted">{x.id}</td>
+									<td>
 										<span class="badge">{x.country}</span>
 										<span class="mini" style="margin-left:8px;">{x.city}</span>
 									</td>
-									<td style="padding:10px;">
+									<td>
 										<a href={x.url} target="_blank" rel="noreferrer">{x.provider}</a>
 									</td>
-									<td style="padding:10px; color: rgba(255,255,255,.78);">{x.plan}</td>
-									<td style="padding:10px; color: rgba(255,255,255,.78);">{x.ipv4}</td>
-									<td style="padding:10px; white-space:nowrap;">{x.price}</td>
-									<td style="padding:10px;">
+									<td>{x.plan}</td>
+									<td>{x.ipv4}</td>
+									<td class="nowrap">{x.price}</td>
+									<td>
 										{x.availability === "sold_out" || x.availability === "out_of_stock" ? (
 											<span class="badge badge--warn">нет слотов</span>
 										) : x.availability === "unknown" ? (
@@ -111,7 +110,7 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 											<span class="badge badge--ok">ok</span>
 										)}
 									</td>
-									<td style="padding:10px; color: rgba(255,255,255,.70); min-width: 320px;">{x.notes}</td>
+									<td class="cell-note">{x.notes}</td>
 								</tr>
 							))}
 						</tbody>
@@ -124,31 +123,31 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 			</div>
 
 			<div id="panel-proxy" style="margin-top:14px; display:none;">
-				<div style="overflow:auto; border-radius: var(--radius); border:1px solid rgba(255,255,255,.10);">
-					<table style="width:100%; border-collapse:collapse; min-width: 980px;">
+				<div class="table-scroll">
+					<table class="dataTable">
 						<thead>
-							<tr style="background: rgba(255,255,255,.06);">
-								<th style="padding:10px; text-align:left;">#</th>
-								<th style="padding:10px; text-align:left;">Категория</th>
-								<th style="padding:10px; text-align:left;">Провайдер</th>
-								<th style="padding:10px; text-align:left;">Тип IP</th>
-								<th style="padding:10px; text-align:left;">Протоколы</th>
-								<th style="padding:10px; text-align:left;">Цена</th>
-								<th style="padding:10px; text-align:left;">Pay-as-you-go</th>
-								<th style="padding:10px; text-align:left;">Заметка</th>
+							<tr>
+								<th>#</th>
+								<th>Категория</th>
+								<th>Провайдер</th>
+								<th>Тип IP</th>
+								<th>Протоколы</th>
+								<th>Цена</th>
+								<th>Pay‑as‑you‑go</th>
+								<th>Заметка</th>
 							</tr>
 						</thead>
 						<tbody>
 							{proxyUS.map((x) => (
-								<tr style="border-top:1px solid rgba(255,255,255,.08);">
-									<td style="padding:10px; color: rgba(255,255,255,.7);">{x.id}</td>
-									<td style="padding:10px;"><span class="badge">{x.category}</span></td>
-									<td style="padding:10px;"><a href={x.url} target="_blank" rel="noreferrer">{x.provider}</a></td>
-									<td style="padding:10px; color: rgba(255,255,255,.78);">{x.ipType}</td>
-									<td style="padding:10px;">{x.protocols}</td>
-									<td style="padding:10px; white-space:nowrap;">{x.pricing}</td>
-									<td style="padding:10px;">{x.payg}</td>
-									<td style="padding:10px; color: rgba(255,255,255,.70); min-width: 320px;">{x.notes}</td>
+								<tr>
+									<td class="cell-muted">{x.id}</td>
+									<td><span class="badge">{x.category}</span></td>
+									<td><a href={x.url} target="_blank" rel="noreferrer">{x.provider}</a></td>
+									<td>{x.ipType}</td>
+									<td>{x.protocols}</td>
+									<td class="nowrap">{x.pricing}</td>
+									<td>{x.payg}</td>
+									<td class="cell-note">{x.notes}</td>
 								</tr>
 							))}
 						</tbody>
@@ -227,14 +226,8 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 			const isVps = name === "vps";
 			panelVps.style.display = isVps ? "" : "none";
 			panelProxy.style.display = isVps ? "none" : "";
-
-			tabVps.style.borderColor = isVps ? "rgba(255,255,255,.14)" : "transparent";
-			tabVps.style.background = isVps ? "rgba(255,255,255,.06)" : "transparent";
-			tabVps.style.color = isVps ? "rgba(255,255,255,.92)" : "rgba(255,255,255,.68)";
-
-			tabProxy.style.borderColor = !isVps ? "rgba(255,255,255,.14)" : "transparent";
-			tabProxy.style.background = !isVps ? "rgba(255,255,255,.06)" : "transparent";
-			tabProxy.style.color = !isVps ? "rgba(255,255,255,.92)" : "rgba(255,255,255,.68)";
+			tabVps.classList.toggle("is-active", isVps);
+			tabProxy.classList.toggle("is-active", !isVps);
 		}
 
 		tabVps.addEventListener("click", () => setTab("vps"));
