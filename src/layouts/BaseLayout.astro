@@ -10,12 +10,28 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 ---
 
 <!doctype html>
-<html lang="ru" data-theme="dark">
+<html lang="ru">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
+		<script is:inline>
+			// Apply saved theme ASAP to avoid flashes between pages
+			(function () {
+				try {
+					const key = "theme";
+					const saved = localStorage.getItem(key);
+					const prefersDark =
+						window.matchMedia &&
+						window.matchMedia("(prefers-color-scheme: dark)").matches;
+					const initial = saved || (prefersDark ? "dark" : "light");
+					document.documentElement.setAttribute("data-theme", initial);
+				} catch (_) {
+					// ignore
+				}
+			})();
+		</script>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<title>{title}</title>
@@ -62,18 +78,13 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 			(function () {
 				const key = "theme";
 				const root = document.documentElement;
-				const saved = localStorage.getItem(key);
-				const prefersDark =
-					window.matchMedia &&
-					window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-				const initial = saved || (prefersDark ? "dark" : "light");
-				root.setAttribute("data-theme", initial);
-
 				const btn = document.getElementById("themeToggle");
 				if (!btn) return;
 
-				const label = () => (root.getAttribute("data-theme") === "dark" ? "Тема: тёмная" : "Тема: светлая");
+				const label = () =>
+					(root.getAttribute("data-theme") === "dark"
+						? "Тема: тёмная"
+						: "Тема: светлая");
 				btn.textContent = label();
 
 				btn.addEventListener("click", () => {
