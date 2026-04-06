@@ -330,7 +330,24 @@ a:hover{ color: color-mix(in oklab, var(--accent2) 80%, var(--text)); }
 	min-width: 220px;
 	outline:none;
 }
-.select{ padding-right: 32px; background-image: none; }
+.input:hover, .select:hover{
+	border-color: var(--stroke2);
+	background: color-mix(in oklab, var(--card) 92%, white);
+}
+.input:focus-visible, .select:focus-visible{
+	border-color: color-mix(in oklab, var(--accent) 55%, var(--stroke));
+	box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 18%, transparent);
+}
+
+/* Make it obvious the select is interactive (chevron + cursor) */
+.select{
+	cursor: pointer;
+	padding-right: 40px;
+	background-repeat: no-repeat;
+	background-position: calc(100% - 14px) 50%;
+	background-size: 16px 16px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
 .input::placeholder{ color: color-mix(in oklab, var(--muted2) 70%, transparent); }
 
 .kpi{
