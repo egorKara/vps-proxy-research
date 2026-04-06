@@ -10,7 +10,7 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 ---
 
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,6 +37,9 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 					<a class="nav__link" href={`${baseUrl}tables/`}>Таблицы</a>
 					<a class="nav__link" href={`${baseUrl}vps-eu/`}>VPS (EU)</a>
 					<a class="nav__link" href={`${baseUrl}proxy-us/`}>Proxy (US)</a>
+					<button class="nav__link" id="themeToggle" type="button" aria-label="Переключить тему">
+						Тема
+					</button>
 				</nav>
 			</div>
 		</header>
@@ -54,5 +57,33 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 				<span class="muted">Сайт генерируется статически. Контент — в Markdown.</span>
 			</div>
 		</footer>
+
+		<script is:inline>
+			(function () {
+				const key = "theme";
+				const root = document.documentElement;
+				const saved = localStorage.getItem(key);
+				const prefersDark =
+					window.matchMedia &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+				const initial = saved || (prefersDark ? "dark" : "light");
+				root.setAttribute("data-theme", initial);
+
+				const btn = document.getElementById("themeToggle");
+				if (!btn) return;
+
+				const label = () => (root.getAttribute("data-theme") === "dark" ? "Тема: тёмная" : "Тема: светлая");
+				btn.textContent = label();
+
+				btn.addEventListener("click", () => {
+					const cur = root.getAttribute("data-theme") || "dark";
+					const next = cur === "dark" ? "light" : "dark";
+					root.setAttribute("data-theme", next);
+					localStorage.setItem(key, next);
+					btn.textContent = label();
+				});
+			})();
+		</script>
 	</body>
 </html>
