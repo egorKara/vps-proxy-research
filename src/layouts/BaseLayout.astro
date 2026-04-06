@@ -5,6 +5,8 @@ const {
 	title = "vps-proxy-research",
 	description = "Архив заметок: VPS (EU) и Proxy (US) — критерии, риски, сравнение провайдеров.",
 } = Astro.props;
+
+const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 ---
 
 <!doctype html>
@@ -24,17 +26,17 @@ const {
 
 		<header class="top">
 			<div class="shell top__inner">
-				<a class="brand" href={Astro.base}>
+				<a class="brand" href={baseUrl}>
 					<span class="brand__mark" aria-hidden="true">⟡</span>
 					<span class="brand__name">vps‑proxy‑research</span>
 					<span class="brand__tag">Obsidian → Web</span>
 				</a>
 
 				<nav class="nav" aria-label="Навигация">
-					<a class="nav__link" href={`${Astro.base}/`}>Главная</a>
-					<a class="nav__link" href={`${Astro.base}/tables/`}>Таблицы</a>
-					<a class="nav__link" href={`${Astro.base}/vps-eu/`}>VPS (EU)</a>
-					<a class="nav__link" href={`${Astro.base}/proxy-us/`}>Proxy (US)</a>
+					<a class="nav__link" href={baseUrl}>Главная</a>
+					<a class="nav__link" href={`${baseUrl}tables/`}>Таблицы</a>
+					<a class="nav__link" href={`${baseUrl}vps-eu/`}>VPS (EU)</a>
+					<a class="nav__link" href={`${baseUrl}proxy-us/`}>Proxy (US)</a>
 				</nav>
 			</div>
 		</header>
@@ -54,4 +56,3 @@ const {
 		</footer>
 	</body>
 </html>
-

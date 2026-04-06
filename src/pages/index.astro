@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const baseUrl = import.meta.env.BASE_URL;
 ---
 <BaseLayout title="vps-proxy-research — архив заметок">
 	<section class="card">
@@ -19,9 +20,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 					</div>
 
 					<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
-						<a class="nav__link" style="border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.06); color: rgba(255,255,255,.92);" href={`${Astro.base}/tables/`}>Открыть таблицы</a>
-						<a class="nav__link" href={`${Astro.base}/vps-eu/`}>Читать VPS (EU)</a>
-						<a class="nav__link" href={`${Astro.base}/proxy-us/`}>Читать Proxy (US)</a>
+						<a class="nav__link" style="border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.06); color: rgba(255,255,255,.92);" href={`${baseUrl}tables/`}>Открыть таблицы</a>
+						<a class="nav__link" href={`${baseUrl}vps-eu/`}>Читать VPS (EU)</a>
+						<a class="nav__link" href={`${baseUrl}proxy-us/`}>Читать Proxy (US)</a>
 					</div>
 				</div>
 
@@ -29,7 +30,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 					<div class="card__inner">
 						<h3 style="margin-top:0;">Как пользоваться</h3>
 						<ul style="margin:0; padding-left: 18px; color: rgba(255,255,255,.72);">
-							<li>начните с <a href={`${Astro.base}/tables/`}>таблиц</a> и отфильтруйте “что реально видно на странице”</li>
+							<li>начните с <a href={`${baseUrl}tables/`}>таблиц</a> и отфильтруйте “что реально видно на странице”</li>
 							<li>откройте полный документ, чтобы увидеть нюансы и вопросы в пресейл</li>
 							<li>фиксируйте результат теста прямо в Obsidian и обновляйте Markdown</li>
 						</ul>

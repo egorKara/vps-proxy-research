@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import vpsEU from "../data/vps_eu.json";
 import proxyUS from "../data/proxy_us.json";
 
+const baseUrl = import.meta.env.BASE_URL;
 const countries = Array.from(new Set(vpsEU.map((x) => x.country))).sort();
 const ipv4Modes = [
 	"Любой",
@@ -118,7 +119,7 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 				</div>
 
 				<p class="mini" style="margin:12px 0 0;">
-					Оригинальный документ: <a href={`${Astro.base}/vps-eu/`}>VPS (EU)</a>
+					Оригинальный документ: <a href={`${baseUrl}vps-eu/`}>VPS (EU)</a>
 				</p>
 			</div>
 
@@ -155,7 +156,7 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 				</div>
 
 				<p class="mini" style="margin:12px 0 0;">
-					Оригинальный документ: <a href={`${Astro.base}/proxy-us/`}>Proxy (US)</a>
+					Оригинальный документ: <a href={`${baseUrl}proxy-us/`}>Proxy (US)</a>
 				</p>
 			</div>
 		</div>
@@ -240,4 +241,3 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 		tabProxy.addEventListener("click", () => setTab("proxy"));
 	</script>
 </BaseLayout>
-

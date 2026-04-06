@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getEntry, render } from "astro:content";
 
+const baseUrl = import.meta.env.BASE_URL;
 const entry = await getEntry("docs", "vps-market-research");
 if (!entry) throw new Error("Missing content: docs/vps-market-research.md");
 const { Content } = await render(entry);
@@ -12,7 +13,7 @@ const { Content } = await render(entry);
 		<div class="card__inner">
 			<h1 style="margin:0 0 6px;">VPS (Европа)</h1>
 			<p style="margin:0;" class="muted">
-				Полный документ из Obsidian. Для быстрого сравнения — <a href={`${Astro.base}/tables/`}>таблицы</a>.
+				Полный документ из Obsidian. Для быстрого сравнения — <a href={`${baseUrl}tables/`}>таблицы</a>.
 			</p>
 		</div>
 	</div>
