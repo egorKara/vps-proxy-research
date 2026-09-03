@@ -102,6 +102,57 @@
 	}
 }
 
+/* Country marker: native flag + ISO code. */
+.country-badge {
+	gap: 7px;
+	padding-inline: 8px 10px;
+}
+
+.country-flag {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1;
+	transform: translateY(.5px);
+}
+
+/* Tier marker: a compact round badge using the same palette as the card accent. */
+.tier-badge {
+	display: inline-grid;
+	place-items: center;
+	width: 31px;
+	height: 31px;
+	padding: 0;
+	border-radius: 999px;
+	font-size: 14px;
+	font-weight: 800;
+	line-height: 1;
+	letter-spacing: 0;
+}
+
+.tier-badge--a {
+	border-color: color-mix(in oklab, var(--accent) 62%, var(--stroke));
+	background: color-mix(in oklab, var(--accent) 20%, var(--card));
+	color: color-mix(in oklab, var(--accent) 78%, var(--text));
+}
+
+.tier-badge--b {
+	border-color: color-mix(in oklab, var(--accent2) 52%, var(--stroke));
+	background: color-mix(in oklab, var(--accent2) 16%, var(--card));
+	color: color-mix(in oklab, var(--accent2) 78%, var(--text));
+}
+
+.tier-badge--c {
+	border-color: color-mix(in oklab, var(--warn) 58%, var(--stroke));
+	background: color-mix(in oklab, var(--warn) 18%, var(--card));
+	color: color-mix(in oklab, var(--warn) 78%, var(--text));
+}
+
+.tier-badge--d {
+	border-color: color-mix(in oklab, var(--danger) 44%, var(--stroke));
+	background: color-mix(in oklab, var(--danger) 13%, var(--card));
+	color: color-mix(in oklab, var(--danger) 72%, var(--text));
+}
+
 /* Make table cards visibly separate from one another on phones. */
 @media (max-width: 760px) {
 	.table-scroll--mobile-cards {
@@ -150,5 +201,15 @@
 		box-shadow:
 			inset 3px 0 0 color-mix(in oklab, var(--danger) 42%, transparent),
 			0 8px 20px rgba(15, 23, 42, .09);
+	}
+
+	.tier-badge {
+		width: 34px;
+		height: 34px;
+		font-size: 15px;
+	}
+
+	.country-flag {
+		font-size: 18px;
 	}
 }
