@@ -1,10 +1,11 @@
 ---
 import "../styles/global.css";
 import "../styles/mobile.css";
+import "../styles/refinements.css";
 
 const {
-	title = "vps-proxy-research",
-	description = "Архив заметок: VPS (EU) и Proxy (US) — критерии, риски, сравнение провайдеров.",
+	title = "VPS & Proxy Research",
+	description = "Публичное исследование VPS в Европе и proxy-сервисов: критерии, цены, IPv4/IPv6, риски, источники и сравнение кандидатов.",
 } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
@@ -73,7 +74,7 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 				<time datetime="2026-09-03">2026‑09‑03</time>
 			</div>
 			<div class="foot__right">
-				<span class="muted">Сайт генерируется статически. Контент — в Markdown.</span>
+				<span class="muted">Статический исследовательский сайт. Данные и выводы версионируются в Git.</span>
 			</div>
 		</footer>
 
