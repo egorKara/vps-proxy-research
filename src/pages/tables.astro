@@ -5,13 +5,20 @@ import proxyUS from "../data/proxy_us.json";
 
 const baseUrl = import.meta.env.BASE_URL;
 const countries = Array.from(new Set(vpsEU.map((x) => x.country))).sort();
-const ipv4Modes = [
-	"Любой",
-	"IPv4 явно указан",
-	"IPv4 не видно до заказа",
-	"IPv4 не указано/не видно",
-];
-const availabilityModes = ["Любая", "В наличии/неизвестно", "Sold out / Out of stock"];
+const tiers = ["A", "B", "C", "D"];
+
+const statusLabel = (value) => {
+	if (value === "available") return "есть";
+	if (value === "sold_out") return "нет слотов";
+	if (value === "unavailable") return "недоступно";
+	return "не подтверждено";
+};
+
+const statusClass = (value) => {
+	if (value === "available") return "badge badge--ok";
+	if (value === "sold_out" || value === "unavailable") return "badge badge--warn";
+	return "badge";
+};
 ---
 
 <BaseLayout title="Таблицы — VPS (EU) и Proxy (US)">
@@ -19,7 +26,7 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 		<div class="card__inner">
 			<h1 style="margin:0 0 6px;">Таблицы</h1>
 			<p style="margin:0;" class="muted">
-				Быстрый обзор: фильтры, поиск, заметки. Источник данных — ваши Markdown‑документы.
+				VPS (EU) перепроверены 03.09.2026: 20 старых кандидатов + новые варианты. Tier и verification показывают качество текущей проверки.
 			</p>
 		</div>
 	</section>
@@ -31,7 +38,7 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 					<button class="nav__link is-active" id="tab-vps" type="button">VPS (EU)</button>
 					<button class="nav__link" id="tab-proxy" type="button">Proxy (US)</button>
 				</div>
-				<div class="mini">Подсказка: клик по названию провайдера открывает первоисточник.</div>
+				<div class="mini">Клик по провайдеру открывает первичный URL строки.</div>
 			</div>
 
 			<div id="panel-vps" style="margin-top:14px;">
@@ -39,7 +46,7 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 					<div class="controls">
 						<div class="field">
 							<label for="q">Поиск</label>
-							<input class="input" id="q" placeholder="провайдер, город, заметка…" />
+							<input class="input" id="q" placeholder="провайдер, город, тариф…" />
 						</div>
 						<div class="field">
 							<label for="country">Страна</label>
@@ -49,15 +56,19 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 							</select>
 						</div>
 						<div class="field">
-							<label for="ipv4">IPv4</label>
-							<select class="select" id="ipv4">
-								{ipv4Modes.map((m) => <option value={m}>{m}</option>)}
+							<label for="tier">Tier</label>
+							<select class="select" id="tier">
+								<option value="ALL">Все</option>
+								{tiers.map((t) => <option value={t}>{t}</option>)}
 							</select>
 						</div>
 						<div class="field">
 							<label for="avail">Наличие</label>
 							<select class="select" id="avail">
-								{availabilityModes.map((m) => <option value={m}>{m}</option>)}
+								<option value="ALL">Любое</option>
+								<option value="available">Есть</option>
+								<option value="unknown">Не подтверждено</option>
+								<option value="bad">Нет слотов / недоступно</option>
 							</select>
 						</div>
 					</div>
@@ -71,46 +82,40 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 						<thead>
 							<tr>
 								<th>#</th>
+								<th>Tier</th>
 								<th>Локация</th>
 								<th>Провайдер</th>
 								<th>План</th>
 								<th>IPv4</th>
 								<th>Цена</th>
-								<th>Статус</th>
-								<th>Заметка</th>
+								<th>Наличие</th>
+								<th>Проверка</th>
+								<th>Дата</th>
+								<th>Заметка / изменение</th>
 							</tr>
 						</thead>
 						<tbody id="rows">
 							{vpsEU.map((x) => (
 								<tr
 									data-country={x.country}
-									data-provider={x.provider}
-									data-city={x.city}
-									data-ipv4={x.ipv4}
+									data-tier={x.tier}
 									data-availability={x.availability}
-									data-text={`${x.country} ${x.city} ${x.provider} ${x.plan} ${x.ipv4} ${x.price} ${x.notes}`.toLowerCase()}
+									data-text={`${x.country} ${x.city} ${x.provider} ${x.plan} ${x.resources ?? ""} ${x.ipv4} ${x.price} ${x.notes} ${x.change ?? ""}`.toLowerCase()}
 								>
 									<td class="cell-muted">{x.id}</td>
-									<td>
-										<span class="badge">{x.country}</span>
-										<span class="mini" style="margin-left:8px;">{x.city}</span>
-									</td>
-									<td>
-										<a href={x.url} target="_blank" rel="noreferrer">{x.provider}</a>
-									</td>
+									<td><span class="badge">{x.tier}</span></td>
+									<td><span class="badge">{x.country}</span><span class="mini" style="margin-left:8px;">{x.city}</span></td>
+									<td><a href={x.url} target="_blank" rel="noreferrer">{x.provider}</a></td>
 									<td>{x.plan}</td>
 									<td>{x.ipv4}</td>
 									<td class="nowrap">{x.price}</td>
-									<td>
-										{x.availability === "sold_out" || x.availability === "out_of_stock" ? (
-											<span class="badge badge--warn">нет слотов</span>
-										) : x.availability === "unknown" ? (
-											<span class="badge">неизвестно</span>
-										) : (
-											<span class="badge badge--ok">ok</span>
-										)}
+									<td><span class={statusClass(x.availability)}>{statusLabel(x.availability)}</span></td>
+									<td><span class={x.verification === "confirmed" ? "badge badge--ok" : x.verification === "confirmed_unavailable" ? "badge badge--warn" : "badge"}>{x.verification}</span></td>
+									<td class="nowrap">{x.verified_at}</td>
+									<td class="cell-note">
+										{x.notes}
+										{x.change && <div class="mini" style="margin-top:6px;">Δ {x.change}</div>}
 									</td>
-									<td class="cell-note">{x.notes}</td>
 								</tr>
 							))}
 						</tbody>
@@ -118,7 +123,7 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 				</div>
 
 				<p class="mini" style="margin:12px 0 0;">
-					Оригинальный документ: <a href={`${baseUrl}vps-eu/`}>VPS (EU)</a>
+					Полный вывод аудита: <a href={`${baseUrl}vps-eu/`}>VPS (EU)</a>. Источники каждой строки лежат в JSON.
 				</p>
 			</div>
 
@@ -127,14 +132,7 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 					<table class="dataTable">
 						<thead>
 							<tr>
-								<th>#</th>
-								<th>Категория</th>
-								<th>Провайдер</th>
-								<th>Тип IP</th>
-								<th>Протоколы</th>
-								<th>Цена</th>
-								<th>Pay‑as‑you‑go</th>
-								<th>Заметка</th>
+								<th>#</th><th>Категория</th><th>Провайдер</th><th>Тип IP</th><th>Протоколы</th><th>Цена</th><th>Pay-as-you-go</th><th>Заметка</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -143,20 +141,13 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 									<td class="cell-muted">{x.id}</td>
 									<td><span class="badge">{x.category}</span></td>
 									<td><a href={x.url} target="_blank" rel="noreferrer">{x.provider}</a></td>
-									<td>{x.ipType}</td>
-									<td>{x.protocols}</td>
-									<td class="nowrap">{x.pricing}</td>
-									<td>{x.payg}</td>
-									<td class="cell-note">{x.notes}</td>
+									<td>{x.ipType}</td><td>{x.protocols}</td><td class="nowrap">{x.pricing}</td><td>{x.payg}</td><td class="cell-note">{x.notes}</td>
 								</tr>
 							))}
 						</tbody>
 					</table>
 				</div>
-
-				<p class="mini" style="margin:12px 0 0;">
-					Оригинальный документ: <a href={`${baseUrl}proxy-us/`}>Proxy (US)</a>
-				</p>
+				<p class="mini" style="margin:12px 0 0;">Оригинальный документ: <a href={`${baseUrl}proxy-us/`}>Proxy (US)</a></p>
 			</div>
 		</div>
 	</section>
@@ -166,60 +157,35 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 		const rows = Array.from(document.querySelectorAll("#rows tr"));
 		const q = $("#q");
 		const country = $("#country");
-		const ipv4 = $("#ipv4");
+		const tier = $("#tier");
 		const avail = $("#avail");
 		const count = $("#count");
-
 		const tabVps = $("#tab-vps");
 		const tabProxy = $("#tab-proxy");
 		const panelVps = $("#panel-vps");
 		const panelProxy = $("#panel-proxy");
 
-		function normalizeMode(mode) {
-			if (mode === "IPv4 явно указан") return "explicit";
-			if (mode === "IPv4 не видно до заказа") return "hidden";
-			if (mode === "IPv4 не указано/не видно") return "unknown";
-			return "any";
-		}
-
-		function classifyIPv4(text) {
-			const t = (text || "").toLowerCase();
-			if (t.includes("ipv4: 1") || t.includes("1 ipv4") || t.includes("включены") && t.includes("ipv4")) return "explicit";
-			if (t.includes("не видно")) return "hidden";
-			return "unknown";
-		}
-
-		function availOk(mode, value) {
-			if (mode === "Любая") return true;
-			const isBad = value === "sold_out" || value === "out_of_stock";
-			if (mode === "Sold out / Out of stock") return isBad;
-			return !isBad; // "В наличии/неизвестно"
+		function availabilityMatches(mode, value) {
+			if (mode === "ALL") return true;
+			if (mode === "bad") return value === "sold_out" || value === "unavailable";
+			return value === mode;
 		}
 
 		function applyFilters() {
 			const query = (q.value || "").trim().toLowerCase();
-			const c = country.value;
-			const ipv4Mode = normalizeMode(ipv4.value);
-			const availMode = avail.value;
-
 			let visible = 0;
 			for (const r of rows) {
-				const text = r.dataset.text || "";
-				const okQ = !query || text.includes(query);
-				const okC = c === "ALL" || r.dataset.country === c;
-				const okA = availOk(availMode, r.dataset.availability);
-
-				const ipv4Class = classifyIPv4(r.dataset.ipv4);
-				const okI = ipv4Mode === "any" || ipv4Class === ipv4Mode;
-
-				const ok = okQ && okC && okI && okA;
+				const ok = (!query || (r.dataset.text || "").includes(query))
+					&& (country.value === "ALL" || r.dataset.country === country.value)
+					&& (tier.value === "ALL" || r.dataset.tier === tier.value)
+					&& availabilityMatches(avail.value, r.dataset.availability);
 				r.style.display = ok ? "" : "none";
 				if (ok) visible++;
 			}
 			count.textContent = String(visible);
 		}
 
-		[q, country, ipv4, avail].forEach((el) => el.addEventListener("input", applyFilters));
+		[q, country, tier, avail].forEach((el) => el.addEventListener("input", applyFilters));
 		applyFilters();
 
 		function setTab(name) {
@@ -229,7 +195,6 @@ const availabilityModes = ["Любая", "В наличии/неизвестно
 			tabVps.classList.toggle("is-active", isVps);
 			tabProxy.classList.toggle("is-active", !isVps);
 		}
-
 		tabVps.addEventListener("click", () => setTab("vps"));
 		tabProxy.addEventListener("click", () => setTab("proxy"));
 	</script>

@@ -23,9 +23,7 @@
     "verified_at": "2026-09-03",
     "change": "Старая цена €5.77 больше не считается текущей. Публично подтверждено: KVM/NVMe и IPv4 как платная опция +€2/мес.",
     "notes": "Перед покупкой обязательно проверить базовую цену, наличие и итог с IPv4 в корзине.",
-    "sources": [
-      "https://the.hosting/en/vps-vds-finland-helsinki"
-    ]
+    "sources": ["https://the.hosting/en/vps-vds-finland-helsinki"]
   },
   {
     "id": 2,
@@ -51,9 +49,7 @@
     "verified_at": "2026-09-03",
     "change": "Сильное улучшение: dedicated IPv4 теперь явно включён; старый 2 GB план за €4.99 sold out, но доступен 1 GB unmetered за €4.99.",
     "notes": "Проходит минимальный порог 1 GB и обязательный IPv4; гипервизор и console/VNC в открытых данных не подтверждены.",
-    "sources": [
-      "https://servers.guru/finland-vps/"
-    ]
+    "sources": ["https://servers.guru/finland-vps/"]
   },
   {
     "id": 3,
@@ -79,9 +75,7 @@
     "verified_at": "2026-09-03",
     "change": "Состояние не улучшилось: Finland KVM остаётся без свободных слотов.",
     "notes": "0 Available — покупать сейчас нельзя.",
-    "sources": [
-      "https://portal.incognet.io/store/finland-kvm-vps-privacy"
-    ]
+    "sources": ["https://portal.incognet.io/store/finland-kvm-vps-privacy"]
   },
   {
     "id": 4,
@@ -107,10 +101,7 @@
     "verified_at": "2026-09-03",
     "change": "Finland больше не подтверждается в текущем каталоге Cube-Host; актуальная европейская позиция перенесена в Lithuania как новый кандидат #26.",
     "notes": "Не считать старую Finland-строку действующим предложением.",
-    "sources": [
-      "https://cube-host.net/",
-      "https://cube-host.net/locations/vps-lithuania/"
-    ]
+    "sources": ["https://cube-host.net/", "https://cube-host.net/locations/vps-lithuania/"]
   },
   {
     "id": 5,
@@ -136,9 +127,7 @@
     "verified_at": "2026-09-03",
     "change": "Старые €5.77 и sold-out статус больше не считаются актуальными; подтверждено IPv4 +€2 и KVM.",
     "notes": "Проверить корзину и итоговую цену с IPv4.",
-    "sources": [
-      "https://the.hosting/en/vps-vds-estonia-tallin"
-    ]
+    "sources": ["https://the.hosting/en/vps-vds-estonia-tallin"]
   },
   {
     "id": 6,
@@ -164,10 +153,7 @@
     "verified_at": "2026-09-03",
     "change": "Стало заметно прозрачнее: точный €5 план, IPv4+IPv6 и backup теперь подтверждаются публично.",
     "notes": "Хороший базовый Tallinn-кандидат ровно под наш минимальный профиль.",
-    "sources": [
-      "https://servinga.com/cloud/datacenters/estonia/",
-      "https://servinga.com/cloud/pricing/"
-    ]
+    "sources": ["https://servinga.com/cloud/datacenters/estonia/", "https://servinga.com/cloud/pricing/"]
   },
   {
     "id": 7,
@@ -193,10 +179,7 @@
     "verified_at": "2026-09-03",
     "change": "Старый 512 MB/$3.99 план больше не соответствует нашему минимуму; сравниваем текущий 1 GB bKVM 1024 за $6.99.",
     "notes": "Точный location-specific checkout price стоит подтвердить перед оплатой.",
-    "sources": [
-      "https://bluevps.de/vps-tallinn",
-      "https://bluevps.com/vps"
-    ]
+    "sources": ["https://bluevps.de/vps-tallinn", "https://bluevps.com/vps"]
   },
   {
     "id": 8,
@@ -222,9 +205,7 @@
     "verified_at": "2026-09-03",
     "change": "Ключевые характеристики и цена в целом сохранились.",
     "notes": "Рабочий вариант, но уступает Tier A по цене/recovery-прозрачности.",
-    "sources": [
-      "https://host-world.com/tallinn-vps"
-    ]
+    "sources": ["https://host-world.com/tallinn-vps"]
   },
   {
     "id": 9,
@@ -250,9 +231,7 @@
     "verified_at": "2026-09-03",
     "change": "Старая цена €5.77 больше не используется как текущая; IPv4 теперь явно +€2.",
     "notes": "Нужна проверка корзины.",
-    "sources": [
-      "https://the.hosting/en/vps-vds-lithuania-vilnius"
-    ]
+    "sources": ["https://the.hosting/en/vps-vds-lithuania-vilnius"]
   },
   {
     "id": 10,
@@ -278,9 +257,7 @@
     "verified_at": "2026-09-03",
     "change": "Сильный старый кандидат сохранил ценовое преимущество и необходимые IP/KVM характеристики.",
     "notes": "Один из лучших по цене при 2 GB RAM и полноценном IPv4.",
-    "sources": [
-      "https://www.melbicom.net/virtualserver/lithuania/"
-    ]
+    "sources": ["https://www.melbicom.net/virtualserver/lithuania/"]
   },
   {
     "id": 11,
@@ -306,9 +283,7 @@
     "verified_at": "2026-09-03",
     "change": "Старая цена €5.77 больше не считается текущей; подтверждено IPv4 +€2.",
     "notes": "Нужна проверка корзины.",
-    "sources": [
-      "https://the.hosting/en/vps-vds-poland-warsaw"
-    ]
+    "sources": ["https://the.hosting/en/vps-vds-poland-warsaw"]
   },
   {
     "id": 12,
@@ -334,10 +309,7 @@
     "verified_at": "2026-09-03",
     "change": "Цена €3.90 и stock подтверждены свежим индексом; официальный сайт подтверждает Warsaw/KVM/1 IPv4/16 IPv6.",
     "notes": "Технические свойства Warsaw подтверждены официальным сайтом; точная цена/наличие €3.90 опираются на свежий внешний индекс и требуют контрольной проверки в корзине.",
-    "sources": [
-      "https://www.melbicom.net/virtualserver/poland/",
-      "https://www.serverhunter.com/offer/melbicom-vds-1-ssd-war/"
-    ]
+    "sources": ["https://www.melbicom.net/virtualserver/poland/", "https://www.serverhunter.com/offer/melbicom-vds-1-ssd-war/"]
   },
   {
     "id": 13,
@@ -363,9 +335,7 @@
     "verified_at": "2026-09-03",
     "change": "IPv4 теперь подтверждается FAQ; старая точная PXS-1 конфигурация не считается перепроверенной.",
     "notes": "Перед оплатой проверить RAM/диск выбранного entry plan и recovery console.",
-    "sources": [
-      "https://vpshive.net/vps-poland/"
-    ]
+    "sources": ["https://vpshive.net/vps-poland/"]
   },
   {
     "id": 14,
@@ -391,9 +361,7 @@
     "verified_at": "2026-09-03",
     "change": "Основные параметры сохранились.",
     "notes": "Рабочий, но не ценовой лидер.",
-    "sources": [
-      "https://host-world.com/warsaw-vps"
-    ]
+    "sources": ["https://host-world.com/warsaw-vps"]
   },
   {
     "id": 15,
@@ -419,10 +387,7 @@
     "verified_at": "2026-09-03",
     "change": "Старый 512 MB/$3.99 план больше не проходит наш минимум; сравнивается 1 GB вариант.",
     "notes": "Location-specific цену проверить в checkout.",
-    "sources": [
-      "https://bluevps.de/vps-poland",
-      "https://bluevps.com/vps"
-    ]
+    "sources": ["https://bluevps.de/vps-poland", "https://bluevps.com/vps"]
   },
   {
     "id": 16,
@@ -448,9 +413,7 @@
     "verified_at": "2026-09-03",
     "change": "Нельзя честно сохранить старый статус 'IPv4+rDNS явно подтверждены': первичный shop сейчас не удалось надёжно прочитать.",
     "notes": "Перед покупкой только через контроль корзины/пресейл.",
-    "sources": [
-      "https://private-hosting.eu/store/vps-general-purpose"
-    ]
+    "sources": ["https://private-hosting.eu/store/vps-general-purpose"]
   },
   {
     "id": 17,
@@ -476,9 +439,7 @@
     "verified_at": "2026-09-03",
     "change": "Критическое изменение: цена выросла с прежних €4.99 до €9.99/мес.",
     "notes": "Технически очень прозрачный, но после удорожания перестал быть лидером цена/функции.",
-    "sources": [
-      "https://www.kernelhost.com/cp/store/kvm-rootserver"
-    ]
+    "sources": ["https://www.kernelhost.com/cp/store/kvm-rootserver"]
   },
   {
     "id": 18,
@@ -504,10 +465,7 @@
     "verified_at": "2026-09-03",
     "change": "Точный план и IPv4/IPv6 теперь публично прозрачны.",
     "notes": "Хороший Frankfurt-кандидат по минимальной конфигурации.",
-    "sources": [
-      "https://servinga.com/cloud/datacenters/germany/",
-      "https://servinga.com/cloud/pricing/"
-    ]
+    "sources": ["https://servinga.com/cloud/datacenters/germany/", "https://servinga.com/cloud/pricing/"]
   },
   {
     "id": 19,
@@ -533,9 +491,7 @@
     "verified_at": "2026-09-03",
     "change": "Старая цена €5.77 больше не используется; IPv4 теперь явно +€2.",
     "notes": "Нужна проверка корзины.",
-    "sources": [
-      "https://the.hosting/en/vps-vds-germany-frankfurt"
-    ]
+    "sources": ["https://the.hosting/en/vps-vds-germany-frankfurt"]
   },
   {
     "id": 20,
@@ -561,9 +517,7 @@
     "verified_at": "2026-09-03",
     "change": "Основные параметры и цена сохраняются.",
     "notes": "Рабочий Frankfurt-вариант, но по цене уступает Tier A.",
-    "sources": [
-      "https://host-world.com/frankfurt-vps"
-    ]
+    "sources": ["https://host-world.com/frankfurt-vps"]
   },
   {
     "id": 21,
@@ -589,10 +543,7 @@
     "verified_at": "2026-09-03",
     "change": "Новый кандидат, хотя провайдер уже фигурировал в старом исследовательском тексте: теперь добавлен в рабочий JSON.",
     "notes": "Очень сильный северный вариант по прозрачности IPv4/recovery/rDNS.",
-    "sources": [
-      "https://www.edisglobal.com/vps-hosting/finland/helsinki",
-      "https://manage.edisglobal.com/cart.php?gid=11"
-    ]
+    "sources": ["https://www.edisglobal.com/vps-hosting/finland/helsinki", "https://manage.edisglobal.com/cart.php?gid=11"]
   },
   {
     "id": 22,
@@ -618,10 +569,7 @@
     "verified_at": "2026-09-03",
     "change": "Новый рабочий кандидат из старого исследовательского shortlist.",
     "notes": "Один из лучших по сочетанию Tallinn + IPv4 + rDNS + recovery.",
-    "sources": [
-      "https://www.edisglobal.com/vps-hosting/estonia/tallinn",
-      "https://manage.edisglobal.com/cart.php?gid=11"
-    ]
+    "sources": ["https://www.edisglobal.com/vps-hosting/estonia/tallinn", "https://manage.edisglobal.com/cart.php?gid=11"]
   },
   {
     "id": 23,
@@ -647,9 +595,7 @@
     "verified_at": "2026-09-03",
     "change": "Новый кандидат: резко сильнее многих старых по цене/ресурсам и recovery.",
     "notes": "Главный компромисс — шестимесячный минимальный срок.",
-    "sources": [
-      "https://www.netcup.com/en/server/vps/vps-nano-g11s-iv-6m-nue"
-    ]
+    "sources": ["https://www.netcup.com/en/server/vps/vps-nano-g11s-iv-6m-nue"]
   },
   {
     "id": 24,
@@ -675,11 +621,7 @@
     "verified_at": "2026-09-03",
     "change": "Новый очень дешёвый Lithuania-кандидат.",
     "notes": "До Tier A не хватает однозначного plan-specific подтверждения IPv4 в открытой карточке.",
-    "sources": [
-      "https://www.time4vps.com/linux-vps/",
-      "https://www.time4vps.com/knowledgebase/how-to-use-emergency-console/",
-      "https://www.time4vps.com/knowledgebase/how-to-reinstall-operating-system/"
-    ]
+    "sources": ["https://www.time4vps.com/linux-vps/", "https://www.time4vps.com/knowledgebase/how-to-use-emergency-console/", "https://www.time4vps.com/knowledgebase/how-to-reinstall-operating-system/"]
   },
   {
     "id": 25,
@@ -705,11 +647,7 @@
     "verified_at": "2026-09-03",
     "change": "Новый кандидат: лучший общий баланс ресурсы/цена/recovery в текущем срезе.",
     "notes": "4 GB RAM и ежедневный backup при цене ниже €5 делают его главным новым ориентиром.",
-    "sources": [
-      "https://www.ovhcloud.com/de/vps/vps-deutschland/",
-      "https://www.ovhcloud.com/de/vps/",
-      "https://docs.ovhcloud.com/en/guides/bare-metal-cloud/virtual-private-servers/using-kvm-for-vps"
-    ]
+    "sources": ["https://www.ovhcloud.com/de/vps/vps-deutschland/", "https://www.ovhcloud.com/de/vps/", "https://docs.ovhcloud.com/en/guides/bare-metal-cloud/virtual-private-servers/using-kvm-for-vps"]
   },
   {
     "id": 26,
@@ -735,9 +673,7 @@
     "verified_at": "2026-09-03",
     "change": "Новая актуальная Cube-Host локация вместо снятой/неподтверждаемой Finland.",
     "notes": "Дороже лидеров, но оставляем как альтернативу в Lithuania.",
-    "sources": [
-      "https://cube-host.net/locations/vps-lithuania/"
-    ]
+    "sources": ["https://cube-host.net/locations/vps-lithuania/"]
   },
   {
     "id": 27,
@@ -763,10 +699,7 @@
     "verified_at": "2026-09-03",
     "change": "Новый watchlist-кандидат: цена актуализирована после 15.06.2026, но CX23 сейчас unavailable в HEL1/NBG1.",
     "notes": "Не включать в shortlist, пока план не вернётся в продажу.",
-    "sources": [
-      "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
-      "https://www.hetzner.com/cloud/"
-    ]
+    "sources": ["https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/", "https://www.hetzner.com/cloud/"]
   },
   {
     "id": 28,
@@ -792,9 +725,6 @@
     "verified_at": "2026-09-03",
     "change": "Новый watchlist-кандидат: очень дешёвый Luxembourg, но слотов сейчас нет.",
     "notes": "Сильный кандидат только после появления stock.",
-    "sources": [
-      "https://buyvm.net/kvm-dedicated-server-slices/",
-      "https://buyvm.net/"
-    ]
+    "sources": ["https://buyvm.net/kvm-dedicated-server-slices/", "https://buyvm.net/"]
   }
 ]
