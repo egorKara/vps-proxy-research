@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import "../styles/mobile.css";
 
 const {
 	title = "vps-proxy-research",
@@ -16,6 +17,8 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
+		<meta name="theme-color" content="#f7f7f8" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)" />
 		<script is:inline>
 			// Apply saved theme ASAP to avoid flashes between pages
 			(function () {
@@ -32,8 +35,8 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 				}
 			})();
 		</script>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
+		<link rel="icon" href={`${baseUrl}favicon.ico`} />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -67,7 +70,7 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 		<footer class="shell foot">
 			<div class="foot__left">
 				<span class="foot__label">Обновлено:</span>
-				<time datetime="2026-04-05">2026‑04‑05</time>
+				<time datetime="2026-09-03">2026‑09‑03</time>
 			</div>
 			<div class="foot__right">
 				<span class="muted">Сайт генерируется статически. Контент — в Markdown.</span>
