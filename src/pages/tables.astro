@@ -33,13 +33,14 @@ const statusClass = (value) => {
 
 	<section class="card" style="margin-top:16px;">
 		<div class="card__inner">
-			<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-				<div style="display:flex; gap:10px; flex-wrap:wrap;">
+			<div class="table-head-row">
+				<div class="table-tabs">
 					<button class="nav__link is-active" id="tab-vps" type="button">VPS (EU)</button>
 					<button class="nav__link" id="tab-proxy" type="button">Proxy (US)</button>
 				</div>
 				<div class="mini">Клик по провайдеру открывает первичный URL строки.</div>
 			</div>
+			<p class="mini table-mobile-hint">На телефоне каждая позиция показана отдельной карточкой — горизонтальная прокрутка не нужна.</p>
 
 			<div id="panel-vps" style="margin-top:14px;">
 				<div class="toolbar">
@@ -77,8 +78,8 @@ const statusClass = (value) => {
 					</div>
 				</div>
 
-				<div class="table-scroll">
-					<table class="dataTable">
+				<div class="table-scroll table-scroll--mobile-cards">
+					<table class="dataTable dataTable--mobile-cards">
 						<thead>
 							<tr>
 								<th>#</th>
@@ -102,17 +103,17 @@ const statusClass = (value) => {
 									data-availability={x.availability}
 									data-text={`${x.country} ${x.city} ${x.provider} ${x.plan} ${x.resources ?? ""} ${x.ipv4} ${x.price} ${x.notes} ${x.change ?? ""}`.toLowerCase()}
 								>
-									<td class="cell-muted">{x.id}</td>
-									<td><span class="badge">{x.tier}</span></td>
-									<td><span class="badge">{x.country}</span><span class="mini" style="margin-left:8px;">{x.city}</span></td>
-									<td><a href={x.url} target="_blank" rel="noreferrer">{x.provider}</a></td>
-									<td>{x.plan}</td>
-									<td>{x.ipv4}</td>
-									<td class="nowrap">{x.price}</td>
-									<td><span class={statusClass(x.availability)}>{statusLabel(x.availability)}</span></td>
-									<td><span class={x.verification === "confirmed" ? "badge badge--ok" : x.verification === "confirmed_unavailable" ? "badge badge--warn" : "badge"}>{x.verification}</span></td>
-									<td class="nowrap">{x.verified_at}</td>
-									<td class="cell-note">
+									<td class="cell-muted mobile-hide" data-label="#">{x.id}</td>
+									<td data-label="Tier"><span class="badge">{x.tier}</span></td>
+									<td data-label="Локация"><span class="badge">{x.country}</span><span class="mini" style="margin-left:8px;">{x.city}</span></td>
+									<td data-label="Провайдер"><a href={x.url} target="_blank" rel="noreferrer">{x.provider}</a></td>
+									<td data-label="План">{x.plan}</td>
+									<td data-label="IPv4">{x.ipv4}</td>
+									<td class="nowrap" data-label="Цена">{x.price}</td>
+									<td data-label="Наличие"><span class={statusClass(x.availability)}>{statusLabel(x.availability)}</span></td>
+									<td data-label="Проверка"><span class={x.verification === "confirmed" ? "badge badge--ok" : x.verification === "confirmed_unavailable" ? "badge badge--warn" : "badge"}>{x.verification}</span></td>
+									<td class="nowrap" data-label="Дата">{x.verified_at}</td>
+									<td class="cell-note" data-label="Заметка">
 										{x.notes}
 										{x.change && <div class="mini" style="margin-top:6px;">Δ {x.change}</div>}
 									</td>
@@ -128,8 +129,8 @@ const statusClass = (value) => {
 			</div>
 
 			<div id="panel-proxy" style="margin-top:14px; display:none;">
-				<div class="table-scroll">
-					<table class="dataTable">
+				<div class="table-scroll table-scroll--mobile-cards">
+					<table class="dataTable dataTable--mobile-cards">
 						<thead>
 							<tr>
 								<th>#</th><th>Категория</th><th>Провайдер</th><th>Тип IP</th><th>Протоколы</th><th>Цена</th><th>Pay-as-you-go</th><th>Заметка</th>
@@ -138,10 +139,14 @@ const statusClass = (value) => {
 						<tbody>
 							{proxyUS.map((x) => (
 								<tr>
-									<td class="cell-muted">{x.id}</td>
-									<td><span class="badge">{x.category}</span></td>
-									<td><a href={x.url} target="_blank" rel="noreferrer">{x.provider}</a></td>
-									<td>{x.ipType}</td><td>{x.protocols}</td><td class="nowrap">{x.pricing}</td><td>{x.payg}</td><td class="cell-note">{x.notes}</td>
+									<td class="cell-muted mobile-hide" data-label="#">{x.id}</td>
+									<td data-label="Категория"><span class="badge">{x.category}</span></td>
+									<td data-label="Провайдер"><a href={x.url} target="_blank" rel="noreferrer">{x.provider}</a></td>
+									<td data-label="Тип IP">{x.ipType}</td>
+									<td data-label="Протоколы">{x.protocols}</td>
+									<td class="nowrap" data-label="Цена">{x.pricing}</td>
+									<td data-label="Pay-as-you-go">{x.payg}</td>
+									<td class="cell-note" data-label="Заметка">{x.notes}</td>
 								</tr>
 							))}
 						</tbody>

@@ -1,0 +1,343 @@
+/* Mobile-first overrides for phones and narrow tablets. */
+
+html {
+	scroll-padding-top: 96px;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+/* Keep long URLs / technical identifiers from widening the viewport. */
+.md,
+.cell-note,
+.dataTable td {
+	overflow-wrap: anywhere;
+	word-break: normal;
+}
+
+.md :where(img, video, iframe) {
+	max-width: 100%;
+	height: auto;
+}
+
+.md :where(pre) {
+	max-width: 100%;
+}
+
+/* Markdown tables remain horizontally scrollable when their structure matters. */
+.md :where(table) {
+	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Tables page helpers. */
+.table-head-row {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.table-tabs {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.table-mobile-hint {
+	display: none;
+}
+
+@media (max-width: 760px) {
+	:root {
+		--radius: 12px;
+		--radius2: 14px;
+	}
+
+	.shell {
+		width: min(100% - 24px, var(--max));
+	}
+
+	.top {
+		backdrop-filter: blur(10px);
+	}
+
+	.top__inner {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 9px;
+		padding: 10px 0 8px;
+	}
+
+	.brand {
+		align-items: center;
+		gap: 8px;
+		min-width: 0;
+	}
+
+	.brand__mark {
+		flex: 0 0 26px;
+	}
+
+	.brand__name {
+		font-size: 17px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.brand__tag {
+		margin-left: auto;
+		flex: 0 0 auto;
+	}
+
+	/* One-line, swipeable navigation instead of a tall wrapped header. */
+	.nav {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		margin-inline: -12px;
+		padding: 0 12px 2px;
+		scroll-snap-type: x proximity;
+	}
+
+	.nav::-webkit-scrollbar {
+		display: none;
+	}
+
+	.nav__link {
+		flex: 0 0 auto;
+		min-height: 44px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 9px 12px;
+		scroll-snap-align: start;
+		touch-action: manipulation;
+	}
+
+	.main {
+		padding: 16px 0 28px;
+	}
+
+	h1 {
+		font-size: clamp(28px, 9vw, 34px);
+	}
+
+	h2 {
+		font-size: 23px;
+		margin-top: 22px;
+	}
+
+	h3 {
+		font-size: 18px;
+	}
+
+	.card__inner,
+	.md {
+		padding: 14px;
+	}
+
+	.grid {
+		gap: 12px;
+	}
+
+	.btn {
+		min-height: 44px;
+		touch-action: manipulation;
+	}
+
+	.foot {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 6px;
+		padding: 16px 0 24px;
+	}
+
+	/* Filters become a single readable column and never overflow. */
+	.toolbar {
+		align-items: stretch;
+		gap: 12px;
+		margin-top: 12px;
+	}
+
+	.controls {
+		width: 100%;
+		align-items: stretch;
+		gap: 9px;
+	}
+
+	.field {
+		flex: 1 1 100%;
+		min-width: 0;
+	}
+
+	.input,
+	.select {
+		width: 100%;
+		min-width: 0;
+		min-height: 46px;
+		font-size: 16px;
+	}
+
+	.kpi {
+		width: 100%;
+		justify-content: flex-start;
+	}
+
+	.table-head-row {
+		align-items: stretch;
+	}
+
+	.table-tabs {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
+	}
+
+	.table-tabs .nav__link {
+		width: 100%;
+		min-width: 0;
+		border-color: var(--stroke);
+	}
+
+	.table-head-row > .mini {
+		width: 100%;
+	}
+
+	.table-mobile-hint {
+		display: block;
+		margin: 10px 0 0;
+	}
+
+	/* The desktop grid turns into stacked records on phones. */
+	.table-scroll--mobile-cards {
+		overflow: visible;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		scrollbar-gutter: auto;
+	}
+
+	.dataTable--mobile-cards {
+		display: block;
+		width: 100%;
+		min-width: 0;
+	}
+
+	.dataTable--mobile-cards thead {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	.dataTable--mobile-cards tbody {
+		display: grid;
+		gap: 12px;
+		width: 100%;
+	}
+
+	.dataTable--mobile-cards tr {
+		display: block;
+		width: 100%;
+		border: 1px solid var(--stroke);
+		border-radius: 14px;
+		background: var(--card);
+		box-shadow: 0 5px 14px rgba(15, 23, 42, .055);
+		overflow: hidden;
+	}
+
+	.dataTable--mobile-cards tr:hover td {
+		background: transparent;
+	}
+
+	.dataTable--mobile-cards td {
+		display: grid;
+		grid-template-columns: minmax(82px, 30%) minmax(0, 1fr);
+		gap: 10px;
+		align-items: start;
+		width: 100%;
+		min-width: 0;
+		padding: 10px 12px;
+		border-bottom: 1px solid var(--stroke);
+	}
+
+	.dataTable--mobile-cards td:last-child {
+		border-bottom: 0;
+	}
+
+	.dataTable--mobile-cards td::before {
+		content: attr(data-label);
+		font-size: 10px;
+		line-height: 1.35;
+		font-weight: 600;
+		letter-spacing: .055em;
+		text-transform: uppercase;
+		color: var(--muted2);
+	}
+
+	.dataTable--mobile-cards td.mobile-hide {
+		display: none;
+	}
+
+	.dataTable--mobile-cards .cell-note {
+		min-width: 0;
+	}
+
+	.dataTable--mobile-cards .nowrap {
+		white-space: normal;
+	}
+
+	.dataTable--mobile-cards td a {
+		font-weight: 600;
+		line-height: 1.35;
+	}
+
+	.dataTable--mobile-cards .badge {
+		white-space: normal;
+		width: fit-content;
+	}
+}
+
+@media (max-width: 480px) {
+	.shell {
+		width: min(100% - 20px, var(--max));
+	}
+
+	.brand__tag {
+		display: none;
+	}
+
+	.card__inner,
+	.md {
+		padding: 12px;
+	}
+
+	.main .btn {
+		width: 100%;
+	}
+
+	.pill {
+		max-width: 100%;
+		white-space: normal;
+	}
+
+	.dataTable--mobile-cards td {
+		grid-template-columns: 76px minmax(0, 1fr);
+		padding: 9px 10px;
+	}
+}
