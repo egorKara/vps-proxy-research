@@ -341,3 +341,72 @@ body {
 		padding: 9px 10px;
 	}
 }
+
+/* Readability tuning after real-phone review (03.09.2026). */
+@media (max-width: 760px) {
+	/* Short fields keep the compact label/value layout, but give values more room. */
+	.dataTable--mobile-cards td {
+		grid-template-columns: 72px minmax(0, 1fr);
+		gap: 8px 12px;
+		padding: 12px;
+		font-size: 17px;
+		line-height: 1.55;
+		color: var(--text);
+	}
+
+	.dataTable--mobile-cards td::before {
+		font-size: 10.5px;
+		line-height: 1.35;
+		font-weight: 700;
+		letter-spacing: .06em;
+		color: var(--muted);
+	}
+
+	.dataTable--mobile-cards td a {
+		font-size: 17px;
+		font-weight: 650;
+		line-height: 1.45;
+	}
+
+	.dataTable--mobile-cards .badge {
+		font-size: 13px;
+		line-height: 1.35;
+	}
+
+	/* Long values should use the card width instead of being squeezed beside a label. */
+	.dataTable--mobile-cards td[data-label="План"],
+	.dataTable--mobile-cards td[data-label="IPv4"],
+	.dataTable--mobile-cards td[data-label="Цена"],
+	.dataTable--mobile-cards .cell-note {
+		display: block;
+	}
+
+	.dataTable--mobile-cards td[data-label="План"]::before,
+	.dataTable--mobile-cards td[data-label="IPv4"]::before,
+	.dataTable--mobile-cards td[data-label="Цена"]::before,
+	.dataTable--mobile-cards .cell-note::before {
+		display: block;
+		margin-bottom: 6px;
+	}
+
+	/* Notes were previously auto-placed back into the narrow label column. */
+	.dataTable--mobile-cards .cell-note {
+		color: var(--muted);
+	}
+
+	.dataTable--mobile-cards .cell-note .mini {
+		display: block;
+		width: 100%;
+		margin-top: 7px !important;
+		font-size: 15px;
+		line-height: 1.55;
+		color: var(--muted);
+	}
+}
+
+@media (max-width: 480px) {
+	.dataTable--mobile-cards td {
+		grid-template-columns: 68px minmax(0, 1fr);
+		padding: 11px 10px;
+	}
+}
