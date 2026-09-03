@@ -1,0 +1,154 @@
+/* Public homepage and post-mobile review refinements. */
+
+.home-section-title {
+	margin-top: 0;
+}
+
+.tier-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 12px;
+	margin-top: 16px;
+}
+
+.tier-card {
+	min-width: 0;
+	padding: 14px;
+	border: 1px solid var(--stroke);
+	border-radius: 14px;
+	background: var(--card2);
+}
+
+.tier-card__head {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	margin-bottom: 9px;
+	color: var(--text);
+}
+
+.tier-mark {
+	display: inline-grid;
+	place-items: center;
+	width: 30px;
+	height: 30px;
+	flex: 0 0 30px;
+	border-radius: 9px;
+	border: 1px solid var(--stroke);
+	font-weight: 700;
+	background: var(--card);
+}
+
+.tier-card p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.tier-card--a {
+	border-color: color-mix(in oklab, var(--accent) 42%, var(--stroke));
+	background: color-mix(in oklab, var(--accent) 8%, var(--card2));
+}
+.tier-card--a .tier-mark {
+	border-color: color-mix(in oklab, var(--accent) 50%, var(--stroke));
+	color: color-mix(in oklab, var(--accent) 72%, var(--text));
+}
+
+.tier-card--b {
+	border-color: color-mix(in oklab, var(--accent2) 32%, var(--stroke));
+	background: color-mix(in oklab, var(--accent2) 6%, var(--card2));
+}
+.tier-card--b .tier-mark {
+	border-color: color-mix(in oklab, var(--accent2) 42%, var(--stroke));
+	color: color-mix(in oklab, var(--accent2) 72%, var(--text));
+}
+
+.tier-card--c {
+	border-color: color-mix(in oklab, var(--warn) 38%, var(--stroke));
+	background: color-mix(in oklab, var(--warn) 6%, var(--card2));
+}
+.tier-card--c .tier-mark {
+	border-color: color-mix(in oklab, var(--warn) 48%, var(--stroke));
+	color: color-mix(in oklab, var(--warn) 72%, var(--text));
+}
+
+.tier-card--d {
+	border-color: color-mix(in oklab, var(--danger) 24%, var(--stroke));
+	background: color-mix(in oklab, var(--danger) 4%, var(--card2));
+}
+.tier-card--d .tier-mark {
+	border-color: color-mix(in oklab, var(--danger) 34%, var(--stroke));
+	color: color-mix(in oklab, var(--danger) 65%, var(--text));
+}
+
+@media (max-width: 900px) {
+	.tier-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 560px) {
+	.tier-grid {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+
+	.tier-card {
+		padding: 13px;
+	}
+
+	.tier-card p {
+		font-size: 15px;
+	}
+}
+
+/* Make table cards visibly separate from one another on phones. */
+@media (max-width: 760px) {
+	.table-scroll--mobile-cards {
+		padding: 10px;
+		border: 1px solid var(--stroke);
+		border-radius: 16px;
+		background: color-mix(in oklab, var(--text) 3.5%, var(--bg0));
+	}
+
+	.dataTable--mobile-cards tbody {
+		gap: 16px;
+	}
+
+	.dataTable--mobile-cards tr {
+		border-color: var(--stroke2);
+		box-shadow:
+			0 1px 2px rgba(15, 23, 42, .05),
+			0 8px 20px rgba(15, 23, 42, .09);
+	}
+
+	[data-theme="dark"] .dataTable--mobile-cards tr {
+		box-shadow:
+			0 1px 2px rgba(0, 0, 0, .3),
+			0 10px 24px rgba(0, 0, 0, .32);
+	}
+
+	#panel-vps .dataTable--mobile-cards tr[data-tier="A"] {
+		box-shadow:
+			inset 3px 0 0 color-mix(in oklab, var(--accent) 72%, transparent),
+			0 8px 20px rgba(15, 23, 42, .09);
+	}
+
+	#panel-vps .dataTable--mobile-cards tr[data-tier="B"] {
+		box-shadow:
+			inset 3px 0 0 color-mix(in oklab, var(--accent2) 62%, transparent),
+			0 8px 20px rgba(15, 23, 42, .09);
+	}
+
+	#panel-vps .dataTable--mobile-cards tr[data-tier="C"] {
+		box-shadow:
+			inset 3px 0 0 color-mix(in oklab, var(--warn) 62%, transparent),
+			0 8px 20px rgba(15, 23, 42, .09);
+	}
+
+	#panel-vps .dataTable--mobile-cards tr[data-tier="D"] {
+		box-shadow:
+			inset 3px 0 0 color-mix(in oklab, var(--danger) 42%, transparent),
+			0 8px 20px rgba(15, 23, 42, .09);
+	}
+}
