@@ -2,43 +2,80 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const baseUrl = import.meta.env.BASE_URL;
 ---
-<BaseLayout title="vps-proxy-research — архив заметок">
+<BaseLayout
+	title="VPS & Proxy Research — сравнение провайдеров"
+	description="Публичное исследование VPS в Европе и proxy-сервисов: цены, IPv4/IPv6, наличие, восстановление, риски, источники и дата проверки."
+>
 	<section class="card">
 		<div class="card__inner">
 			<div class="grid">
 				<div>
-					<h1>Чтобы не потерялось.</h1>
+					<h1>VPS & Proxy Research</h1>
 					<p>
-						Этот сайт — статический архив ваших Obsidian‑заметок с акцентом на практику:
-						провайдеры, цены, IPv4/IPv6, риски, и что проверять в тесте.
+						Публичный исследовательский сайт для практического сравнения VPS в Европе и proxy‑сервисов.
+						Проект вырос из структурированных исследовательских заметок в Obsidian и теперь ведётся как
+						проверяемая база: цены, IPv4/IPv6, наличие, инструменты восстановления, риски, источники и дата проверки.
+					</p>
+					<p>
+						Цель — быстро отсеивать слабые или неясные предложения и оставлять кандидатов, которые имеет смысл
+						проверять в корзине, пресейле или реальном тесте.
 					</p>
 
 					<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
 						<span class="pill"><span class="dot"></span> VPS (EU): подбор под SSH</span>
 						<span class="pill"><span class="dot dot--blue"></span> Proxy (US): точка выхода</span>
-						<span class="pill">таблицы + фильтры</span>
+						<span class="pill">источники + дата проверки</span>
 					</div>
 
 					<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
 						<a class="btn btn--primary" href={`${baseUrl}tables/`}>Открыть таблицы</a>
-						<a class="btn" href={`${baseUrl}vps-eu/`}>Читать VPS (EU)</a>
-						<a class="btn" href={`${baseUrl}proxy-us/`}>Читать Proxy (US)</a>
+						<a class="btn" href={`${baseUrl}vps-eu/`}>Читать аудит VPS (EU)</a>
+						<a class="btn" href={`${baseUrl}proxy-us/`}>Proxy (US)</a>
 					</div>
 				</div>
 
 				<aside class="card" style="box-shadow:none; background: var(--card2);">
 					<div class="card__inner">
 						<h3 style="margin-top:0;">Как пользоваться</h3>
-						<ul style="margin:0; padding-left: 18px; color: var(--muted);">
-							<li>начните с <a href={`${baseUrl}tables/`}>таблиц</a> и отфильтруйте “что реально видно на странице”</li>
-							<li>откройте полный документ, чтобы увидеть нюансы и вопросы в пресейл</li>
-							<li>фиксируйте результат теста прямо в Obsidian и обновляйте Markdown</li>
+						<ul style="margin:0; padding-left:18px; color:var(--muted);">
+							<li>начните с <a href={`${baseUrl}tables/`}>таблицы</a> и отфильтруйте страну, Tier и наличие;</li>
+							<li>откройте полный аудит, чтобы увидеть причины рейтинга и изменения относительно прошлой проверки;</li>
+							<li>перед оплатой перепроверьте checkout, IPv4, recovery и дату <code>verified_at</code>.</li>
 						</ul>
 						<p class="mini" style="margin-top:12px;">
-							Сайт не требует серверной части и подходит для GitHub Pages.
+							Сайт публикуется статически через GitHub Pages. Условия провайдеров могут меняться между проверками.
 						</p>
 					</div>
 				</aside>
+			</div>
+		</div>
+	</section>
+
+	<section class="card" style="margin-top:16px;">
+		<div class="card__inner">
+			<h2 class="home-section-title">Что означают Tier A–D</h2>
+			<p>
+				Tier показывает <strong>текущий статус кандидата в этом исследовании</strong>, а не абсолютную оценку
+				надёжности компании. Рейтинг может измениться после новой проверки цены, наличия или условий.
+			</p>
+
+			<div class="tier-grid">
+				<article class="tier-card tier-card--a">
+					<div class="tier-card__head"><span class="tier-mark">A</span><strong>Текущий shortlist</strong></div>
+					<p>Ключевые условия достаточно подтверждены, предложение рационально для покупки или пилотного теста.</p>
+				</article>
+				<article class="tier-card tier-card--b">
+					<div class="tier-card__head"><span class="tier-mark">B</span><strong>Рабочий кандидат</strong></div>
+					<p>Вариант выглядит пригодным, но есть заметный компромисс или одно важное непроверенное свойство.</p>
+				</article>
+				<article class="tier-card tier-card--c">
+					<div class="tier-card__head"><span class="tier-mark">C</span><strong>Нужна валидация</strong></div>
+					<p>Перед оплатой обязательна проверка корзины, IPv4, цены, наличия или ответ пресейла.</p>
+				</article>
+				<article class="tier-card tier-card--d">
+					<div class="tier-card__head"><span class="tier-mark">D</span><strong>Watchlist / недоступно</strong></div>
+					<p>Нет слотов, локация снята, предложение временно недоступно или оставлено только для наблюдения.</p>
+				</article>
 			</div>
 		</div>
 	</section>
