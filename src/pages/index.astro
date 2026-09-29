@@ -1,7 +1,7 @@
 ---
 import CatalogLayout from '../layouts/CatalogLayout.astro';
 import PairCard from '../components/catalog/PairCard.astro';
-import { activeProfile, activePairs, activeSources, sourceState, siteBuiltAt, routeLabel, formatDate, activeReports } from '../lib/catalog.js';
+import { activeProfile, activePairs, activeSources, siteBuiltAt, routeLabel, formatDate, activeReports, cityName, countryName, countText } from '../lib/catalog.js';
 const base = import.meta.env.BASE_URL;
 ---
 <CatalogLayout title="Сравнение VPS-пар" current="pairs">
@@ -12,9 +12,9 @@ const base = import.meta.env.BASE_URL;
   <section class="profile-panel" aria-labelledby="profile-title">
     <div class="section-heading"><div><p class="eyebrow">Общие условия поиска</p><h2 id="profile-title">Текущий профиль</h2></div><span class="profile-version">Версия {activeProfile?.version ?? '—'}</span></div>
     {activeProfile ? <div class="profile-conditions">
-      <div><span>Исходная локация</span><strong>{activeProfile.originLocation.city}, {activeProfile.originLocation.country}</strong></div>
+      <div><span>Исходная локация</span><strong>{cityName(activeProfile.originLocation.city)}, {countryName(activeProfile.originLocation.country)}</strong></div>
       <div><span>Интернет-провайдер</span><strong>{activeProfile.originProvider.name} {activeProfile.originProvider.asn ? `(AS${activeProfile.originProvider.asn})` : '(ASN неизвестен)'}</strong></div>
-      <div><span>Конечная локация</span><strong>{activeProfile.foreignExit.city}, {activeProfile.foreignExit.country}</strong></div>
+      <div><span>Конечная локация</span><strong>{cityName(activeProfile.foreignExit.city)}, {countryName(activeProfile.foreignExit.country)}</strong></div>
     </div> : <p class="empty-copy">Активный профиль отсутствует. Пары и оценки пока не выбираются.</p>}
     <p class="profile-note">Это общие условия проекта. Владелец изменяет их и запускает новый сбор через <a href="https://github.com/egorKara/vps-proxy-research/actions/workflows/refresh.yml" target="_blank" rel="noopener noreferrer">GitHub Actions ↗</a>; посетитель сайта их не меняет. <a href={`${base}method/#refresh`}>Как это работает</a>.</p>
   </section>
@@ -23,8 +23,8 @@ const base = import.meta.env.BASE_URL;
     {activePairs.length ? <div class="pair-grid">{activePairs.map((pair) => <PairCard pair={pair} />)}</div> : <div class="empty-state"><h3>Для этого профиля пар пока нет</h3><p>Новые условия не наследуют оценки прежнего профиля. Нужны источники и редакционная проверка двух VPS.</p><a href={`${base}method/`}>Посмотреть методику</a></div>}
   </section>
   <section class="context-strip" aria-label="Границы данных">
-    <div><strong>Общая история источников</strong><p>{activeSources.length ? `${activeSources.length} источника в реестре профиля. Покрытие и ошибки показаны в изменениях.` : 'Для текущего профиля источники ещё не связаны.'}</p></div>
-    <div><strong>Собственные измерения</strong><p>{activeReports.length ? `${activeReports.length} импортированных отчётов; область и дата указаны в методике.` : 'Собственные измерения отсутствуют.'}</p></div>
+    <div><strong>Общая история источников</strong><p>{activeSources.length ? `${countText(activeSources.length, 'источник', 'источника', 'источников')} в реестре профиля. Покрытие и ошибки показаны в изменениях.` : 'Для текущего профиля источники ещё не связаны.'}</p></div>
+    <div><strong>Собственные измерения</strong><p>{activeReports.length ? `${countText(activeReports.length, 'импортированный отчёт', 'импортированных отчёта', 'импортированных отчётов')}; область и дата указаны в методике.` : 'Собственные измерения отсутствуют.'}</p></div>
     <div><strong>Свежесть</strong><p>{activeSources.length ? <>Последний успех источников проверяется при просмотре. <a href={`${base}changes/`}>Посмотреть состояние</a>.</> : 'Нет успешных обновлений для профиля.'}</p></div>
   </section>
   <p class="build-note">Снимок сайта: {formatDate(siteBuiltAt)}. Время сборки не обновляет даты фактов.</p>
