@@ -16,7 +16,7 @@ const base = import.meta.env.BASE_URL;
       <div><span>Интернет-провайдер</span><strong>{activeProfile.originProvider.name} {activeProfile.originProvider.asn ? `(AS${activeProfile.originProvider.asn})` : '(ASN неизвестен)'}</strong></div>
       <div><span>Конечная локация</span><strong>{activeProfile.foreignExit.city}, {activeProfile.foreignExit.country}</strong></div>
     </div> : <p class="empty-copy">Активный профиль отсутствует. Пары и оценки пока не выбираются.</p>}
-    <p class="profile-note">Это общие условия проекта. Изменение и запуск нового сбора выполняет владелец после появления авторизованного действия; посетитель сайта их не меняет. <a href={`${base}method/#refresh`}>Что означает «Получить новые данные»</a>.</p>
+    <p class="profile-note">Это общие условия проекта. Владелец изменяет их и запускает новый сбор через <a href="https://github.com/egorKara/vps-proxy-research/actions/workflows/refresh.yml" target="_blank" rel="noopener noreferrer">GitHub Actions ↗</a>; посетитель сайта их не меняет. <a href={`${base}method/#refresh`}>Как это работает</a>.</p>
   </section>
   <section class="catalog-section" aria-labelledby="pairs-title">
     <div class="section-heading"><div><p class="eyebrow">{routeLabel(activeProfile)}</p><h2 id="pairs-title">Сравнение пар</h2></div><span class="section-count">{activePairs.length} из 3 возможных</span></div>
