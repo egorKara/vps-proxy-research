@@ -84,6 +84,7 @@ export function errorText(value) {
 }
 export function affectedType(value) { return ({SERVICE:'Сервис',SITE:'Площадка',REGION:'Регион',ASN:'Автономная система',PREFIX:'Сетевой префикс'})[value] || 'Область влияния'; }
 export function countText(count, one, few, many) { const n = Math.abs(count), r = n % 10, h = n % 100; return `${count} ${h >= 11 && h <= 14 ? many : r === 1 ? one : r >= 2 && r <= 4 ? few : many}`; }
+export function formatAmount(value) { return typeof value === 'number' ? value.toLocaleString('ru-RU') : '?'; }
 export function displayValue(value) {
   if (value === null || value === undefined || value === '') return 'Не установлено';
   if (typeof value === 'boolean') return value ? 'Да' : 'Нет';
