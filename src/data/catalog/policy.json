@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "manualRun": true,
+  "scheduleEnabled": true,
+  "cadenceHints": {
+    "daily": {
+      "proposedTimeUtc": "03:17",
+      "staleAfterHours": 48,
+      "sourceKinds": ["INCIDENT_HTML", "INCIDENT_ATOM", "BGP_HISTORY"]
+    },
+    "weekly": {
+      "proposedDayUtc": "Monday",
+      "staleAfterDays": 14,
+      "sourceKinds": ["ASN_OWNER", "PROVIDER_PLAN"]
+    }
+  }
+}

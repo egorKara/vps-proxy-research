@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "activeProfileId": "home-spb-rtk-fra-v1",
+  "profiles": [
+    {
+      "id": "home-spb-rtk-fra-v1",
+      "version": 1,
+      "originLocation": { "city": "Санкт-Петербург", "country": "RU" },
+      "originProvider": { "name": "Ростелеком", "asn": 12389 },
+      "foreignExit": { "city": "Frankfurt", "country": "DE" },
+      "evidence": {
+        "kind": "USER_REQUIREMENT",
+        "observedAt": "2026-09-29",
+        "scope": "Условия поиска, не факт доступности или свойство конкретного VPS"
+      }
+    }
+  ]
+}

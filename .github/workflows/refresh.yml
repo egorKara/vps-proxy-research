@@ -1,0 +1,132 @@
+name: Refresh catalog and publish Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      profile_mode:
+        description: 'current, select saved profile, or set three search conditions'
+        required: true
+        type: choice
+        default: current
+        options: [current, select, set]
+      profile_id:
+        description: 'Saved profile ID for select'
+        required: false
+        type: string
+      origin_city:
+        description: 'Origin city for set'
+        required: false
+        type: string
+      origin_country:
+        description: 'Origin country code for set'
+        required: false
+        type: string
+      origin_provider:
+        description: 'Origin ISP for set'
+        required: false
+        type: string
+      origin_asn:
+        description: 'Verified origin ASN, optional'
+        required: false
+        type: string
+      exit_city:
+        description: 'Foreign exit city for set'
+        required: false
+        type: string
+      exit_country:
+        description: 'Foreign exit country code for set'
+        required: false
+        type: string
+  schedule:
+    - cron: '17 3 * * *'
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      pages: read
+    outputs:
+      published_sha: ${{ steps.save.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Collect
+        run: node scripts/catalog/refresh.mjs
+        env:
+          PROFILE_MODE: ${{ inputs.profile_mode || 'current' }}
+          PROFILE_ID: ${{ inputs.profile_id }}
+          ORIGIN_CITY: ${{ inputs.origin_city }}
+          ORIGIN_COUNTRY: ${{ inputs.origin_country }}
+          ORIGIN_PROVIDER: ${{ inputs.origin_provider }}
+          ORIGIN_ASN: ${{ inputs.origin_asn }}
+          EXIT_CITY: ${{ inputs.exit_city }}
+          EXIT_COUNTRY: ${{ inputs.exit_country }}
+      - run: npm run validate
+      - run: npm test
+      - run: npm run build
+      - name: Save validated data only
+        id: save
+        shell: bash
+        run: |
+          set -euo pipefail
+          base=$(git rev-parse HEAD)
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$base"
+          while IFS= read -r -d '' path; do
+            case "$path" in
+              src/data/catalog/profiles.json|src/data/catalog/snapshot.json) ;;
+              *) echo "Unexpected staged path: $path" >&2; exit 1 ;;
+            esac
+          done < <(git diff --cached --name-only -z)
+          git add -- src/data/catalog/profiles.json src/data/catalog/snapshot.json
+          while IFS= read -r -d '' path; do
+            case "$path" in
+              src/data/catalog/profiles.json|src/data/catalog/snapshot.json) ;;
+              *) echo "Unexpected staged path: $path" >&2; exit 1 ;;
+            esac
+          done < <(git diff --cached --name-only -z)
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh catalog observations'
+            git push origin HEAD:main
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Confirm artifact is current
+        shell: bash
+        env:
+          EXPECTED_SHA: ${{ needs.refresh.outputs.published_sha }}
+        run: |
+          set -euo pipefail
+          actual=$(git ls-remote https://github.com/${{ github.repository }}.git refs/heads/main | cut -f1)
+          test "$actual" = "$EXPECTED_SHA"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

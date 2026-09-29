@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "decisions": [
+    {
+      "profileId": "home-spb-rtk-fra-v1",
+      "pairId": "selectel-digitalocean-fra1",
+      "decision": "UNDECIDED",
+      "reason": "Нет измерения домашнего и прикладного маршрутов, ASN/IP и данных заказа; гипервизор/эквивалентность остаётся UNKNOWN.",
+      "decidedAt": "2026-09-29",
+      "scope": "Редакционная оценка опубликованных свойств; без домашних и прикладных измерений",
+      "provenance": "INFERRED"
+    },
+    {
+      "profileId": "home-spb-rtk-fra-v1",
+      "pairId": "selectel-ovhcloud-de",
+      "decision": "UNDECIDED",
+      "reason": "Город/площадка конкретного VPS-1, гипервизор и финальный счёт не подтверждены; домашний маршрут UNKNOWN.",
+      "decidedAt": "2026-09-29",
+      "scope": "Редакционная оценка опубликованных свойств; без домашних и прикладных измерений",
+      "provenance": "INFERRED"
+    },
+    {
+      "profileId": "home-spb-rtk-fra-v1",
+      "pairId": "selectel-hetzner-nbg1",
+      "decision": "UNDECIDED",
+      "reason": "Официальная цена новых заказов есть, но CX23 отображается not available; заказ, гипервизор и домашний маршрут UNKNOWN.",
+      "decidedAt": "2026-09-29",
+      "scope": "Редакционная оценка опубликованных свойств; без домашних и прикладных измерений",
+      "provenance": "INFERRED"
+    }
+  ]
+}

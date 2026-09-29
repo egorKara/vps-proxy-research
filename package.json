@@ -9,7 +9,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "collect": "node scripts/catalog/cli.mjs collect",
+    "validate": "node scripts/catalog/cli.mjs validate",
+    "test": "node --test scripts/catalog/*.test.mjs"
   },
   "dependencies": {
     "astro": "^6.1.3"

@@ -5,21 +5,24 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: read
+    outputs:
+      built_sha: ${{ steps.head.outputs.sha }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -29,6 +32,16 @@ jobs:
 
       - name: Install
         run: npm ci
+
+      - name: Validate catalog
+        run: npm run validate
+
+      - name: Test catalog
+        run: npm test
+
+      - name: Record checkout
+        id: head
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Build
         run: npm run build
@@ -44,10 +57,22 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Confirm artifact is current
+        shell: bash
+        env:
+          EXPECTED_SHA: ${{ needs.build.outputs.built_sha }}
+        run: |
+          set -euo pipefail
+          actual=$(git ls-remote https://github.com/${{ github.repository }}.git refs/heads/main | cut -f1)
+          test "$actual" = "$EXPECTED_SHA"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

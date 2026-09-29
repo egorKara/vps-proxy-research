@@ -1,0 +1,589 @@
+{
+  "schemaVersion": 1,
+  "nodes": [
+    {
+      "id": "selectel-spb-vds-2-2-40",
+      "statusSourceIds": [
+        "selectel-status"
+      ],
+      "properties": {
+        "brand": {
+          "value": "Selectel",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+          "observedAt": "2026-09-29",
+          "scope": "Бренд продукта VDS",
+          "provenance": "CONFIRMED"
+        },
+        "owner": {
+          "value": null,
+          "sourceUrl": "https://docs.selectel.ru/vds-servers/about/about-vds-server/",
+          "observedAt": "2026-09-29",
+          "scope": "Юридическое лицо договора на будущий VDS не установлено",
+          "provenance": "UNKNOWN"
+        },
+        "city": {
+          "value": "Санкт-Петербург",
+          "sourceUrl": "https://docs.selectel.ru/infrastructure/product-availability-by-location/",
+          "observedAt": "2026-09-29",
+          "scope": "Пул ru-3b, регион СПб",
+          "provenance": "CONFIRMED"
+        },
+        "datacenter": {
+          "value": "Группа ЦОД «Цветочная», ул. Цветочная, 19; ru-3b",
+          "sourceUrl": "https://docs.selectel.ru/infrastructure/product-availability-by-location/",
+          "observedAt": "2026-09-29",
+          "scope": "Пул и группа ЦОД; корпус будущей VM не установлен",
+          "provenance": "CONFIRMED"
+        },
+        "asn": {
+          "value": null,
+          "sourceUrl": "https://docs.selectel.ru/internet-access/announce-pi-prefix/",
+          "observedAt": "2026-09-29",
+          "scope": "ASN будущего VDS IPv4; AS49505 относится к PI на выделенных серверах",
+          "provenance": "UNKNOWN"
+        },
+        "prefixes": {
+          "value": null,
+          "sourceUrl": "https://docs.selectel.ru/vds-servers/about/about-vds-server/",
+          "observedAt": "2026-09-29",
+          "scope": "Префикс будущего VDS IPv4",
+          "provenance": "UNKNOWN"
+        },
+        "plan": {
+          "value": "VDS 2-2-40",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+          "observedAt": "2026-09-29",
+          "scope": "Опубликованная конфигурация VDS",
+          "provenance": "CONFIRMED"
+        },
+        "resources": {
+          "value": {
+            "vcpu": 2,
+            "ramGB": 2,
+            "diskGB": 40,
+            "diskType": "local NVMe"
+          },
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+          "observedAt": "2026-09-29",
+          "scope": "Опубликованная конфигурация VDS",
+          "provenance": "CONFIRMED"
+        },
+        "ipv4": {
+          "value": true,
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+          "observedAt": "2026-09-29",
+          "scope": "FAQ VDS: только IPv4; описание продукта: один публичный IP",
+          "provenance": "CONFIRMED"
+        },
+        "linux": {
+          "value": true,
+          "sourceUrl": "https://docs.selectel.ru/vds-servers/manage/boot-to-rescue/",
+          "observedAt": "2026-09-29",
+          "scope": "Rescue документация VDS описывает Linux",
+          "provenance": "CONFIRMED"
+        },
+        "virtualization": {
+          "value": "KVM",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+          "observedAt": "2026-09-29",
+          "scope": "Страница именно VDS: каждый VDS на KVM",
+          "provenance": "CONFIRMED"
+        },
+        "recovery": {
+          "value": {
+            "console": true,
+            "rescue": true
+          },
+          "sourceUrl": "https://docs.selectel.ru/vds-servers/manage/boot-to-rescue/",
+          "observedAt": "2026-09-29",
+          "scope": "VDS Rescue и консоль; пересоздание отдельно: https://docs.selectel.ru/vds-servers/manage/manage-server/",
+          "provenance": "CONFIRMED"
+        },
+        "billing": {
+          "value": "Почасовое pay-as-you-go; 400 RUB/мес. на витрине, итог не гарантирован",
+          "sourceUrl": "https://docs.selectel.ru/vds-servers/about/payment/",
+          "observedAt": "2026-09-29",
+          "scope": "Списание за конфигурацию каждый час",
+          "provenance": "CONFIRMED"
+        },
+        "tax": {
+          "value": null,
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+          "observedAt": "2026-09-29",
+          "scope": "НДС для конкретного аккаунта и суммы 400 RUB не установлен",
+          "provenance": "UNKNOWN"
+        },
+        "availability": {
+          "value": null,
+          "sourceUrl": "https://docs.selectel.ru/infrastructure/product-availability-by-location/",
+          "observedAt": "2026-09-29",
+          "scope": "Наличие конкретной конфигурации в ru-3b при заказе",
+          "provenance": "UNKNOWN"
+        },
+        "networkAsnContext": {
+          "value": "AS49505",
+          "sourceUrl": "https://docs.selectel.ru/internet-access/announce-pi-prefix/",
+          "observedAt": "2026-09-29",
+          "scope": "Только анонс PI на выделенном сервере в СПб; не ASN VDS",
+          "provenance": "CONFIRMED"
+        },
+        "statusPage": {
+          "value": "https://selectel.live/incidents",
+          "sourceUrl": "https://selectel.live/incidents",
+          "observedAt": "2026-09-29",
+          "scope": "История всей платформы, не доказательство аварий конкретного VDS",
+          "provenance": "CONFIRMED"
+        },
+        "reinstall": {
+          "value": {
+            "available": true,
+            "wipesDisk": true,
+            "retainsIP": true
+          },
+          "sourceUrl": "https://docs.selectel.ru/vds-servers/manage/manage-server/",
+          "observedAt": "2026-09-29",
+          "scope": "VDS пересоздание ОС",
+          "provenance": "CONFIRMED"
+        }
+      }
+    },
+    {
+      "id": "digitalocean-fra1-basic-2-2",
+      "statusSourceIds": ["digitalocean-status"],
+      "properties": {
+        "brand": {
+          "value": "DigitalOcean",
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets",
+          "observedAt": "2026-09-29",
+          "scope": "Бренд Droplet",
+          "provenance": "CONFIRMED"
+        },
+        "owner": {
+          "value": "DigitalOcean, LLC",
+          "sourceUrl": "https://www.digitalocean.com/legal/terms-of-service-agreement",
+          "observedAt": "2026-09-29",
+          "scope": "Сторона общих условий сервиса; не владелец здания",
+          "provenance": "CONFIRMED"
+        },
+        "city": {
+          "value": "Frankfurt",
+          "sourceUrl": "https://docs.digitalocean.com/platform/regional-availability/",
+          "observedAt": "2026-09-29",
+          "scope": "Регион FRA1",
+          "provenance": "CONFIRMED"
+        },
+        "datacenter": {
+          "value": "FRA1",
+          "sourceUrl": "https://docs.digitalocean.com/platform/regional-availability/",
+          "observedAt": "2026-09-29",
+          "scope": "Код площадки; адрес здания не опубликован",
+          "provenance": "CONFIRMED"
+        },
+        "asn": {
+          "value": null,
+          "sourceUrl": "https://docs.digitalocean.com/platform/regional-availability/",
+          "observedAt": "2026-09-29",
+          "scope": "ASN будущего выделенного IPv4",
+          "provenance": "UNKNOWN"
+        },
+        "prefixes": {
+          "value": null,
+          "sourceUrl": "https://docs.digitalocean.com/platform/regional-availability/",
+          "observedAt": "2026-09-29",
+          "scope": "Префикс будущего IPv4",
+          "provenance": "UNKNOWN"
+        },
+        "plan": {
+          "value": "Basic Regular 2 GiB / 2 vCPU",
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets",
+          "observedAt": "2026-09-29",
+          "scope": "Bundled Droplet",
+          "provenance": "CONFIRMED"
+        },
+        "resources": {
+          "value": {
+            "vcpu": 2,
+            "ramGiB": 2,
+            "diskGiB": 60,
+            "diskType": "SSD"
+          },
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets",
+          "observedAt": "2026-09-29",
+          "scope": "Regular Basic тариф",
+          "provenance": "CONFIRMED"
+        },
+        "ipv4": {
+          "value": true,
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets",
+          "observedAt": "2026-09-29",
+          "scope": "Bundled Plan включает публичный IPv4",
+          "provenance": "CONFIRMED"
+        },
+        "linux": {
+          "value": true,
+          "sourceUrl": "https://docs.digitalocean.com/products/droplets/how-to/recovery/recovery-console/",
+          "observedAt": "2026-09-29",
+          "scope": "Документация Droplets описывает Linux VM",
+          "provenance": "CONFIRMED"
+        },
+        "virtualization": {
+          "value": null,
+          "sourceUrl": "https://docs.digitalocean.com/products/droplets/how-to/recovery/recovery-console/",
+          "observedAt": "2026-09-29",
+          "scope": "Точный гипервизор/эквивалент изоляции не установлен",
+          "provenance": "UNKNOWN"
+        },
+        "recovery": {
+          "value": {
+            "outOfBandConsole": true,
+            "recoveryISO": true
+          },
+          "sourceUrl": "https://docs.digitalocean.com/products/droplets/how-to/recovery/recovery-console/",
+          "observedAt": "2026-09-29",
+          "scope": "Recovery Console; rebuild отдельно: https://docs.digitalocean.com/products/droplets/how-to/rebuild/",
+          "provenance": "CONFIRMED"
+        },
+        "billing": {
+          "value": "Per-second с месячным cap 18 USD для Bundled Plan",
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets",
+          "observedAt": "2026-09-29",
+          "scope": "Тариф Basic Regular 2/2",
+          "provenance": "CONFIRMED"
+        },
+        "tax": {
+          "value": null,
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets",
+          "observedAt": "2026-09-29",
+          "scope": "Налог для аккаунта не установлен",
+          "provenance": "UNKNOWN"
+        },
+        "availability": {
+          "value": null,
+          "sourceUrl": "https://docs.digitalocean.com/platform/regional-availability/",
+          "observedAt": "2026-09-29",
+          "scope": "Размер 2/2 в FRA1 при заказе не подтверждён",
+          "provenance": "UNKNOWN"
+        },
+        "statusPage": {
+          "value": "https://status.digitalocean.com/",
+          "sourceUrl": "https://status.digitalocean.com/",
+          "observedAt": "2026-09-29",
+          "scope": "Публичный status DigitalOcean; история Droplets/FRA1 импортируется как сведения платформы, влияние на будущую VM неизвестно",
+          "provenance": "CONFIRMED"
+        },
+        "reinstall": {
+          "value": {
+            "available": true,
+            "wipesDisk": true,
+            "retainsIP": true
+          },
+          "sourceUrl": "https://docs.digitalocean.com/products/droplets/how-to/rebuild/",
+          "observedAt": "2026-09-29",
+          "scope": "Droplet rebuild",
+          "provenance": "CONFIRMED"
+        }
+      }
+    },
+    {
+      "id": "ovhcloud-de-vps-1",
+      "statusSourceIds": ["ovhcloud-status"],
+      "properties": {
+        "brand": {
+          "value": "OVHcloud",
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/",
+          "observedAt": "2026-09-29",
+          "scope": "Бренд VPS",
+          "provenance": "CONFIRMED"
+        },
+        "owner": {
+          "value": null,
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/",
+          "observedAt": "2026-09-29",
+          "scope": "Договорное юридическое лицо зависит от страны аккаунта",
+          "provenance": "UNKNOWN"
+        },
+        "city": {
+          "value": null,
+          "sourceUrl": "https://www.ovhcloud.com/fr/vps/vps-deutschland/",
+          "observedAt": "2026-09-29",
+          "scope": "Немецкий VPS подтверждён, город конкретного VPS-1 не назван",
+          "provenance": "UNKNOWN"
+        },
+        "datacenter": {
+          "value": null,
+          "sourceUrl": "https://www.ovhcloud.com/fr/vps/vps-deutschland/",
+          "observedAt": "2026-09-29",
+          "scope": "Связь VPS-1 с Limburg/LIM не доказана",
+          "provenance": "UNKNOWN"
+        },
+        "asn": {
+          "value": null,
+          "sourceUrl": "https://www.ovhcloud.com/en/network/backbone/",
+          "observedAt": "2026-09-29",
+          "scope": "ASN будущего IPv4, не ASN бренда",
+          "provenance": "UNKNOWN"
+        },
+        "prefixes": {
+          "value": null,
+          "sourceUrl": "https://www.ovhcloud.com/en/vps/",
+          "observedAt": "2026-09-29",
+          "scope": "Префикс будущего IPv4",
+          "provenance": "UNKNOWN"
+        },
+        "plan": {
+          "value": "VPS-1, линейка VPS 2027",
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/",
+          "observedAt": "2026-09-29",
+          "scope": "Немецкая витрина",
+          "provenance": "CONFIRMED"
+        },
+        "resources": {
+          "value": {
+            "vcpu": 2,
+            "ramGB": 4,
+            "diskGB": 40,
+            "diskType": "NVMe SSD"
+          },
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/",
+          "observedAt": "2026-09-29",
+          "scope": "Немецкая витрина VPS-1",
+          "provenance": "CONFIRMED"
+        },
+        "ipv4": {
+          "value": true,
+          "sourceUrl": "https://www.ovhcloud.com/en/vps/",
+          "observedAt": "2026-09-29",
+          "scope": "Выделенный IPv4 включён в VPS",
+          "provenance": "CONFIRMED"
+        },
+        "linux": {
+          "value": true,
+          "sourceUrl": "https://www.ovhcloud.com/en/vps/",
+          "observedAt": "2026-09-29",
+          "scope": "Linux-образы доступны для VPS",
+          "provenance": "CONFIRMED"
+        },
+        "virtualization": {
+          "value": null,
+          "sourceUrl": "https://www.ovhcloud.com/en/vps/",
+          "observedAt": "2026-09-29",
+          "scope": "KVM console — удалённый ввод/вывод, гипервизор не подтверждён",
+          "provenance": "UNKNOWN"
+        },
+        "recovery": {
+          "value": {
+            "rescue": true
+          },
+          "sourceUrl": "https://docs.ovhcloud.com/en/guides/bare-metal-cloud/virtual-private-servers/rescue",
+          "observedAt": "2026-09-29",
+          "scope": "VPS Rescue; переустановка отдельно: https://docs.ovhcloud.com/en/guides/bare-metal-cloud/virtual-private-servers/understand-vps-control-panel",
+          "provenance": "CONFIRMED"
+        },
+        "billing": {
+          "value": "От 4.53 EUR/мес. с НДС на немецкой витрине; срок и финальный счёт неизвестны",
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/",
+          "observedAt": "2026-09-29",
+          "scope": "Германия, VPS-1",
+          "provenance": "CONFIRMED"
+        },
+        "tax": {
+          "value": "Немецкая витрина: НДС включён; налог аккаунта неизвестен",
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/",
+          "observedAt": "2026-09-29",
+          "scope": "Только витрина DE",
+          "provenance": "CONFIRMED"
+        },
+        "availability": {
+          "value": null,
+          "sourceUrl": "https://www.ovhcloud.com/fr/vps/vps-deutschland/",
+          "observedAt": "2026-09-29",
+          "scope": "VPS-1 на конкретной немецкой площадке при заказе",
+          "provenance": "UNKNOWN"
+        },
+        "networkAsnContext": {
+          "value": "AS16276",
+          "sourceUrl": "https://www.ovhcloud.com/en/network/backbone/",
+          "observedAt": "2026-09-29",
+          "scope": "Backbone OVHcloud, не ASN будущего IP",
+          "provenance": "CONFIRMED"
+        },
+        "geographicContext": {
+          "value": "OVHcloud имеет ЦОД Limburg примерно в 100 км от Frankfurt",
+          "sourceUrl": "https://corporate.ovhcloud.com/de/newsroom/news/ovh-firstping-german-datacenter-successful/",
+          "observedAt": "2026-09-29",
+          "scope": "Контекст компании; связь с VPS-1 неизвестна",
+          "provenance": "CONFIRMED"
+        },
+        "statusPage": {
+          "value": "https://bare-metal-servers.status-ovhcloud.com/",
+          "sourceUrl": "https://bare-metal-servers.status-ovhcloud.com/",
+          "observedAt": "2026-09-29",
+          "scope": "Статус Bare Metal Cloud; история VPS импортируется как сведения платформы, площадка и влияние на будущую VM неизвестны",
+          "provenance": "CONFIRMED"
+        },
+        "console": {
+          "value": true,
+          "sourceUrl": "https://docs.ovhcloud.com/en/guides/bare-metal-cloud/virtual-private-servers/using-kvm-for-vps",
+          "observedAt": "2026-09-29",
+          "scope": "Удалённая KVM console; не доказательство KVM гипервизора",
+          "provenance": "CONFIRMED"
+        },
+        "reinstall": {
+          "value": true,
+          "sourceUrl": "https://docs.ovhcloud.com/en/guides/bare-metal-cloud/virtual-private-servers/understand-vps-control-panel",
+          "observedAt": "2026-09-29",
+          "scope": "Переустановка VPS из панели",
+          "provenance": "CONFIRMED"
+        }
+      }
+    },
+    {
+      "id": "hetzner-nbg1-cx23",
+      "statusSourceIds": [
+        "hetzner-status"
+      ],
+      "properties": {
+        "brand": {
+          "value": "Hetzner",
+          "sourceUrl": "https://www.hetzner.com/cloud/cost-optimized/",
+          "observedAt": "2026-09-29",
+          "scope": "Бренд Cloud Server",
+          "provenance": "CONFIRMED"
+        },
+        "owner": {
+          "value": "Hetzner Online GmbH",
+          "sourceUrl": "https://status.hetzner.com/",
+          "observedAt": "2026-09-29",
+          "scope": "Официальная статус-панель, юридическое имя компании",
+          "provenance": "CONFIRMED"
+        },
+        "city": {
+          "value": "Nürnberg",
+          "sourceUrl": "https://docs.hetzner.com/de/cloud/general/locations/",
+          "observedAt": "2026-09-29",
+          "scope": "Cloud location nbg1; немецкий fallback от Frankfurt",
+          "provenance": "CONFIRMED"
+        },
+        "datacenter": {
+          "value": null,
+          "sourceUrl": "https://docs.hetzner.com/de/cloud/general/locations/",
+          "observedAt": "2026-09-29",
+          "scope": "nbg1-dc3 — виртуальный код, физическое здание будущей VM неизвестно",
+          "provenance": "UNKNOWN"
+        },
+        "asn": {
+          "value": null,
+          "sourceUrl": "https://docs.hetzner.com/general/infrastructure-and-availability/peering-policy/",
+          "observedAt": "2026-09-29",
+          "scope": "ASN будущего Primary IPv4",
+          "provenance": "UNKNOWN"
+        },
+        "prefixes": {
+          "value": null,
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/primary-ips/overview/",
+          "observedAt": "2026-09-29",
+          "scope": "Префикс будущего Primary IPv4",
+          "provenance": "UNKNOWN"
+        },
+        "plan": {
+          "value": "CX23",
+          "sourceUrl": "https://www.hetzner.com/cloud/cost-optimized/",
+          "observedAt": "2026-09-29",
+          "scope": "Cost-Optimized Cloud Server",
+          "provenance": "CONFIRMED"
+        },
+        "resources": {
+          "value": {
+            "vcpu": 2,
+            "ramGB": 4,
+            "diskGB": 40,
+            "diskType": "NVMe"
+          },
+          "sourceUrl": "https://www.hetzner.com/cloud/cost-optimized/",
+          "observedAt": "2026-09-29",
+          "scope": "CX23 на опубликованной странице",
+          "provenance": "CONFIRMED"
+        },
+        "ipv4": {
+          "value": "Доступен отдельный Primary IPv4 за 0.50 EUR/мес. без НДС",
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/primary-ips/overview/",
+          "observedAt": "2026-09-29",
+          "scope": "IPv4 не входит в цену сервера",
+          "provenance": "CONFIRMED"
+        },
+        "linux": {
+          "value": true,
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/overview/",
+          "observedAt": "2026-09-29",
+          "scope": "Linux-образы Cloud Server",
+          "provenance": "CONFIRMED"
+        },
+        "virtualization": {
+          "value": "Гипервизор; реализация не указана",
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/overview/",
+          "observedAt": "2026-09-29",
+          "scope": "Общее описание Cloud Server; эквивалент KVM для VPS не доказан",
+          "provenance": "INFERRED"
+        },
+        "recovery": {
+          "value": {
+            "rescue": true
+          },
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/getting-started/rescue-system/",
+          "observedAt": "2026-09-29",
+          "scope": "Rescue; VNC и rebuild отдельно: https://docs.hetzner.com/cloud/servers/getting-started/vnc-console/ ; https://docs.hetzner.com/cloud/servers/faq/",
+          "provenance": "CONFIRMED"
+        },
+        "billing": {
+          "value": "Почасовой счёт с месячным cap",
+          "sourceUrl": "https://www.hetzner.com/cloud/cost-optimized/",
+          "observedAt": "2026-09-29",
+          "scope": "Сервер CX23",
+          "provenance": "CONFIRMED"
+        },
+        "tax": {
+          "value": null,
+          "sourceUrl": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+          "observedAt": "2026-09-29",
+          "scope": "Тариф исключает НДС; налог конкретного аккаунта не установлен",
+          "provenance": "UNKNOWN"
+        },
+        "availability": {
+          "value": null,
+          "sourceUrl": "https://www.hetzner.com/cloud/cost-optimized/",
+          "observedAt": "2026-09-29",
+          "scope": "Страница показывает not available, доступность nbg1 не установлена",
+          "provenance": "UNKNOWN"
+        },
+        "networkAsnContext": {
+          "value": "AS24940",
+          "sourceUrl": "https://docs.hetzner.com/general/infrastructure-and-availability/peering-policy/",
+          "observedAt": "2026-09-29",
+          "scope": "Peering бренда, не ASN будущего IP",
+          "provenance": "CONFIRMED"
+        },
+        "statusPage": {
+          "value": "https://status.hetzner.com/",
+          "sourceUrl": "https://status.hetzner.com/",
+          "observedAt": "2026-09-29",
+          "scope": "Статус всей платформы; не история будущей VM",
+          "provenance": "CONFIRMED"
+        },
+        "console": {
+          "value": true,
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/getting-started/vnc-console/",
+          "observedAt": "2026-09-29",
+          "scope": "VNC console Cloud Server",
+          "provenance": "CONFIRMED"
+        },
+        "reinstall": {
+          "value": true,
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/faq/",
+          "observedAt": "2026-09-29",
+          "scope": "Rebuild Cloud Server",
+          "provenance": "CONFIRMED"
+        }
+      }
+    }
+  ]
+}

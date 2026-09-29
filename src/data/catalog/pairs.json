@@ -1,0 +1,769 @@
+{
+  "schemaVersion": 1,
+  "pairs": [
+    {
+      "id": "selectel-digitalocean-fra1",
+      "profileId": "home-spb-rtk-fra-v1",
+      "entryNodeId": "selectel-spb-vds-2-2-40",
+      "foreignNodeId": "digitalocean-fra1-basic-2-2",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "observedAt": "2026-09-29",
+        "components": [
+          {
+            "label": "Selectel VDS 2-2-40 — ориентир за месяц",
+            "amount": 400,
+            "currency": "RUB",
+            "included": "VDS, один IPv4",
+            "conditions": "Не гарантированный фиксированный счёт; НДС не уточнён; внешний трафик сверх 3 ТБ отдельно",
+            "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+            "observedAt": "2026-09-29",
+            "scope": "VDS 2-2-40; hourly pay-as-you-go per billing terms",
+            "provenance": "CONFIRMED"
+          },
+          {
+            "label": "DigitalOcean Basic 2/2/60 — месячный предел",
+            "amount": 18,
+            "currency": "USD",
+            "included": "Droplet, IPv4",
+            "conditions": "Налог аккаунта неизвестен; включён публичный IPv4",
+            "sourceUrl": "https://www.digitalocean.com/pricing/droplets",
+            "observedAt": "2026-09-29",
+            "scope": "Bundled Plan",
+            "provenance": "CONFIRMED"
+          }
+        ],
+        "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+        "scope": "Два отдельных VPS; RUB и USD/EUR не суммируются; состав зависит от аккаунта",
+        "provenance": "INFERRED"
+      },
+      "criteria": [
+        {
+          "id": "entry-location",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": false,
+          "reason": "Selectel VDS находится в СПб, пул ru-3b",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.selectel.ru/infrastructure/product-availability-by-location/"
+        },
+        {
+          "id": "entry-provider-exclusion",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Selectel не RUVDS",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/"
+        },
+        {
+          "id": "entry-ipv4",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "FAQ конкретного продукта VDS подтверждает только IPv4",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/"
+        },
+        {
+          "id": "foreign-provider-exclusion",
+          "status": "PASS",
+          "provenance": "INFERRED",
+          "mandatory": true,
+          "reason": "Зарубежный бренд не Timeweb Cloud",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets"
+        },
+        {
+          "id": "independent-owner",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Бренды различны, но юридическое лицо договора Selectel VDS не подтверждено",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "foreign-cpu",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Не менее двух vCPU",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets"
+        },
+        {
+          "id": "foreign-ram",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Не менее 2 ГБ RAM",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets"
+        },
+        {
+          "id": "foreign-disk",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Не менее приблизительно 20 ГБ диска",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets"
+        },
+        {
+          "id": "foreign-ipv4",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Публичный IPv4 доступен для продукта",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets"
+        },
+        {
+          "id": "foreign-linux",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Linux доступен для продукта",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.digitalocean.com/products/droplets/how-to/recovery/recovery-console/"
+        },
+        {
+          "id": "foreign-virtualization",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Виртуальная машина подтверждена, но реализация гипервизора/эквивалентности не установлена",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "foreign-console",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Панельная консоль документирована",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.digitalocean.com/products/droplets/how-to/recovery/recovery-console/"
+        },
+        {
+          "id": "foreign-rescue",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Режим восстановления документирован",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.digitalocean.com/products/droplets/how-to/recovery/recovery-console/"
+        },
+        {
+          "id": "foreign-reinstall",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Переустановка или rebuild документированы",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.digitalocean.com/products/droplets/how-to/rebuild/"
+        },
+        {
+          "id": "monthly-billing",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Помесячная цена или месячный предел счёта документированы",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.digitalocean.com/pricing/droplets"
+        },
+        {
+          "id": "order-availability",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Наличие конкретного тарифа/площадки при заказе не проверено",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "home-route",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Домашний путь из Ростелекома не измерен",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "application-availability",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Прикладная доступность не проверялась",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "history-coverage",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Шестимесячное покрытие A/B/C для будущей VM не подтверждено",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "foreign-exit",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": false,
+          "reason": "FRA1 — Frankfurt, целевой город профиля",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.digitalocean.com/platform/regional-availability/"
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "ORIGIN_ISP",
+          "value": "Ростелеком AS12389",
+          "scope": "Из сохранённого профиля home-spb-rtk-fra-v1, не измерение сети",
+          "sourceUrl": null,
+          "provenance": "CONFIRMED",
+          "observedAt": "2026-09-29",
+          "profileId": "home-spb-rtk-fra-v1",
+          "sourceRef": "src/data/catalog/profiles.json#home-spb-rtk-fra-v1"
+        },
+        {
+          "kind": "ENTRY_PROVIDER",
+          "value": "Selectel",
+          "scope": "Один и тот же кандидат SPb VDS используется во всех трёх парах",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+          "provenance": "CONFIRMED",
+          "observedAt": "2026-09-29"
+        }
+      ],
+      "geoconcentration": "Frankfurt совпадает с целевым городом и текущим выходом; концентрация площадок требует отдельной оценки",
+      "decision": "UNDECIDED",
+      "reason": "Нет измерения домашнего и прикладного маршрутов, ASN/IP и данных заказа; гипервизор/эквивалентность остаётся UNKNOWN.",
+      "decisionAt": null,
+      "homeRouteStatus": "UNKNOWN"
+    },
+    {
+      "id": "selectel-ovhcloud-de",
+      "profileId": "home-spb-rtk-fra-v1",
+      "entryNodeId": "selectel-spb-vds-2-2-40",
+      "foreignNodeId": "ovhcloud-de-vps-1",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "observedAt": "2026-09-29",
+        "components": [
+          {
+            "label": "Selectel VDS 2-2-40 — ориентир за месяц",
+            "amount": 400,
+            "currency": "RUB",
+            "included": "VDS, один IPv4",
+            "conditions": "Не гарантированный фиксированный счёт; НДС не уточнён; внешний трафик сверх 3 ТБ отдельно",
+            "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+            "observedAt": "2026-09-29",
+            "scope": "VDS 2-2-40; hourly pay-as-you-go per billing terms",
+            "provenance": "CONFIRMED"
+          },
+          {
+            "label": "OVHcloud VPS-1 — цена «от» в Германии",
+            "amount": 4.53,
+            "currency": "EUR",
+            "included": "VPS, IPv4",
+            "conditions": "С НДС на витрине; конечный аккаунт, срок и конкретная площадка неизвестны",
+            "sourceUrl": "https://www.ovhcloud.com/de/vps/",
+            "observedAt": "2026-09-29",
+            "scope": "Немецкая витрина",
+            "provenance": "CONFIRMED"
+          }
+        ],
+        "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+        "scope": "Два отдельных VPS; RUB и USD/EUR не суммируются; состав зависит от аккаунта",
+        "provenance": "INFERRED"
+      },
+      "criteria": [
+        {
+          "id": "entry-location",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": false,
+          "reason": "Selectel VDS находится в СПб, пул ru-3b",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.selectel.ru/infrastructure/product-availability-by-location/"
+        },
+        {
+          "id": "entry-provider-exclusion",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Selectel не RUVDS",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/"
+        },
+        {
+          "id": "entry-ipv4",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "FAQ конкретного продукта VDS подтверждает только IPv4",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/"
+        },
+        {
+          "id": "foreign-provider-exclusion",
+          "status": "PASS",
+          "provenance": "INFERRED",
+          "mandatory": true,
+          "reason": "Зарубежный бренд не Timeweb Cloud",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/"
+        },
+        {
+          "id": "independent-owner",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Бренды различны, но юридическое лицо договора Selectel VDS не подтверждено",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "foreign-cpu",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Не менее двух vCPU",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/"
+        },
+        {
+          "id": "foreign-ram",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Не менее 2 ГБ RAM",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/"
+        },
+        {
+          "id": "foreign-disk",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Не менее приблизительно 20 ГБ диска",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/"
+        },
+        {
+          "id": "foreign-ipv4",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Публичный IPv4 доступен для продукта",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.ovhcloud.com/en/vps/"
+        },
+        {
+          "id": "foreign-linux",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Linux доступен для продукта",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.ovhcloud.com/en/vps/"
+        },
+        {
+          "id": "foreign-virtualization",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Гипервизор не установлен; KVM console не является доказательством гипервизора",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "foreign-console",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Панельная консоль документирована",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.ovhcloud.com/en/guides/bare-metal-cloud/virtual-private-servers/rescue"
+        },
+        {
+          "id": "foreign-rescue",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Режим восстановления документирован",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.ovhcloud.com/en/guides/bare-metal-cloud/virtual-private-servers/rescue"
+        },
+        {
+          "id": "foreign-reinstall",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Переустановка или rebuild документированы",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.ovhcloud.com/en/guides/bare-metal-cloud/virtual-private-servers/understand-vps-control-panel"
+        },
+        {
+          "id": "monthly-billing",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "На витрине указана цена «от» за месяц, но срок обязательства и возможность помесячной оплаты без длинного контракта не подтверждены",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.ovhcloud.com/de/vps/"
+        },
+        {
+          "id": "order-availability",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Наличие конкретного тарифа/площадки при заказе не проверено",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "home-route",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Домашний путь из Ростелекома не измерен",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "application-availability",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Прикладная доступность не проверялась",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "history-coverage",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Шестимесячное покрытие A/B/C для будущей VM не подтверждено",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "foreign-exit",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": false,
+          "reason": "Немецкая площадка есть, но город именно VPS-1 не установлен",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "ORIGIN_ISP",
+          "value": "Ростелеком AS12389",
+          "scope": "Из сохранённого профиля home-spb-rtk-fra-v1, не измерение сети",
+          "sourceUrl": null,
+          "provenance": "CONFIRMED",
+          "observedAt": "2026-09-29",
+          "profileId": "home-spb-rtk-fra-v1",
+          "sourceRef": "src/data/catalog/profiles.json#home-spb-rtk-fra-v1"
+        },
+        {
+          "kind": "ENTRY_PROVIDER",
+          "value": "Selectel",
+          "scope": "Один и тот же кандидат SPb VDS используется во всех трёх парах",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+          "provenance": "CONFIRMED",
+          "observedAt": "2026-09-29"
+        }
+      ],
+      "geoconcentration": "Немецкий VPS не локализован до города; Limburg лишь контекст OVHcloud, а не доказанная площадка VPS-1",
+      "decision": "UNDECIDED",
+      "reason": "Город/площадка конкретного VPS-1, гипервизор и финальный счёт не подтверждены; домашний маршрут UNKNOWN.",
+      "decisionAt": null,
+      "homeRouteStatus": "UNKNOWN"
+    },
+    {
+      "id": "selectel-hetzner-nbg1",
+      "profileId": "home-spb-rtk-fra-v1",
+      "entryNodeId": "selectel-spb-vds-2-2-40",
+      "foreignNodeId": "hetzner-nbg1-cx23",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "observedAt": "2026-09-29",
+        "components": [
+          {
+            "label": "Selectel VDS 2-2-40 — ориентир за месяц",
+            "amount": 400,
+            "currency": "RUB",
+            "included": "VDS, один IPv4",
+            "conditions": "Не гарантированный фиксированный счёт; НДС не уточнён; внешний трафик сверх 3 ТБ отдельно",
+            "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+            "observedAt": "2026-09-29",
+            "scope": "VDS 2-2-40; hourly pay-as-you-go per billing terms",
+            "provenance": "CONFIRMED"
+          },
+          {
+            "label": "Hetzner CX23 — цена новых заказов с 15.06.2026",
+            "amount": 5.49,
+            "currency": "EUR",
+            "included": "Cloud server",
+            "conditions": "Без НДС и IPv4; текущая страница заказа цену не показывает",
+            "sourceUrl": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+            "observedAt": "2026-09-29",
+            "scope": "Germany FSN/NBG",
+            "provenance": "CONFIRMED"
+          },
+          {
+            "label": "Hetzner — основной IPv4",
+            "amount": 0.5,
+            "currency": "EUR",
+            "included": "Публичный IPv4",
+            "conditions": "Без НДС; отдельный необходимый компонент",
+            "sourceUrl": "https://docs.hetzner.com/cloud/servers/primary-ips/overview/",
+            "observedAt": "2026-09-29",
+            "scope": "Primary IPv4",
+            "provenance": "CONFIRMED"
+          }
+        ],
+        "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+        "scope": "Два отдельных VPS; RUB и USD/EUR не суммируются; состав зависит от аккаунта",
+        "provenance": "INFERRED"
+      },
+      "criteria": [
+        {
+          "id": "entry-location",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": false,
+          "reason": "Selectel VDS находится в СПб, пул ru-3b",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.selectel.ru/infrastructure/product-availability-by-location/"
+        },
+        {
+          "id": "entry-provider-exclusion",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Selectel не RUVDS",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/"
+        },
+        {
+          "id": "entry-ipv4",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "FAQ конкретного продукта VDS подтверждает только IPv4",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/"
+        },
+        {
+          "id": "foreign-provider-exclusion",
+          "status": "PASS",
+          "provenance": "INFERRED",
+          "mandatory": true,
+          "reason": "Зарубежный бренд не Timeweb Cloud",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.hetzner.com/cloud/cost-optimized/"
+        },
+        {
+          "id": "independent-owner",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Бренды различны, но юридическое лицо договора Selectel VDS не подтверждено",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "foreign-cpu",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Не менее двух vCPU",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.hetzner.com/cloud/cost-optimized/"
+        },
+        {
+          "id": "foreign-ram",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Не менее 2 ГБ RAM",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.hetzner.com/cloud/cost-optimized/"
+        },
+        {
+          "id": "foreign-disk",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Не менее приблизительно 20 ГБ диска",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.hetzner.com/cloud/cost-optimized/"
+        },
+        {
+          "id": "foreign-ipv4",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Публичный IPv4 доступен для продукта",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/primary-ips/overview/"
+        },
+        {
+          "id": "foreign-linux",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Linux доступен для продукта",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/overview/"
+        },
+        {
+          "id": "foreign-virtualization",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Виртуальная машина подтверждена, но реализация гипервизора/эквивалентности не установлена",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "foreign-console",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Панельная консоль документирована",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/getting-started/vnc-console/"
+        },
+        {
+          "id": "foreign-rescue",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Режим восстановления документирован",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/getting-started/rescue-system/"
+        },
+        {
+          "id": "foreign-reinstall",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Переустановка или rebuild документированы",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/faq/"
+        },
+        {
+          "id": "monthly-billing",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": true,
+          "reason": "Помесячная цена или месячный предел счёта документированы",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://www.hetzner.com/cloud/cost-optimized/"
+        },
+        {
+          "id": "order-availability",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Наличие конкретного тарифа/площадки при заказе не проверено",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "home-route",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Домашний путь из Ростелекома не измерен",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "application-availability",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Прикладная доступность не проверялась",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "history-coverage",
+          "status": "UNKNOWN",
+          "provenance": "UNKNOWN",
+          "mandatory": true,
+          "reason": "Шестимесячное покрытие A/B/C для будущей VM не подтверждено",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": null
+        },
+        {
+          "id": "foreign-exit",
+          "status": "RISK",
+          "provenance": "INFERRED",
+          "mandatory": false,
+          "reason": "Nürnberg — допустимый немецкий fallback, но отклонение от предпочтительного Frankfurt; влияние на маршрут не измерено",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.hetzner.com/de/cloud/general/locations/"
+        },
+        {
+          "id": "frankfurt-deviation",
+          "status": "RISK",
+          "provenance": "CONFIRMED",
+          "mandatory": false,
+          "reason": "Nürnberg — fallback вместо предпочтительного Frankfurt; влияние на маршрут неизвестно",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.hetzner.com/de/cloud/general/locations/"
+        },
+        {
+          "id": "primary-ipv4-extra-cost",
+          "status": "PASS",
+          "provenance": "CONFIRMED",
+          "mandatory": false,
+          "reason": "Для выполнения условия IPv4 добавлен отдельный платный компонент",
+          "evaluatedAt": "2026-09-29",
+          "sourceUrl": "https://docs.hetzner.com/cloud/servers/primary-ips/overview/"
+        }
+      ],
+      "dependencies": [
+        {
+          "kind": "ORIGIN_ISP",
+          "value": "Ростелеком AS12389",
+          "scope": "Из сохранённого профиля home-spb-rtk-fra-v1, не измерение сети",
+          "sourceUrl": null,
+          "provenance": "CONFIRMED",
+          "observedAt": "2026-09-29",
+          "profileId": "home-spb-rtk-fra-v1",
+          "sourceRef": "src/data/catalog/profiles.json#home-spb-rtk-fra-v1"
+        },
+        {
+          "kind": "ENTRY_PROVIDER",
+          "value": "Selectel",
+          "scope": "Один и тот же кандидат SPb VDS используется во всех трёх парах",
+          "sourceUrl": "https://selectel.ru/services/cloud/vps-vds/",
+          "provenance": "CONFIRMED",
+          "observedAt": "2026-09-29"
+        }
+      ],
+      "geoconcentration": "Nürnberg — немецкий fallback вместо Frankfurt; задержка и маршрут не измерены",
+      "decision": "UNDECIDED",
+      "reason": "Официальная цена новых заказов есть, но CX23 отображается not available; заказ, гипервизор и домашний маршрут UNKNOWN.",
+      "decisionAt": null,
+      "homeRouteStatus": "UNKNOWN"
+    }
+  ]
+}

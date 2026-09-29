@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "selectel-status",
+      "kind": "INCIDENT_HTML",
+      "url": "https://selectel.live/incidents",
+      "profileIds": ["home-spb-rtk-fra-v1"],
+      "scope": "Официальная статус-панель Selectel; события всей платформы, применимость к будущему узлу требует проверки",
+      "frequency": "daily",
+      "enabled": true,
+      "historyMonths": 6,
+      "maxPagesPerRun": 2
+    },
+    {
+      "id": "hetzner-status",
+      "kind": "INCIDENT_ATOM",
+      "url": "https://status.hetzner.com/en.atom",
+      "profileIds": ["home-spb-rtk-fra-v1"],
+      "scope": "Официальная статус-панель Hetzner; события всей платформы, не проверка Frankfurt VPS",
+      "frequency": "daily",
+      "enabled": true,
+      "historyMonths": 6
+    },
+    {
+      "id": "digitalocean-status",
+      "kind": "DIGITALOCEAN_STATUS",
+      "url": "https://status.digitalocean.com/history",
+      "profileIds": ["home-spb-rtk-fra-v1"],
+      "scope": "DigitalOcean platform status; Droplets/FRA1 titles only, no proof of effect on a future FRA1 VM",
+      "frequency": "daily",
+      "enabled": true,
+      "historyMonths": 6,
+      "maxDetailsPerRun": 30
+    },
+    {
+      "id": "ovhcloud-status",
+      "kind": "OVHCLOUD_STATUS",
+      "url": "https://bare-metal-servers.status-ovhcloud.com/history",
+      "profileIds": ["home-spb-rtk-fra-v1"],
+      "scope": "OVHcloud Bare Metal Cloud platform status; VPS titles only, no proof of effect on a future German VM or LIM",
+      "frequency": "daily",
+      "enabled": true,
+      "historyMonths": 6,
+      "maxDetailsPerRun": 30
+    },
+    {
+      "id": "ripestat-routing-history",
+      "kind": "BGP_HISTORY",
+      "url": "https://stat.ripe.net/data/routing-history/data.json",
+      "profileIds": [],
+      "scope": "Анонсы, видимые коллекторам RIPE RIS; не прикладная доступность",
+      "frequency": "daily",
+      "enabled": false,
+      "historyMonths": 6,
+      "resources": []
+    }
+  ]
+}
