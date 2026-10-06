@@ -867,6 +867,28 @@
       "sourceUpdatedAt": "2026-09-29T13:25:04.000Z"
     },
     {
+      "id": "hetzner-status:fcb1aa57-bbb9-41eb-80e1-27eeadb929f4",
+      "sourceId": "hetzner-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "Replacement of power supply components and UPS in FSN1-DC8",
+      "startedAt": "2026-10-06T05:07:14.000Z",
+      "endedAt": null,
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "FSN1-DC8"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:fcb1aa57-bbb9-41eb-80e1-27eeadb929f4"
+      ],
+      "sourceUpdatedAt": "2026-10-06T05:08:33.000Z"
+    },
+    {
       "id": "ovhcloud-status:0nch0j9wj57p",
       "sourceId": "ovhcloud-status",
       "class": "A",
@@ -13655,6 +13677,176 @@
         "selectel-status:402764"
       ],
       "sourceUpdatedAt": "2026-10-05T08:55:42.000Z"
+    },
+    {
+      "id": "selectel-status:402809",
+      "sourceId": "selectel-status",
+      "class": "UNKNOWN",
+      "classProvenance": "UNKNOWN",
+      "status": "OPEN",
+      "title": "Проблема в работе услуги ИИ-роутер",
+      "startedAt": "2026-10-05T14:05:49.000Z",
+      "endedAt": null,
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "ИИ-роутер"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "selectel-status:402809"
+      ],
+      "sourceUpdatedAt": "2026-10-05T14:05:49.000Z"
+    },
+    {
+      "id": "selectel-status:402818",
+      "sourceId": "selectel-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "Плановые работы на электрооборудовании MSK-6 машзал №2 с 08-10-26 09:00 MSK до 08-10-26 12:00 MSK",
+      "startedAt": "2026-10-08T06:00:00.000Z",
+      "endedAt": null,
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "Выделенные серверы и оборудование"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Пулы"
+        },
+        {
+          "type": "SITE",
+          "value": "MSK-6"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Сервисы"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Выделенные серверы"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "selectel-status:402818"
+      ],
+      "sourceUpdatedAt": "2026-10-05T11:30:00.000Z"
+    },
+    {
+      "id": "selectel-status:402820",
+      "sourceId": "selectel-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "Плановые работы на электрооборудовании MSK-6 машзал №2 с 08-10-26 13:00 MSK до 08-10-26 16:00 MSK",
+      "startedAt": "2026-10-08T10:00:00.000Z",
+      "endedAt": null,
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "Выделенные серверы и оборудование"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Пулы"
+        },
+        {
+          "type": "SITE",
+          "value": "MSK-6"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Сервисы"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Выделенные серверы"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "selectel-status:402820"
+      ],
+      "sourceUpdatedAt": "2026-10-05T11:30:00.000Z"
+    },
+    {
+      "id": "selectel-status:402832",
+      "sourceId": "selectel-status",
+      "class": "B",
+      "classProvenance": "INFERRED",
+      "status": "RESOLVED",
+      "title": "Недоступность сети на время проведения аварийных работ",
+      "startedAt": "2026-10-05T15:22:01.000Z",
+      "endedAt": "2026-10-06T07:38:55.000Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "Выделенные серверы и оборудование"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Пулы"
+        },
+        {
+          "type": "SITE",
+          "value": "MSK-1"
+        },
+        {
+          "type": "SITE",
+          "value": "MSK-2"
+        },
+        {
+          "type": "SITE",
+          "value": "MSK-4"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Сервисы"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Сеть"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "selectel-status:402832"
+      ],
+      "sourceUpdatedAt": "2026-10-06T07:38:55.000Z"
+    },
+    {
+      "id": "selectel-status:402961",
+      "sourceId": "selectel-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "Плановые работы на инфраструктуре резервного копирования с 13-10-26 10:30 MSK до 13-10-26 13:30 MSK",
+      "startedAt": "2026-10-13T07:30:00.000Z",
+      "endedAt": null,
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "Продукты партнёров"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Veeam Cloud Connect/Veeam Agent"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "selectel-status:402961"
+      ],
+      "sourceUpdatedAt": "2026-10-06T09:45:00.000Z"
     }
   ],
   "bgpObservations": [],
@@ -13961,6 +14153,14 @@
       "url": "https://status.hetzner.com/incident/f654a8b9-7303-478b-aa64-78c2d82284d6",
       "observedAt": "2026-09-29T13:25:04.000Z",
       "scope": "Hetzner status: Hetzner API",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "hetzner-status:fcb1aa57-bbb9-41eb-80e1-27eeadb929f4",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/fcb1aa57-bbb9-41eb-80e1-27eeadb929f4",
+      "observedAt": "2026-10-06T05:08:33.000Z",
+      "scope": "Hetzner status: FSN1-DC8",
       "provenance": "CONFIRMED"
     },
     {
@@ -16594,37 +16794,77 @@
       "observedAt": "2026-10-05T08:55:42.000Z",
       "scope": "Selectel status: Облачная платформа, Пулы, ru-9a, Интерфейсы, API",
       "provenance": "CONFIRMED"
+    },
+    {
+      "id": "selectel-status:402809",
+      "sourceId": "selectel-status",
+      "url": "https://selectel.live/incidents/402809",
+      "observedAt": "2026-10-05T14:05:49.000Z",
+      "scope": "Selectel status: ИИ-роутер",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "selectel-status:402818",
+      "sourceId": "selectel-status",
+      "url": "https://selectel.live/incidents/402818",
+      "observedAt": "2026-10-05T11:30:00.000Z",
+      "scope": "Selectel status: Выделенные серверы и оборудование, Пулы, MSK-6, Сервисы, Выделенные серверы",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "selectel-status:402820",
+      "sourceId": "selectel-status",
+      "url": "https://selectel.live/incidents/402820",
+      "observedAt": "2026-10-05T11:30:00.000Z",
+      "scope": "Selectel status: Выделенные серверы и оборудование, Пулы, MSK-6, Сервисы, Выделенные серверы",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "selectel-status:402832",
+      "sourceId": "selectel-status",
+      "url": "https://selectel.live/incidents/402832",
+      "observedAt": "2026-10-06T07:38:55.000Z",
+      "scope": "Selectel status: Выделенные серверы и оборудование, Пулы, MSK-1, MSK-2, MSK-4, Сервисы, Сеть",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "selectel-status:402961",
+      "sourceId": "selectel-status",
+      "url": "https://selectel.live/incidents/402961",
+      "observedAt": "2026-10-06T09:45:00.000Z",
+      "scope": "Selectel status: Продукты партнёров, Veeam Cloud Connect/Veeam Agent",
+      "provenance": "CONFIRMED"
     }
   ],
   "sourceState": {
     "selectel-status": {
-      "lastAttemptAt": "2026-10-05T10:30:33.309Z",
-      "lastSuccessAt": "2026-10-05T10:30:33.309Z",
+      "lastAttemptAt": "2026-10-06T10:22:32.822Z",
+      "lastSuccessAt": "2026-10-06T10:22:32.822Z",
       "error": null,
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "https://selectel.live/incidents?after=g3QAAAACdwJpZGIABe-Udw1zdGFydHNfYXRfdXRjdAAAAA13C21pY3Jvc2Vjb25kaAJhAGEAdwZzZWNvbmRhAHcIY2FsZW5kYXJ3E0VsaXhpci5DYWxlbmRhci5JU093BW1vbnRoYQh3Cl9fc3RydWN0X193D0VsaXhpci5EYXRlVGltZXcKdXRjX29mZnNldGEAdwpzdGRfb2Zmc2V0YQB3BHllYXJiAAAH6ncEaG91cmELdwNkYXlhBXcJem9uZV9hYmJybQAAAANVVEN3Bm1pbnV0ZWEAdwl0aW1lX3pvbmVtAAAAB0V0Yy9VVEM%3D",
-      "observedEnd": "2026-10-05T07:48:49.000Z"
+      "refreshCursor": "https://selectel.live/incidents?after=g3QAAAACdwJpZGIABbRzdw1zdGFydHNfYXRfdXRjdAAAAA13C21pY3Jvc2Vjb25kaAJhAGEAdwZzZWNvbmRhAHcIY2FsZW5kYXJ3E0VsaXhpci5DYWxlbmRhci5JU093BW1vbnRoYQV3Cl9fc3RydWN0X193D0VsaXhpci5EYXRlVGltZXcKdXRjX29mZnNldGEAdwpzdGRfb2Zmc2V0YQB3BHllYXJiAAAH6ncEaG91cmESdwNkYXlhFHcJem9uZV9hYmJybQAAAANVVEN3Bm1pbnV0ZWEAdwl0aW1lX3pvbmVtAAAAB0V0Yy9VVEM%3D",
+      "observedEnd": "2026-10-06T10:00:00.000Z"
     },
     "hetzner-status": {
-      "lastAttemptAt": "2026-10-05T10:30:33.309Z",
-      "lastSuccessAt": "2026-10-05T10:30:33.309Z",
+      "lastAttemptAt": "2026-10-06T10:22:32.822Z",
+      "lastSuccessAt": "2026-10-06T10:22:32.822Z",
       "error": null,
       "nextCursor": null,
       "backfillComplete": false,
       "expectedFrequency": "daily",
       "refreshCursor": null,
-      "observedEnd": "2026-10-05T08:09:25.000Z"
+      "observedEnd": "2026-10-06T05:08:33.000Z"
     },
     "digitalocean-status": {
-      "lastAttemptAt": "2026-10-05T10:30:33.309Z",
-      "lastSuccessAt": "2026-10-05T10:30:33.309Z",
+      "lastAttemptAt": "2026-10-06T10:22:32.822Z",
+      "lastSuccessAt": "2026-10-06T10:22:32.822Z",
       "error": "Official incident detail unavailable: 4v4m8rywbtx2; Official incident detail unavailable: d60xpcw15jqc; Official incident detail unavailable: df2vx9wzqfdz; Official incident detail unavailable: mw0kv1pvk6hm; Official incident detail unavailable: tdz57gsr1j90",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "3",
+      "refreshCursor": "2",
       "historyMarkers": {
         "y3kn2w2qf5s4": "8fb3407c0446fe5034e1336060fe5d9f7ea49d19df9da4cce8cc53e56934ef27",
         "2wql4f4sb13r": "270675dd7de54c0a26509cbc394fa8dc5501668e2f1f4894595270cc8f114076",
@@ -16637,7 +16877,7 @@
         "7jwkcbg34qsp": "36a64f9317cce602c3a61cbbcef92a40174ee76618ce4da1cc4d3cbad6692ea0",
         "3lq0zklcll0k": "ccc02a3dc509395e5a955e50d9ef44e14bc4be90e433feaa8e50c20b8d972d1f"
       },
-      "observedEnd": "2026-10-05T10:30:33.309Z",
+      "observedEnd": "2026-10-06T10:22:32.822Z",
       "unavailableDetails": [
         "4v4m8rywbtx2",
         "d60xpcw15jqc",
@@ -16647,13 +16887,13 @@
       ]
     },
     "ovhcloud-status": {
-      "lastAttemptAt": "2026-10-05T10:30:33.309Z",
-      "lastSuccessAt": "2026-10-05T10:30:33.309Z",
+      "lastAttemptAt": "2026-10-06T10:22:32.822Z",
+      "lastSuccessAt": "2026-10-06T10:22:32.822Z",
       "error": "Official incident detail unavailable: 81m8s8bwnpcs; Official incident detail unavailable: 8y80j6w970h5; Official incident detail unavailable: k4p0k8t330vf; Official incident detail unavailable: mxwv4kcwmw72",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "3",
+      "refreshCursor": "2",
       "historyMarkers": {
         "0yls4rmkpcmq": "5c1159b2d43abbf09488d4dd05d252d24f9815f668dafc6228032ef1e06085dd",
         "33cwgb7hg5j8": "67c48698dd4f85e5f7399373f98639fe2cfb2ace2a590450a0a48666dc62394f",
@@ -16721,7 +16961,7 @@
         "wkfw32fl7flj": "0161702d66b489eb9be8563599c0add4bc3f80f94fcac00c9d12c125253cd38f",
         "tch2h9n53kb6": "1d16c9417c74c1c0338ed195f4e519f0755031c368eefec91ae60cca9fcf56bf"
       },
-      "observedEnd": "2026-10-05T10:30:33.309Z",
+      "observedEnd": "2026-10-06T10:22:32.822Z",
       "unavailableDetails": [
         "81m8s8bwnpcs",
         "8y80j6w970h5",
@@ -16735,9 +16975,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "selectel-status",
       "class": "A",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": "2026-03-30T07:37:22.000Z",
-      "observedEnd": "2026-10-05T07:48:49.000Z",
+      "observedEnd": "2026-10-06T10:00:00.000Z",
       "gaps": [
         "Provider reports do not establish all incidents or coverage of a specific VPS"
       ],
@@ -16747,9 +16987,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "selectel-status",
       "class": "B",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": "2026-03-30T07:37:22.000Z",
-      "observedEnd": "2026-10-05T07:48:49.000Z",
+      "observedEnd": "2026-10-06T10:00:00.000Z",
       "gaps": [
         "Provider reports do not establish all incidents or coverage of a specific VPS"
       ],
@@ -16759,7 +16999,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "selectel-status",
       "class": "C",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": "2026-03-30T18:00:00.000Z",
       "observedEnd": "2026-09-10T07:00:00.000Z",
       "gaps": [
@@ -16771,9 +17011,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "A",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
-      "observedEnd": "2026-10-05T08:09:25.000Z",
+      "observedEnd": "2026-10-06T05:08:33.000Z",
       "gaps": [
         "Atom feed has no confirmed historical pagination; earlier incidents may be missing",
         "Provider reports do not establish all incidents or coverage of a specific VPS"
@@ -16784,9 +17024,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "B",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
-      "observedEnd": "2026-10-05T08:09:25.000Z",
+      "observedEnd": "2026-10-06T05:08:33.000Z",
       "gaps": [
         "Atom feed has no confirmed historical pagination; earlier incidents may be missing",
         "Provider reports do not establish all incidents or coverage of a specific VPS"
@@ -16797,7 +17037,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "C",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -16809,9 +17049,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "A",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": "2026-04-10T20:32:35.016Z",
-      "observedEnd": "2026-10-05T10:30:33.309Z",
+      "observedEnd": "2026-10-06T10:22:32.822Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -16826,9 +17066,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "B",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": null,
-      "observedEnd": "2026-10-05T10:30:33.309Z",
+      "observedEnd": "2026-10-06T10:22:32.822Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -16843,7 +17083,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "C",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -16855,9 +17095,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "A",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": "2026-03-30T08:53:41.008Z",
-      "observedEnd": "2026-10-05T10:30:33.309Z",
+      "observedEnd": "2026-10-06T10:22:32.822Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -16871,9 +17111,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "B",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": "2026-05-19T18:06:18.290Z",
-      "observedEnd": "2026-10-05T10:30:33.309Z",
+      "observedEnd": "2026-10-06T10:22:32.822Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -16887,7 +17127,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "C",
-      "requestedStart": "2026-04-05T10:30:33.309Z",
+      "requestedStart": "2026-04-06T10:22:32.822Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -23177,6 +23417,78 @@
       "at": "2026-10-05T10:30:33.309Z",
       "sourceId": "ovhcloud-status",
       "id": "ovhcloud-status:tch2h9n53kb6",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:402961",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:402820",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:402818",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:402832",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:402809",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:402961",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:402820",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:402818",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:402832",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:402809",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:fcb1aa57-bbb9-41eb-80e1-27eeadb929f4",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-06T10:22:32.822Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:fcb1aa57-bbb9-41eb-80e1-27eeadb929f4",
       "change": "ADDED"
     }
   ]
