@@ -273,6 +273,28 @@
       "sourceUpdatedAt": "2026-10-23T10:10:38.000Z"
     },
     {
+      "id": "hetzner-status:2075cefc-4bdd-4fe5-869a-6d7da8388118",
+      "sourceId": "hetzner-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "UPS function tests in FSN1-DC8",
+      "startedAt": "2026-10-28T12:00:00.000Z",
+      "endedAt": "2026-10-28T13:00:00.000Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "FSN1-DC8"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:2075cefc-4bdd-4fe5-869a-6d7da8388118"
+      ],
+      "sourceUpdatedAt": "2026-10-26T07:08:19.000Z"
+    },
+    {
       "id": "hetzner-status:24a97435-a8e3-4982-9c0e-44d513bbc2d7",
       "sourceId": "hetzner-status",
       "class": "UNKNOWN",
@@ -601,6 +623,28 @@
         "hetzner-status:6b2bc579-6fba-434d-a5b7-a1b07490aa6b"
       ],
       "sourceUpdatedAt": "2026-09-30T09:01:39.000Z"
+    },
+    {
+      "id": "hetzner-status:6e51938c-797f-4c97-a8af-449755d4bd00",
+      "sourceId": "hetzner-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "Function tests on UPS and emergency power systems in FSN1-DC8",
+      "startedAt": "2026-10-27T08:00:00.000Z",
+      "endedAt": "2026-10-27T09:00:00.000Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "FSN1-DC8"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:6e51938c-797f-4c97-a8af-449755d4bd00"
+      ],
+      "sourceUpdatedAt": "2026-10-26T07:05:28.000Z"
     },
     {
       "id": "hetzner-status:7142aae4-3c29-4658-8b3b-98e54cce7f55",
@@ -16962,6 +17006,14 @@
       "provenance": "CONFIRMED"
     },
     {
+      "id": "hetzner-status:2075cefc-4bdd-4fe5-869a-6d7da8388118",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/2075cefc-4bdd-4fe5-869a-6d7da8388118",
+      "observedAt": "2026-10-26T07:08:19.000Z",
+      "scope": "Hetzner status: FSN1-DC8",
+      "provenance": "CONFIRMED"
+    },
+    {
       "id": "hetzner-status:24a97435-a8e3-4982-9c0e-44d513bbc2d7",
       "sourceId": "hetzner-status",
       "url": "https://status.hetzner.com/incident/24a97435-a8e3-4982-9c0e-44d513bbc2d7",
@@ -17079,6 +17131,14 @@
       "url": "https://status.hetzner.com/incident/6b2bc579-6fba-434d-a5b7-a1b07490aa6b",
       "observedAt": "2026-09-30T09:01:39.000Z",
       "scope": "Hetzner status: Managed",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "hetzner-status:6e51938c-797f-4c97-a8af-449755d4bd00",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/6e51938c-797f-4c97-a8af-449755d4bd00",
+      "observedAt": "2026-10-26T07:05:28.000Z",
+      "scope": "Hetzner status: FSN1-DC8",
       "provenance": "CONFIRMED"
     },
     {
@@ -20556,33 +20616,33 @@
   ],
   "sourceState": {
     "selectel-status": {
-      "lastAttemptAt": "2026-10-25T08:28:16.938Z",
-      "lastSuccessAt": "2026-10-25T08:28:16.938Z",
+      "lastAttemptAt": "2026-10-26T08:59:35.638Z",
+      "lastSuccessAt": "2026-10-26T08:59:35.638Z",
       "error": null,
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "https://selectel.live/incidents?after=g3QAAAACdwJpZGIABhWodw1zdGFydHNfYXRfdXRjdAAAAA13C21pY3Jvc2Vjb25kaAJhAGEAdwZzZWNvbmRhAHcIY2FsZW5kYXJ3E0VsaXhpci5DYWxlbmRhci5JU093BW1vbnRoYQl3Cl9fc3RydWN0X193D0VsaXhpci5EYXRlVGltZXcKdXRjX29mZnNldGEAdwpzdGRfb2Zmc2V0YQB3BHllYXJiAAAH6ncEaG91cmEOdwNkYXlhEXcJem9uZV9hYmJybQAAAANVVEN3Bm1pbnV0ZWEAdwl0aW1lX3pvbmVtAAAAB0V0Yy9VVEM%3D",
-      "observedEnd": "2026-10-22T15:21:50.000Z"
+      "refreshCursor": "https://selectel.live/incidents?after=g3QAAAACdwJpZGIABdjkdw1zdGFydHNfYXRfdXRjdAAAAA13C21pY3Jvc2Vjb25kaAJhAGEAdwZzZWNvbmRhD3cIY2FsZW5kYXJ3E0VsaXhpci5DYWxlbmRhci5JU093BW1vbnRoYQd3Cl9fc3RydWN0X193D0VsaXhpci5EYXRlVGltZXcKdXRjX29mZnNldGEAdwpzdGRfb2Zmc2V0YQB3BHllYXJiAAAH6ncEaG91cmESdwNkYXlhA3cJem9uZV9hYmJybQAAAANVVEN3Bm1pbnV0ZWEldwl0aW1lX3pvbmVtAAAAB0V0Yy9VVEM%3D",
+      "observedEnd": "2026-10-26T07:00:00.000Z"
     },
     "hetzner-status": {
-      "lastAttemptAt": "2026-10-25T08:28:16.938Z",
-      "lastSuccessAt": "2026-10-25T08:28:16.938Z",
+      "lastAttemptAt": "2026-10-26T08:59:35.638Z",
+      "lastSuccessAt": "2026-10-26T08:59:35.638Z",
       "error": null,
       "nextCursor": null,
       "backfillComplete": false,
       "expectedFrequency": "daily",
       "refreshCursor": null,
-      "observedEnd": "2026-10-23T15:22:50.000Z"
+      "observedEnd": "2026-10-26T07:08:19.000Z"
     },
     "digitalocean-status": {
-      "lastAttemptAt": "2026-10-25T08:28:16.938Z",
-      "lastSuccessAt": "2026-10-25T08:28:16.938Z",
+      "lastAttemptAt": "2026-10-26T08:59:35.638Z",
+      "lastSuccessAt": "2026-10-26T08:59:35.638Z",
       "error": "Official incident detail unavailable: 4v4m8rywbtx2; Official incident detail unavailable: d60xpcw15jqc; Official incident detail unavailable: df2vx9wzqfdz; Official incident detail unavailable: mw0kv1pvk6hm; Official incident detail unavailable: tdz57gsr1j90",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "2",
+      "refreshCursor": "3",
       "historyMarkers": {
         "y3kn2w2qf5s4": "8fb3407c0446fe5034e1336060fe5d9f7ea49d19df9da4cce8cc53e56934ef27",
         "2wql4f4sb13r": "270675dd7de54c0a26509cbc394fa8dc5501668e2f1f4894595270cc8f114076",
@@ -20595,7 +20655,7 @@
         "7jwkcbg34qsp": "36a64f9317cce602c3a61cbbcef92a40174ee76618ce4da1cc4d3cbad6692ea0",
         "3lq0zklcll0k": "ccc02a3dc509395e5a955e50d9ef44e14bc4be90e433feaa8e50c20b8d972d1f"
       },
-      "observedEnd": "2026-10-25T08:28:16.938Z",
+      "observedEnd": "2026-10-26T08:59:35.638Z",
       "unavailableDetails": [
         "4v4m8rywbtx2",
         "d60xpcw15jqc",
@@ -20605,13 +20665,13 @@
       ]
     },
     "ovhcloud-status": {
-      "lastAttemptAt": "2026-10-25T08:28:16.938Z",
-      "lastSuccessAt": "2026-10-25T08:28:16.938Z",
+      "lastAttemptAt": "2026-10-26T08:59:35.638Z",
+      "lastSuccessAt": "2026-10-26T08:59:35.638Z",
       "error": "Official incident detail unavailable: 81m8s8bwnpcs; Official incident detail unavailable: 8y80j6w970h5; Official incident detail unavailable: k4p0k8t330vf; Official incident detail unavailable: mxwv4kcwmw72",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "2",
+      "refreshCursor": "3",
       "historyMarkers": {
         "0yls4rmkpcmq": "5c1159b2d43abbf09488d4dd05d252d24f9815f668dafc6228032ef1e06085dd",
         "33cwgb7hg5j8": "67c48698dd4f85e5f7399373f98639fe2cfb2ace2a590450a0a48666dc62394f",
@@ -20682,7 +20742,7 @@
         "hxqybch5twd7": "7ccabfe44aa106a4b106dd200f3b244449143af6d37dbffb5c0a635e418882d4",
         "jqqkp50j9snr": "aaaf85e21f5bf2c33d9ac3ef818e51076c9089d9acc9b26ba3d8e01257e81884"
       },
-      "observedEnd": "2026-10-25T08:28:16.938Z",
+      "observedEnd": "2026-10-26T08:59:35.638Z",
       "unavailableDetails": [
         "81m8s8bwnpcs",
         "8y80j6w970h5",
@@ -20696,9 +20756,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "selectel-status",
       "class": "A",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": "2026-03-30T07:37:22.000Z",
-      "observedEnd": "2026-10-22T15:21:50.000Z",
+      "observedEnd": "2026-10-26T07:00:00.000Z",
       "gaps": [
         "Provider reports do not establish all incidents or coverage of a specific VPS"
       ],
@@ -20708,9 +20768,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "selectel-status",
       "class": "B",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": "2026-03-30T07:37:22.000Z",
-      "observedEnd": "2026-10-22T15:21:50.000Z",
+      "observedEnd": "2026-10-26T07:00:00.000Z",
       "gaps": [
         "Provider reports do not establish all incidents or coverage of a specific VPS"
       ],
@@ -20720,9 +20780,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "selectel-status",
       "class": "C",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": "2026-03-30T18:00:00.000Z",
-      "observedEnd": "2026-10-25T08:28:16.938Z",
+      "observedEnd": "2026-10-26T08:59:35.638Z",
       "gaps": [
         "Provider incident reports do not establish complete application coverage or home-route reachability"
       ],
@@ -20732,9 +20792,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "A",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
-      "observedEnd": "2026-10-23T15:22:50.000Z",
+      "observedEnd": "2026-10-26T07:08:19.000Z",
       "gaps": [
         "Atom feed has no confirmed historical pagination; earlier incidents may be missing",
         "Provider reports do not establish all incidents or coverage of a specific VPS"
@@ -20745,9 +20805,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "B",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
-      "observedEnd": "2026-10-23T15:22:50.000Z",
+      "observedEnd": "2026-10-26T07:08:19.000Z",
       "gaps": [
         "Atom feed has no confirmed historical pagination; earlier incidents may be missing",
         "Provider reports do not establish all incidents or coverage of a specific VPS"
@@ -20758,7 +20818,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "C",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -20770,9 +20830,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "A",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": "2026-04-10T20:32:35.016Z",
-      "observedEnd": "2026-10-25T08:28:16.938Z",
+      "observedEnd": "2026-10-26T08:59:35.638Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -20787,9 +20847,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "B",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": null,
-      "observedEnd": "2026-10-25T08:28:16.938Z",
+      "observedEnd": "2026-10-26T08:59:35.638Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -20804,7 +20864,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "C",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -20816,9 +20876,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "A",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": "2026-03-30T08:53:41.008Z",
-      "observedEnd": "2026-10-25T08:28:16.938Z",
+      "observedEnd": "2026-10-26T08:59:35.638Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -20832,9 +20892,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "B",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": "2026-05-19T18:06:18.290Z",
-      "observedEnd": "2026-10-25T08:28:16.938Z",
+      "observedEnd": "2026-10-26T08:59:35.638Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -20848,7 +20908,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "C",
-      "requestedStart": "2026-04-25T08:28:16.938Z",
+      "requestedStart": "2026-04-26T08:59:35.638Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -29070,6 +29130,30 @@
       "at": "2026-10-25T08:28:16.938Z",
       "sourceId": "ovhcloud-status",
       "id": "ovhcloud-status:jqqkp50j9snr",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-26T08:59:35.638Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:6e51938c-797f-4c97-a8af-449755d4bd00",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-26T08:59:35.638Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:2075cefc-4bdd-4fe5-869a-6d7da8388118",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-26T08:59:35.638Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:6e51938c-797f-4c97-a8af-449755d4bd00",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-10-26T08:59:35.638Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:2075cefc-4bdd-4fe5-869a-6d7da8388118",
       "change": "ADDED"
     }
   ]
