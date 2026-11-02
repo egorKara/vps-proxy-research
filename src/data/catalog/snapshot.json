@@ -234,13 +234,13 @@
       "class": "A",
       "classProvenance": "INFERRED",
       "status": "PLANNED",
-      "title": "Maintenance UPS systems in FSN1-DC22",
+      "title": "Maintenance UPS systems in FSN1-DC24",
       "startedAt": "2026-11-02T08:00:00.000Z",
       "endedAt": null,
       "affected": [
         {
           "type": "SERVICE",
-          "value": "FSN1-DC22"
+          "value": "FSN1-DC24"
         }
       ],
       "cause": null,
@@ -248,7 +248,7 @@
       "evidenceIds": [
         "hetzner-status:0621fc5e-872c-4128-bb44-a30b89853ce6"
       ],
-      "sourceUpdatedAt": "2026-10-27T09:58:26.000Z"
+      "sourceUpdatedAt": "2026-11-02T10:06:31.000Z"
     },
     {
       "id": "hetzner-status:087d31fa-e286-413e-b42d-a3251e2894db",
@@ -337,6 +337,28 @@
         "hetzner-status:16416037-66a3-4d12-b742-a1e3c4821d6c"
       ],
       "sourceUpdatedAt": "2026-10-27T07:29:50.000Z"
+    },
+    {
+      "id": "hetzner-status:1c356f97-9be9-44f3-a22c-d6f7f72f9917",
+      "sourceId": "hetzner-status",
+      "class": "UNKNOWN",
+      "classProvenance": "UNKNOWN",
+      "status": "PLANNED",
+      "title": "Maintenance work on mirror (mirror.hetzner.com / download.hetzner.com)",
+      "startedAt": "2026-11-05T06:00:00.000Z",
+      "endedAt": "2026-11-05T08:00:00.000Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "Mirror"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:1c356f97-9be9-44f3-a22c-d6f7f72f9917"
+      ],
+      "sourceUpdatedAt": "2026-11-02T08:00:30.000Z"
     },
     {
       "id": "hetzner-status:1f95308c-1331-4442-adf5-c5932ca5e642",
@@ -625,6 +647,28 @@
       "sourceUpdatedAt": "2026-09-28T13:39:36.000Z"
     },
     {
+      "id": "hetzner-status:440dfc5a-f616-4563-ba85-a87cbef95551",
+      "sourceId": "hetzner-status",
+      "class": "UNKNOWN",
+      "classProvenance": "UNKNOWN",
+      "status": "PLANNED",
+      "title": "Maintenance work on abuse system",
+      "startedAt": "2026-11-03T05:30:00.000Z",
+      "endedAt": "2026-11-03T06:00:00.000Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "Abuse"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:440dfc5a-f616-4563-ba85-a87cbef95551"
+      ],
+      "sourceUpdatedAt": "2026-11-02T10:26:02.000Z"
+    },
+    {
       "id": "hetzner-status:4fb0d796-7dd1-478b-a63b-d999212499b7",
       "sourceId": "hetzner-status",
       "class": "UNKNOWN",
@@ -733,6 +777,28 @@
         "hetzner-status:59d75fd8-6185-490d-b685-97f19bb16259"
       ],
       "sourceUpdatedAt": "2026-10-07T08:03:33.000Z"
+    },
+    {
+      "id": "hetzner-status:68690c28-5165-47c8-8f49-68de2934c1c1",
+      "sourceId": "hetzner-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "Function tests on UPS and emergency power systems in FSN1-DC24",
+      "startedAt": "2026-11-03T08:00:00.000Z",
+      "endedAt": null,
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "FSN1-DC24"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:68690c28-5165-47c8-8f49-68de2934c1c1"
+      ],
+      "sourceUpdatedAt": "2026-11-02T10:08:25.000Z"
     },
     {
       "id": "hetzner-status:6b2bc579-6fba-434d-a5b7-a1b07490aa6b",
@@ -1283,6 +1349,28 @@
         "hetzner-status:d5f60e1e-5919-4f0e-bfe4-2387ae7e1c9f"
       ],
       "sourceUpdatedAt": "2026-10-01T09:42:54.000Z"
+    },
+    {
+      "id": "hetzner-status:db6e18fc-7331-4aec-95de-3cae5f01d970",
+      "sourceId": "hetzner-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "Function tests on UPS and emergency power systems in FSN1-DC1",
+      "startedAt": "2026-11-03T07:00:00.000Z",
+      "endedAt": null,
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "FSN1-DC1"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:db6e18fc-7331-4aec-95de-3cae5f01d970"
+      ],
+      "sourceUpdatedAt": "2026-11-02T07:53:38.000Z"
     },
     {
       "id": "hetzner-status:dc591a73-758c-4b18-a4a2-7ed98e7c6428",
@@ -2537,6 +2625,28 @@
       "sourceUpdatedAt": "2026-05-04T15:14:26.853Z"
     },
     {
+      "id": "ovhcloud-status:wchmzmg4s659",
+      "sourceId": "ovhcloud-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "RESOLVED",
+      "title": "[SBG8][Virtual Private Servers] - VPS Incident Notification",
+      "startedAt": "2026-11-01T19:49:01.843Z",
+      "endedAt": "2026-11-01T20:06:36.600Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "SBG"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "ovhcloud-status:wchmzmg4s659"
+      ],
+      "sourceUpdatedAt": "2026-11-01T20:06:36.625Z"
+    },
+    {
       "id": "ovhcloud-status:wkfw32fl7flj",
       "sourceId": "ovhcloud-status",
       "class": "A",
@@ -2695,6 +2805,28 @@
         "ovhcloud-status:yzqlxh16yr5k"
       ],
       "sourceUpdatedAt": "2026-07-20T15:57:34.183Z"
+    },
+    {
+      "id": "ovhcloud-status:zfl14r5cfwtz",
+      "sourceId": "ovhcloud-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "RESOLVED",
+      "title": "[SBG6/8][Virtual Private Servers] - VPS Incident Notification",
+      "startedAt": "2026-11-01T18:38:57.000Z",
+      "endedAt": "2026-11-01T19:43:44.443Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "SBG"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "ovhcloud-status:zfl14r5cfwtz"
+      ],
+      "sourceUpdatedAt": "2026-11-01T19:47:57.594Z"
     },
     {
       "id": "selectel-status:360953",
@@ -15850,6 +15982,10 @@
         },
         {
           "type": "SERVICE",
+          "value": "uz-1b"
+        },
+        {
+          "type": "SERVICE",
           "value": "ke-1a"
         },
         {
@@ -17558,7 +17694,7 @@
       "evidenceIds": [
         "selectel-status:408427"
       ],
-      "sourceUpdatedAt": "2026-10-28T11:03:39.000Z"
+      "sourceUpdatedAt": "2026-11-02T06:58:36.000Z"
     },
     {
       "id": "selectel-status:408461",
@@ -17939,6 +18075,52 @@
         "selectel-status:409109"
       ],
       "sourceUpdatedAt": "2026-10-30T12:01:58.000Z"
+    },
+    {
+      "id": "selectel-status:409361",
+      "sourceId": "selectel-status",
+      "class": "UNKNOWN",
+      "classProvenance": "UNKNOWN",
+      "status": "RESOLVED",
+      "title": "Проблемы в работе API облачных баз данных в регионе ru-1",
+      "startedAt": "2026-11-01T17:28:38.000Z",
+      "endedAt": "2026-11-01T19:02:18.000Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "Облачная платформа"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Пулы"
+        },
+        {
+          "type": "SERVICE",
+          "value": "ru-1a"
+        },
+        {
+          "type": "SERVICE",
+          "value": "ru-1b"
+        },
+        {
+          "type": "SERVICE",
+          "value": "ru-1c"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Сервисы"
+        },
+        {
+          "type": "SERVICE",
+          "value": "Облачные базы данных"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "selectel-status:409361"
+      ],
+      "sourceUpdatedAt": "2026-11-01T19:02:18.000Z"
     }
   ],
   "bgpObservations": [],
@@ -18019,8 +18201,8 @@
       "id": "hetzner-status:0621fc5e-872c-4128-bb44-a30b89853ce6",
       "sourceId": "hetzner-status",
       "url": "https://status.hetzner.com/incident/0621fc5e-872c-4128-bb44-a30b89853ce6",
-      "observedAt": "2026-10-27T09:58:26.000Z",
-      "scope": "Hetzner status: FSN1-DC22",
+      "observedAt": "2026-11-02T10:06:31.000Z",
+      "scope": "Hetzner status: FSN1-DC24",
       "provenance": "CONFIRMED"
     },
     {
@@ -18053,6 +18235,14 @@
       "url": "https://status.hetzner.com/incident/16416037-66a3-4d12-b742-a1e3c4821d6c",
       "observedAt": "2026-10-27T07:29:50.000Z",
       "scope": "Hetzner status: HEL1-DC6",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "hetzner-status:1c356f97-9be9-44f3-a22c-d6f7f72f9917",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/1c356f97-9be9-44f3-a22c-d6f7f72f9917",
+      "observedAt": "2026-11-02T08:00:30.000Z",
+      "scope": "Hetzner status: Mirror",
       "provenance": "CONFIRMED"
     },
     {
@@ -18160,6 +18350,14 @@
       "provenance": "CONFIRMED"
     },
     {
+      "id": "hetzner-status:440dfc5a-f616-4563-ba85-a87cbef95551",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/440dfc5a-f616-4563-ba85-a87cbef95551",
+      "observedAt": "2026-11-02T10:26:02.000Z",
+      "scope": "Hetzner status: Abuse",
+      "provenance": "CONFIRMED"
+    },
+    {
       "id": "hetzner-status:4fb0d796-7dd1-478b-a63b-d999212499b7",
       "sourceId": "hetzner-status",
       "url": "https://status.hetzner.com/incident/4fb0d796-7dd1-478b-a63b-d999212499b7",
@@ -18197,6 +18395,14 @@
       "url": "https://status.hetzner.com/incident/59d75fd8-6185-490d-b685-97f19bb16259",
       "observedAt": "2026-10-07T08:03:33.000Z",
       "scope": "Hetzner status: Load Balancer",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "hetzner-status:68690c28-5165-47c8-8f49-68de2934c1c1",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/68690c28-5165-47c8-8f49-68de2934c1c1",
+      "observedAt": "2026-11-02T10:08:25.000Z",
+      "scope": "Hetzner status: FSN1-DC24",
       "provenance": "CONFIRMED"
     },
     {
@@ -18397,6 +18603,14 @@
       "url": "https://status.hetzner.com/incident/d5f60e1e-5919-4f0e-bfe4-2387ae7e1c9f",
       "observedAt": "2026-10-01T09:42:54.000Z",
       "scope": "Hetzner status: Load Balancer",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "hetzner-status:db6e18fc-7331-4aec-95de-3cae5f01d970",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/db6e18fc-7331-4aec-95de-3cae5f01d970",
+      "observedAt": "2026-11-02T07:53:38.000Z",
+      "scope": "Hetzner status: FSN1-DC1",
       "provenance": "CONFIRMED"
     },
     {
@@ -18816,6 +19030,14 @@
       "provenance": "CONFIRMED"
     },
     {
+      "id": "ovhcloud-status:wchmzmg4s659",
+      "sourceId": "ovhcloud-status",
+      "url": "https://bare-metal-servers.status-ovhcloud.com/incidents/wchmzmg4s659",
+      "observedAt": "2026-11-01T20:06:36.625Z",
+      "scope": "OVHcloud Bare Metal Cloud platform status; VPS titles only, no proof of effect on a future German VM or LIM; provider incident; affected components: SBG",
+      "provenance": "CONFIRMED"
+    },
+    {
       "id": "ovhcloud-status:wkfw32fl7flj",
       "sourceId": "ovhcloud-status",
       "url": "https://bare-metal-servers.status-ovhcloud.com/incidents/wkfw32fl7flj",
@@ -18845,6 +19067,14 @@
       "url": "https://bare-metal-servers.status-ovhcloud.com/incidents/yzqlxh16yr5k",
       "observedAt": "2026-07-20T15:57:34.183Z",
       "scope": "OVHcloud Bare Metal Cloud platform status; VPS titles only, no proof of effect on a future German VM or LIM; provider incident; affected components: GRA",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "ovhcloud-status:zfl14r5cfwtz",
+      "sourceId": "ovhcloud-status",
+      "url": "https://bare-metal-servers.status-ovhcloud.com/incidents/zfl14r5cfwtz",
+      "observedAt": "2026-11-01T19:47:57.594Z",
+      "scope": "OVHcloud Bare Metal Cloud platform status; VPS titles only, no proof of effect on a future German VM or LIM; provider incident; affected components: SBG",
       "provenance": "CONFIRMED"
     },
     {
@@ -21436,7 +21666,7 @@
       "sourceId": "selectel-status",
       "url": "https://selectel.live/incidents/405326",
       "observedAt": "2026-10-29T09:31:58.000Z",
-      "scope": "Selectel status: Облачная платформа, Пулы, ru-1b, ru-1c, ru-3a, ru-3b, ru-3c, uz-1a, ke-1a, ru-6a, ru-6b, Сервисы, Облачные серверы, Сетевые диски, Managed Kubernetes",
+      "scope": "Selectel status: Облачная платформа, Пулы, ru-1b, ru-1c, ru-3a, ru-3b, ru-3c, uz-1a, uz-1b, ke-1a, ru-6a, ru-6b, Сервисы, Облачные серверы, Сетевые диски, Managed Kubernetes",
       "provenance": "CONFIRMED"
     },
     {
@@ -21803,7 +22033,7 @@
       "id": "selectel-status:408427",
       "sourceId": "selectel-status",
       "url": "https://selectel.live/incidents/408427",
-      "observedAt": "2026-10-28T11:03:39.000Z",
+      "observedAt": "2026-11-02T06:58:36.000Z",
       "scope": "Selectel status: VDS by Selectel, Сайт, Панель управления, API, Москва, Санкт-Петербург",
       "provenance": "CONFIRMED"
     },
@@ -21886,37 +22116,45 @@
       "observedAt": "2026-10-30T12:01:58.000Z",
       "scope": "Selectel status: Облачная платформа, Пулы, ru-3a, ru-3b, ru-3c, Сервисы, Сеть, Сетевые сервисы, Глобальный роутер (L3 VPN)",
       "provenance": "CONFIRMED"
+    },
+    {
+      "id": "selectel-status:409361",
+      "sourceId": "selectel-status",
+      "url": "https://selectel.live/incidents/409361",
+      "observedAt": "2026-11-01T19:02:18.000Z",
+      "scope": "Selectel status: Облачная платформа, Пулы, ru-1a, ru-1b, ru-1c, Сервисы, Облачные базы данных",
+      "provenance": "CONFIRMED"
     }
   ],
   "sourceState": {
     "selectel-status": {
-      "lastAttemptAt": "2026-11-01T10:30:33.412Z",
-      "lastSuccessAt": "2026-11-01T10:30:33.412Z",
+      "lastAttemptAt": "2026-11-02T11:14:40.004Z",
+      "lastSuccessAt": "2026-11-02T11:14:40.004Z",
       "error": null,
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": null,
-      "observedEnd": "2026-10-30T20:00:00.000Z"
+      "refreshCursor": "https://selectel.live/incidents?after=g3QAAAACdwJpZGIABhiDdw1zdGFydHNfYXRfdXRjdAAAAA13C21pY3Jvc2Vjb25kaAJhAGEAdwZzZWNvbmRhAHcIY2FsZW5kYXJ3E0VsaXhpci5DYWxlbmRhci5JU093BW1vbnRoYQl3Cl9fc3RydWN0X193D0VsaXhpci5EYXRlVGltZXcEeWVhcmIAAAfqdwZtaW51dGVhAHcEaG91cmETdwNkYXlhHXcKdXRjX29mZnNldGEAdwpzdGRfb2Zmc2V0YQB3CXpvbmVfYWJicm0AAAADVVRDdwl0aW1lX3pvbmVtAAAAB0V0Yy9VVEM%3D",
+      "observedEnd": "2026-11-01T17:28:38.000Z"
     },
     "hetzner-status": {
-      "lastAttemptAt": "2026-11-01T10:30:33.412Z",
-      "lastSuccessAt": "2026-11-01T10:30:33.412Z",
+      "lastAttemptAt": "2026-11-02T11:14:40.004Z",
+      "lastSuccessAt": "2026-11-02T11:14:40.004Z",
       "error": null,
       "nextCursor": null,
       "backfillComplete": false,
       "expectedFrequency": "daily",
       "refreshCursor": null,
-      "observedEnd": "2026-10-30T16:07:21.000Z"
+      "observedEnd": "2026-11-02T10:26:02.000Z"
     },
     "digitalocean-status": {
-      "lastAttemptAt": "2026-11-01T10:30:33.412Z",
-      "lastSuccessAt": "2026-11-01T10:30:33.412Z",
+      "lastAttemptAt": "2026-11-02T11:14:40.004Z",
+      "lastSuccessAt": "2026-11-02T11:14:40.004Z",
       "error": "Official incident detail unavailable: 4v4m8rywbtx2; Official incident detail unavailable: d60xpcw15jqc; Official incident detail unavailable: df2vx9wzqfdz; Official incident detail unavailable: mw0kv1pvk6hm; Official incident detail unavailable: tdz57gsr1j90",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "3",
+      "refreshCursor": "2",
       "historyMarkers": {
         "y3kn2w2qf5s4": "8fb3407c0446fe5034e1336060fe5d9f7ea49d19df9da4cce8cc53e56934ef27",
         "2wql4f4sb13r": "270675dd7de54c0a26509cbc394fa8dc5501668e2f1f4894595270cc8f114076",
@@ -21929,7 +22167,7 @@
         "7jwkcbg34qsp": "36a64f9317cce602c3a61cbbcef92a40174ee76618ce4da1cc4d3cbad6692ea0",
         "3lq0zklcll0k": "ccc02a3dc509395e5a955e50d9ef44e14bc4be90e433feaa8e50c20b8d972d1f"
       },
-      "observedEnd": "2026-11-01T10:30:33.412Z",
+      "observedEnd": "2026-11-02T11:14:40.004Z",
       "unavailableDetails": [
         "4v4m8rywbtx2",
         "d60xpcw15jqc",
@@ -21939,13 +22177,13 @@
       ]
     },
     "ovhcloud-status": {
-      "lastAttemptAt": "2026-11-01T10:30:33.412Z",
-      "lastSuccessAt": "2026-11-01T10:30:33.412Z",
+      "lastAttemptAt": "2026-11-02T11:14:40.004Z",
+      "lastSuccessAt": "2026-11-02T11:14:40.004Z",
       "error": "Official incident detail unavailable: 81m8s8bwnpcs; Official incident detail unavailable: 8y80j6w970h5; Official incident detail unavailable: k4p0k8t330vf; Official incident detail unavailable: mxwv4kcwmw72",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "3",
+      "refreshCursor": "2",
       "historyMarkers": {
         "0yls4rmkpcmq": "5c1159b2d43abbf09488d4dd05d252d24f9815f668dafc6228032ef1e06085dd",
         "33cwgb7hg5j8": "67c48698dd4f85e5f7399373f98639fe2cfb2ace2a590450a0a48666dc62394f",
@@ -22015,9 +22253,11 @@
         "h98w5krk8fs1": "4d1574f363c79e985648dd32858a06da375f43917a45cb60d4277c0eb8c2a43d",
         "hxqybch5twd7": "7ccabfe44aa106a4b106dd200f3b244449143af6d37dbffb5c0a635e418882d4",
         "jqqkp50j9snr": "7443fdbf1209eb5d7122fcfac41055496c190c94bb0dbc95075c4dbaa386c184",
-        "00s3nfhwhfbl": "d0949641b5c4e48cb9650a5e0ff51479ddae526c028414f7979335e4025814e8"
+        "00s3nfhwhfbl": "d0949641b5c4e48cb9650a5e0ff51479ddae526c028414f7979335e4025814e8",
+        "wchmzmg4s659": "4c06ad1ce64eb340e701151bf82f5fafd9d2b921e2eb0b45fc64b879660c53ab",
+        "zfl14r5cfwtz": "03c6fac367b7f806d03e4f66f6ce26e09c92661441c01b90613ba8c9ae206ad6"
       },
-      "observedEnd": "2026-11-01T10:30:33.412Z",
+      "observedEnd": "2026-11-02T11:14:40.004Z",
       "unavailableDetails": [
         "81m8s8bwnpcs",
         "8y80j6w970h5",
@@ -22031,9 +22271,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "selectel-status",
       "class": "A",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": "2026-03-30T07:37:22.000Z",
-      "observedEnd": "2026-10-30T20:00:00.000Z",
+      "observedEnd": "2026-11-01T17:28:38.000Z",
       "gaps": [
         "Provider reports do not establish all incidents or coverage of a specific VPS"
       ],
@@ -22043,9 +22283,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "selectel-status",
       "class": "B",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": "2026-03-30T07:37:22.000Z",
-      "observedEnd": "2026-10-30T20:00:00.000Z",
+      "observedEnd": "2026-11-01T17:28:38.000Z",
       "gaps": [
         "Provider reports do not establish all incidents or coverage of a specific VPS"
       ],
@@ -22055,9 +22295,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "selectel-status",
       "class": "C",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": "2026-03-30T18:00:00.000Z",
-      "observedEnd": "2026-11-01T10:30:33.412Z",
+      "observedEnd": "2026-11-02T11:14:40.004Z",
       "gaps": [
         "Provider incident reports do not establish complete application coverage or home-route reachability"
       ],
@@ -22067,9 +22307,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "A",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
-      "observedEnd": "2026-10-30T16:07:21.000Z",
+      "observedEnd": "2026-11-02T10:26:02.000Z",
       "gaps": [
         "Atom feed has no confirmed historical pagination; earlier incidents may be missing",
         "Provider reports do not establish all incidents or coverage of a specific VPS"
@@ -22080,9 +22320,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "B",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
-      "observedEnd": "2026-10-30T16:07:21.000Z",
+      "observedEnd": "2026-11-02T10:26:02.000Z",
       "gaps": [
         "Atom feed has no confirmed historical pagination; earlier incidents may be missing",
         "Provider reports do not establish all incidents or coverage of a specific VPS"
@@ -22093,7 +22333,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "C",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -22105,9 +22345,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "A",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": "2026-04-10T20:32:35.016Z",
-      "observedEnd": "2026-11-01T10:30:33.412Z",
+      "observedEnd": "2026-11-02T11:14:40.004Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -22122,9 +22362,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "B",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": null,
-      "observedEnd": "2026-11-01T10:30:33.412Z",
+      "observedEnd": "2026-11-02T11:14:40.004Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -22139,7 +22379,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "C",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -22151,9 +22391,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "A",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": "2026-03-30T08:53:41.008Z",
-      "observedEnd": "2026-11-01T10:30:33.412Z",
+      "observedEnd": "2026-11-02T11:14:40.004Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -22167,9 +22407,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "B",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": "2026-05-19T18:06:18.290Z",
-      "observedEnd": "2026-11-01T10:30:33.412Z",
+      "observedEnd": "2026-11-02T11:14:40.004Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -22183,7 +22423,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "C",
-      "requestedStart": "2026-05-01T10:30:33.412Z",
+      "requestedStart": "2026-05-02T11:14:40.004Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -30970,6 +31210,126 @@
       "sourceId": "hetzner-status",
       "id": "hetzner-status:54493dac-b3a2-44f0-8d8b-6de8b25d8f17",
       "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:409361",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:408427",
+      "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:405326",
+      "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:409361",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:408427",
+      "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "selectel-status",
+      "id": "selectel-status:405326",
+      "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:0621fc5e-872c-4128-bb44-a30b89853ce6",
+      "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:db6e18fc-7331-4aec-95de-3cae5f01d970",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:1c356f97-9be9-44f3-a22c-d6f7f72f9917",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:68690c28-5165-47c8-8f49-68de2934c1c1",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:440dfc5a-f616-4563-ba85-a87cbef95551",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:0621fc5e-872c-4128-bb44-a30b89853ce6",
+      "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:db6e18fc-7331-4aec-95de-3cae5f01d970",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:1c356f97-9be9-44f3-a22c-d6f7f72f9917",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:68690c28-5165-47c8-8f49-68de2934c1c1",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:440dfc5a-f616-4563-ba85-a87cbef95551",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "ovhcloud-status",
+      "id": "ovhcloud-status:wchmzmg4s659",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "ovhcloud-status",
+      "id": "ovhcloud-status:zfl14r5cfwtz",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "ovhcloud-status",
+      "id": "ovhcloud-status:wchmzmg4s659",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-02T11:14:40.004Z",
+      "sourceId": "ovhcloud-status",
+      "id": "ovhcloud-status:zfl14r5cfwtz",
+      "change": "ADDED"
     }
   ]
 }
