@@ -757,6 +757,28 @@
       "sourceUpdatedAt": "2026-11-02T10:26:02.000Z"
     },
     {
+      "id": "hetzner-status:47bf8bd4-101c-4e01-b212-6c8223867fb6",
+      "sourceId": "hetzner-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "Maintenance UPS systems in HEL1-DC2",
+      "startedAt": "2026-11-23T06:30:00.000Z",
+      "endedAt": "2026-11-25T15:00:00.000Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "HEL1-DC2"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:47bf8bd4-101c-4e01-b212-6c8223867fb6"
+      ],
+      "sourceUpdatedAt": "2026-11-23T06:24:51.000Z"
+    },
+    {
       "id": "hetzner-status:4fb0d796-7dd1-478b-a63b-d999212499b7",
       "sourceId": "hetzner-status",
       "class": "UNKNOWN",
@@ -842,7 +864,7 @@
       "evidenceIds": [
         "hetzner-status:5538b885-8fe5-42ad-98f7-7f788a8af426"
       ],
-      "sourceUpdatedAt": "2026-11-19T13:36:45.000Z"
+      "sourceUpdatedAt": "2026-11-23T11:19:10.000Z"
     },
     {
       "id": "hetzner-status:5836f2d7-5d14-43ce-9666-68421b0c600f",
@@ -1417,6 +1439,28 @@
       "sourceUpdatedAt": "2026-10-28T13:46:33.000Z"
     },
     {
+      "id": "hetzner-status:9fcdafb8-360f-49d9-9abe-a8ba17ea2c48",
+      "sourceId": "hetzner-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "UPS function tests in HEL1-DC2",
+      "startedAt": "2026-11-25T06:00:00.000Z",
+      "endedAt": "2026-11-25T14:00:00.000Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "HEL1-DC2"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:9fcdafb8-360f-49d9-9abe-a8ba17ea2c48"
+      ],
+      "sourceUpdatedAt": "2026-11-23T06:35:32.000Z"
+    },
+    {
       "id": "hetzner-status:a42a6038-1017-4a8e-a449-c0f6a4aa5e34",
       "sourceId": "hetzner-status",
       "class": "A",
@@ -1437,6 +1481,28 @@
         "hetzner-status:a42a6038-1017-4a8e-a449-c0f6a4aa5e34"
       ],
       "sourceUpdatedAt": "2026-11-17T11:57:26.000Z"
+    },
+    {
+      "id": "hetzner-status:a5080a06-5542-450a-ba6e-43ddbb8f74d1",
+      "sourceId": "hetzner-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "Maintenance UPS systems in HEL1-DC1",
+      "startedAt": "2026-11-23T06:30:00.000Z",
+      "endedAt": "2026-11-25T15:00:00.000Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "HEL1-DC1"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:a5080a06-5542-450a-ba6e-43ddbb8f74d1"
+      ],
+      "sourceUpdatedAt": "2026-11-23T06:29:39.000Z"
     },
     {
       "id": "hetzner-status:a654fd5c-ddff-42c4-b66a-b759898078fa",
@@ -1987,6 +2053,28 @@
         "hetzner-status:f4144d55-38c3-48d1-8664-7a3429355cd7"
       ],
       "sourceUpdatedAt": "2026-10-23T15:22:50.000Z"
+    },
+    {
+      "id": "hetzner-status:f4786712-363c-4a7f-b2a0-27d1e6cb4d2a",
+      "sourceId": "hetzner-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "PLANNED",
+      "title": "UPS function tests in HEL1-DC1",
+      "startedAt": "2026-11-25T06:30:00.000Z",
+      "endedAt": "2026-11-25T14:30:00.000Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "HEL1-DC1"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:f4786712-363c-4a7f-b2a0-27d1e6cb4d2a"
+      ],
+      "sourceUpdatedAt": "2026-11-23T06:38:15.000Z"
     },
     {
       "id": "hetzner-status:f654a8b9-7303-478b-aa64-78c2d82284d6",
@@ -21750,6 +21838,14 @@
       "provenance": "CONFIRMED"
     },
     {
+      "id": "hetzner-status:47bf8bd4-101c-4e01-b212-6c8223867fb6",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/47bf8bd4-101c-4e01-b212-6c8223867fb6",
+      "observedAt": "2026-11-23T06:24:51.000Z",
+      "scope": "Hetzner status: HEL1-DC2",
+      "provenance": "CONFIRMED"
+    },
+    {
       "id": "hetzner-status:4fb0d796-7dd1-478b-a63b-d999212499b7",
       "sourceId": "hetzner-status",
       "url": "https://status.hetzner.com/incident/4fb0d796-7dd1-478b-a63b-d999212499b7",
@@ -21777,7 +21873,7 @@
       "id": "hetzner-status:5538b885-8fe5-42ad-98f7-7f788a8af426",
       "sourceId": "hetzner-status",
       "url": "https://status.hetzner.com/incident/5538b885-8fe5-42ad-98f7-7f788a8af426",
-      "observedAt": "2026-11-19T13:36:45.000Z",
+      "observedAt": "2026-11-23T11:19:10.000Z",
       "scope": "Hetzner status: Object Storage",
       "provenance": "CONFIRMED"
     },
@@ -21990,11 +22086,27 @@
       "provenance": "CONFIRMED"
     },
     {
+      "id": "hetzner-status:9fcdafb8-360f-49d9-9abe-a8ba17ea2c48",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/9fcdafb8-360f-49d9-9abe-a8ba17ea2c48",
+      "observedAt": "2026-11-23T06:35:32.000Z",
+      "scope": "Hetzner status: HEL1-DC2",
+      "provenance": "CONFIRMED"
+    },
+    {
       "id": "hetzner-status:a42a6038-1017-4a8e-a449-c0f6a4aa5e34",
       "sourceId": "hetzner-status",
       "url": "https://status.hetzner.com/incident/a42a6038-1017-4a8e-a449-c0f6a4aa5e34",
       "observedAt": "2026-11-17T11:57:26.000Z",
       "scope": "Hetzner status: HEL1-DC12",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "hetzner-status:a5080a06-5542-450a-ba6e-43ddbb8f74d1",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/a5080a06-5542-450a-ba6e-43ddbb8f74d1",
+      "observedAt": "2026-11-23T06:29:39.000Z",
+      "scope": "Hetzner status: HEL1-DC1",
       "provenance": "CONFIRMED"
     },
     {
@@ -22195,6 +22307,14 @@
       "url": "https://status.hetzner.com/incident/f4144d55-38c3-48d1-8664-7a3429355cd7",
       "observedAt": "2026-10-23T15:22:50.000Z",
       "scope": "Hetzner status: General",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "hetzner-status:f4786712-363c-4a7f-b2a0-27d1e6cb4d2a",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/f4786712-363c-4a7f-b2a0-27d1e6cb4d2a",
+      "observedAt": "2026-11-23T06:38:15.000Z",
+      "scope": "Hetzner status: HEL1-DC1",
       "provenance": "CONFIRMED"
     },
     {
@@ -26224,7 +26344,7 @@
   ],
   "sourceState": {
     "selectel-status": {
-      "lastAttemptAt": "2026-11-22T11:29:33.730Z",
+      "lastAttemptAt": "2026-11-23T12:51:26.621Z",
       "lastSuccessAt": "2026-11-21T11:08:29.094Z",
       "error": "invalid event dates",
       "nextCursor": null,
@@ -26234,23 +26354,23 @@
       "observedEnd": "2026-11-20T17:28:01.000Z"
     },
     "hetzner-status": {
-      "lastAttemptAt": "2026-11-22T11:29:33.730Z",
-      "lastSuccessAt": "2026-11-22T11:29:33.730Z",
+      "lastAttemptAt": "2026-11-23T12:51:26.621Z",
+      "lastSuccessAt": "2026-11-23T12:51:26.621Z",
       "error": null,
       "nextCursor": null,
       "backfillComplete": false,
       "expectedFrequency": "daily",
       "refreshCursor": null,
-      "observedEnd": "2026-11-20T14:56:11.000Z"
+      "observedEnd": "2026-11-23T11:19:10.000Z"
     },
     "digitalocean-status": {
-      "lastAttemptAt": "2026-11-22T11:29:33.730Z",
-      "lastSuccessAt": "2026-11-22T11:29:33.730Z",
+      "lastAttemptAt": "2026-11-23T12:51:26.621Z",
+      "lastSuccessAt": "2026-11-23T12:51:26.621Z",
       "error": "Official incident detail unavailable: 4v4m8rywbtx2; Official incident detail unavailable: d60xpcw15jqc; Official incident detail unavailable: df2vx9wzqfdz; Official incident detail unavailable: mw0kv1pvk6hm; Official incident detail unavailable: tdz57gsr1j90",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "2",
+      "refreshCursor": "3",
       "historyMarkers": {
         "y3kn2w2qf5s4": "8fb3407c0446fe5034e1336060fe5d9f7ea49d19df9da4cce8cc53e56934ef27",
         "2wql4f4sb13r": "270675dd7de54c0a26509cbc394fa8dc5501668e2f1f4894595270cc8f114076",
@@ -26263,7 +26383,7 @@
         "7jwkcbg34qsp": "36a64f9317cce602c3a61cbbcef92a40174ee76618ce4da1cc4d3cbad6692ea0",
         "3lq0zklcll0k": "ccc02a3dc509395e5a955e50d9ef44e14bc4be90e433feaa8e50c20b8d972d1f"
       },
-      "observedEnd": "2026-11-22T11:29:33.730Z",
+      "observedEnd": "2026-11-23T12:51:26.621Z",
       "unavailableDetails": [
         "4v4m8rywbtx2",
         "d60xpcw15jqc",
@@ -26273,13 +26393,13 @@
       ]
     },
     "ovhcloud-status": {
-      "lastAttemptAt": "2026-11-22T11:29:33.730Z",
-      "lastSuccessAt": "2026-11-22T11:29:33.730Z",
+      "lastAttemptAt": "2026-11-23T12:51:26.621Z",
+      "lastSuccessAt": "2026-11-23T12:51:26.621Z",
       "error": "Official incident detail unavailable: 81m8s8bwnpcs; Official incident detail unavailable: 8y80j6w970h5; Official incident detail unavailable: k4p0k8t330vf; Official incident detail unavailable: mxwv4kcwmw72",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "2",
+      "refreshCursor": "3",
       "historyMarkers": {
         "0yls4rmkpcmq": "5c1159b2d43abbf09488d4dd05d252d24f9815f668dafc6228032ef1e06085dd",
         "33cwgb7hg5j8": "67c48698dd4f85e5f7399373f98639fe2cfb2ace2a590450a0a48666dc62394f",
@@ -26356,7 +26476,7 @@
         "xxhpg0rt8c6b": "5e726b7b2ec6a4ba8755b392a16ccd3fbede107527d8a50b0bf4a951525ccc52",
         "k9s7xgc6hxjr": "cbd07d264a05b7777b7c8a580975e21ac45ac310208d03c435bd6eec8de73fe0"
       },
-      "observedEnd": "2026-11-22T11:29:33.730Z",
+      "observedEnd": "2026-11-23T12:51:26.621Z",
       "unavailableDetails": [
         "81m8s8bwnpcs",
         "8y80j6w970h5",
@@ -26406,9 +26526,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "A",
-      "requestedStart": "2026-05-22T11:29:33.730Z",
+      "requestedStart": "2026-05-23T12:51:26.621Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
-      "observedEnd": "2026-11-20T14:56:11.000Z",
+      "observedEnd": "2026-11-23T11:19:10.000Z",
       "gaps": [
         "Atom feed has no confirmed historical pagination; earlier incidents may be missing",
         "Provider reports do not establish all incidents or coverage of a specific VPS"
@@ -26419,9 +26539,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "B",
-      "requestedStart": "2026-05-22T11:29:33.730Z",
+      "requestedStart": "2026-05-23T12:51:26.621Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
-      "observedEnd": "2026-11-20T14:56:11.000Z",
+      "observedEnd": "2026-11-23T11:19:10.000Z",
       "gaps": [
         "Atom feed has no confirmed historical pagination; earlier incidents may be missing",
         "Provider reports do not establish all incidents or coverage of a specific VPS"
@@ -26432,7 +26552,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "C",
-      "requestedStart": "2026-05-22T11:29:33.730Z",
+      "requestedStart": "2026-05-23T12:51:26.621Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -26444,9 +26564,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "A",
-      "requestedStart": "2026-05-22T11:29:33.730Z",
+      "requestedStart": "2026-05-23T12:51:26.621Z",
       "observedStart": "2026-04-10T20:32:35.016Z",
-      "observedEnd": "2026-11-22T11:29:33.730Z",
+      "observedEnd": "2026-11-23T12:51:26.621Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -26461,9 +26581,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "B",
-      "requestedStart": "2026-05-22T11:29:33.730Z",
+      "requestedStart": "2026-05-23T12:51:26.621Z",
       "observedStart": null,
-      "observedEnd": "2026-11-22T11:29:33.730Z",
+      "observedEnd": "2026-11-23T12:51:26.621Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -26478,7 +26598,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "C",
-      "requestedStart": "2026-05-22T11:29:33.730Z",
+      "requestedStart": "2026-05-23T12:51:26.621Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -26490,9 +26610,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "A",
-      "requestedStart": "2026-05-22T11:29:33.730Z",
+      "requestedStart": "2026-05-23T12:51:26.621Z",
       "observedStart": "2026-03-30T08:53:41.008Z",
-      "observedEnd": "2026-11-22T11:29:33.730Z",
+      "observedEnd": "2026-11-23T12:51:26.621Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -26506,9 +26626,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "B",
-      "requestedStart": "2026-05-22T11:29:33.730Z",
+      "requestedStart": "2026-05-23T12:51:26.621Z",
       "observedStart": "2026-05-19T18:06:18.290Z",
-      "observedEnd": "2026-11-22T11:29:33.730Z",
+      "observedEnd": "2026-11-23T12:51:26.621Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -26522,7 +26642,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "C",
-      "requestedStart": "2026-05-22T11:29:33.730Z",
+      "requestedStart": "2026-05-23T12:51:26.621Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -36850,6 +36970,66 @@
       "at": "2026-11-21T11:08:29.094Z",
       "sourceId": "hetzner-status",
       "id": "hetzner-status:c846961f-000c-4209-89bc-43a8b8a36876",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-23T12:51:26.621Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:5538b885-8fe5-42ad-98f7-7f788a8af426",
+      "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-23T12:51:26.621Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:47bf8bd4-101c-4e01-b212-6c8223867fb6",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-23T12:51:26.621Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:a5080a06-5542-450a-ba6e-43ddbb8f74d1",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-23T12:51:26.621Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:9fcdafb8-360f-49d9-9abe-a8ba17ea2c48",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-23T12:51:26.621Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:f4786712-363c-4a7f-b2a0-27d1e6cb4d2a",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-23T12:51:26.621Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:5538b885-8fe5-42ad-98f7-7f788a8af426",
+      "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-23T12:51:26.621Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:47bf8bd4-101c-4e01-b212-6c8223867fb6",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-23T12:51:26.621Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:a5080a06-5542-450a-ba6e-43ddbb8f74d1",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-23T12:51:26.621Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:9fcdafb8-360f-49d9-9abe-a8ba17ea2c48",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-23T12:51:26.621Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:f4786712-363c-4a7f-b2a0-27d1e6cb4d2a",
       "change": "ADDED"
     }
   ]
