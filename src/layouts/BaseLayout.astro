@@ -5,7 +5,7 @@ import "../styles/refinements.css";
 
 const {
 	title = "VPS & Proxy Research",
-	description = "Публичное исследование VPS в Европе и proxy-сервисов: критерии, цены, IPv4/IPv6, риски, источники и сравнение кандидатов.",
+	description = "Выбор европейского VPS с оплатой из России: цены, IPv4, ограничения, источники и даты проверки.",
 } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
@@ -49,15 +49,14 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 				<a class="brand" href={baseUrl}>
 					<span class="brand__mark" aria-hidden="true">⟡</span>
 					<span class="brand__name">vps‑proxy‑research</span>
-					<span class="brand__tag">Obsidian → Web</span>
+					<span class="brand__tag">выбор сервера</span>
 				</a>
 
 				<nav class="nav" aria-label="Навигация">
-					<a class="nav__link" href={baseUrl}>Главная</a>
+					<a class="nav__link" href={baseUrl}>Серверы</a>
+					<a class="nav__link" href={`${baseUrl}tables/`}>Сравнение</a>
+					<a class="nav__link" href={`${baseUrl}pairs/`}>Пары</a>
 					<a class="nav__link" href={`${baseUrl}archive/`}>Архив</a>
-					<a class="nav__link" href={`${baseUrl}tables/`}>Таблицы</a>
-					<a class="nav__link" href={`${baseUrl}vps-eu/`}>VPS (EU)</a>
-					<a class="nav__link" href={`${baseUrl}proxy-us/`}>Proxy (US)</a>
 					<button class="nav__link" id="themeToggle" type="button" aria-label="Переключить тему">
 						Тема
 					</button>
@@ -71,8 +70,7 @@ const baseUrl = import.meta.env.BASE_URL; // e.g. "/vps-proxy-research/"
 
 		<footer class="shell foot">
 			<div class="foot__left">
-				<span class="foot__label">Обновлено:</span>
-				<time datetime="2026-09-03">2026‑09‑03</time>
+				<span class="foot__label">Даты проверки указаны в карточках и материалах.</span>
 			</div>
 			<div class="foot__right">
 				<span class="muted">Статический исследовательский сайт. Данные и выводы версионируются в Git.</span>

@@ -1,0 +1,194 @@
+---
+import catalog from '../data/vps_single.json';
+
+const { heading = 'Европейский VPS с оплатой из России' } = Astro.props;
+const formatDate = (value: string) => new Date(`${value}T12:00:00Z`).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Moscow' });
+const budget = catalog.budget_rub.toLocaleString('ru-RU');
+const entries = [...catalog.entries].sort((a, b) => Number(b.preferred) - Number(a.preferred));
+---
+
+<div class="single-catalog" data-single-catalog>
+  <section class="catalog-intro" aria-labelledby="single-title">
+    <p class="catalog-eyebrow">Один сервер · понятная цена · оплата из РФ</p>
+    <h1 id="single-title">{heading}</h1>
+    <p class="catalog-description">{catalog.intro}</p>
+    <p class="catalog-date">Публичные условия проверены <time datetime={catalog.checked_at}>{formatDate(catalog.checked_at)}</time>.</p>
+    <div class="recommendation">
+      <h2>С чего начать</h2>
+      <p>{catalog.recommendation}</p>
+    </div>
+  </section>
+
+  <section class="server-selection" aria-labelledby="server-selection-title">
+    <div class="selection-heading">
+      <h2 id="server-selection-title">Кандидаты</h2>
+      <span class="result-count" data-result-count aria-live="polite">Показано: {entries.length} из {entries.length}</span>
+    </div>
+    <div class="catalog-filters" data-catalog-filters hidden>
+      <label><input type="checkbox" data-budget-filter /> До {budget} ₽/мес.</label>
+      <label><input type="checkbox" data-payment-filter /> Оплата из РФ подтверждена</label>
+    </div>
+    <p class="filter-note">Подтверждение оплаты означает сведения провайдера о доступном способе. Пробного платежа не было.</p>
+
+    <div class="server-grid">
+      {entries.map((server) => (
+        <article class:list={['server-card', { 'server-card--preferred': server.preferred }]}
+          id={`server-${server.id}`} data-server-card
+          data-budget={String(server.within_budget)} data-payment={String(server.payment_confirmed)}>
+          <header class="server-header">
+            <div class="server-badges">
+              {server.preferred && <span class="server-badge server-badge--preferred">Первый выбор</span>}
+              <span class="server-badge">{server.status}</span>
+            </div>
+            <div class="server-title-row">
+              <div><h3>{server.provider}</h3><p class="server-plan">{server.plan}</p></div>
+              <p class="server-price">{server.price_label}</p>
+            </div>
+            <p class="server-location">{server.location && `${server.location} · `}{server.country}</p>
+          </header>
+
+          <dl class="server-specs">
+            <div><dt>Ресурсы</dt><dd>{server.resources}</dd></div>
+            <div><dt>IPv4</dt><dd>{server.ipv4}</dd></div>
+            <div><dt>Сеть</dt><dd>{server.network}</dd></div>
+            <div><dt>Оплата</dt><dd>{server.payment}</dd></div>
+          </dl>
+
+          <div class="server-caveat"><strong>Что учесть</strong><p>{server.caveat}</p></div>
+
+          <details class="server-details">
+            <summary>Условия и источники</summary>
+            <dl class="server-specs server-specs--details">
+              <div><dt>Период оплаты</dt><dd>{server.billing}</dd></div>
+              <div><dt>Продление</dt><dd>{server.renewal}</dd></div>
+              <div><dt>Восстановление</dt><dd>{server.recovery}</dd></div>
+              <div><dt>Наличие</dt><dd>{server.orderability}</dd></div>
+              <div><dt>Основание</dt><dd>{server.evidence}</dd></div>
+            </dl>
+            <p class="sources-label">Источники проверки</p>
+            <ul class="server-sources">
+              {server.sources.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}
+            </ul>
+          </details>
+
+          <footer class="server-footer">
+            <a class="provider-link" href={server.url} target="_blank" rel="noopener noreferrer">Тариф на сайте {server.provider}</a>
+            <p>Проверено <time datetime={server.checked_at}>{formatDate(server.checked_at)}</time></p>
+          </footer>
+        </article>
+      ))}
+    </div>
+    <p class="no-results" data-no-results hidden>Под эти условия вариантов нет. Снимите один из фильтров, чтобы увидеть остальные предложения.</p>
+  </section>
+
+  {catalog.excluded.length > 0 && <details class="excluded-providers">
+    <summary>Что исключено из выбора</summary>
+    <ul>{catalog.excluded.map((item) => <li><a href={item.url} target="_blank" rel="noopener noreferrer">{item.provider}</a><span>{item.reason}</span></li>)}</ul>
+  </details>}
+
+  <section class="catalog-method" aria-labelledby="single-method-title">
+    <h2 id="single-method-title">Что проверено</h2>
+    <p>{catalog.methodology}</p>
+    <p>Работа сервера и платёж на практике не испытывались. Дата проверки относится к публичным условиям; перед заказом нужен итог выбранной конфигурации в корзине.</p>
+  </section>
+</div>
+
+<script is:inline>
+  (() => {
+    document.querySelectorAll('[data-single-catalog]').forEach((catalog) => {
+      const cards = Array.from(catalog.querySelectorAll('[data-server-card]'));
+      const budget = catalog.querySelector('[data-budget-filter]');
+      const payment = catalog.querySelector('[data-payment-filter]');
+      const count = catalog.querySelector('[data-result-count]');
+      const empty = catalog.querySelector('[data-no-results]');
+      const filters = catalog.querySelector('[data-catalog-filters]');
+      if (!budget || !payment || !count || !empty || !filters) return;
+      filters.hidden = false;
+      const apply = () => {
+        let visible = 0;
+        cards.forEach((card) => {
+          const show = (!budget.checked || card.dataset.budget === 'true')
+            && (!payment.checked || card.dataset.payment === 'true');
+          card.hidden = !show;
+          if (show) visible++;
+        });
+        count.textContent = `Показано: ${visible} из ${cards.length}`;
+        empty.hidden = visible > 0;
+      };
+      budget.addEventListener('change', apply);
+      payment.addEventListener('change', apply);
+      apply();
+    });
+  })();
+</script>
+
+<style>
+  .single-catalog { font-size: 1rem; }
+  .catalog-intro { padding: 1rem 0 1.5rem; max-width: 54rem; }
+  .catalog-eyebrow { margin: 0 0 .65rem; font-size: .875rem; font-weight: 600; color: var(--muted); }
+  h1 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); line-height: 1.12; letter-spacing: -.035em; margin: 0 0 1rem; }
+  .catalog-description { font-size: 1.1rem; margin: 0 0 .8rem; color: var(--muted); }
+  .catalog-date, .filter-note { color: var(--muted); font-size: .9rem; }
+  .catalog-date { margin: 0; }
+  .recommendation { margin-top: 1.4rem; padding: 1.15rem 1.3rem; border: 1px solid var(--stroke2); border-left: 4px solid var(--accent); border-radius: var(--radius); background: var(--card); }
+  .recommendation h2 { font-size: 1.05rem; margin: 0 0 .4rem; }
+  .recommendation p { margin: 0; }
+  .selection-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem; margin: 0 0 .8rem; }
+  .selection-heading h2 { font-size: 1.4rem; margin: 0; }
+  .result-count { color: var(--muted); font-size: .9rem; }
+  .catalog-filters { display: flex; flex-wrap: wrap; gap: .65rem 1.1rem; }
+  .catalog-filters[hidden] { display: none; }
+  .catalog-filters label { display: flex; align-items: center; gap: .5rem; padding: .5rem .75rem; border: 1px solid var(--stroke); border-radius: .6rem; background: var(--card); cursor: pointer; }
+  .catalog-filters input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--accent); }
+  .filter-note { margin: .65rem 0 1.1rem; max-width: 52rem; }
+  .server-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+  .server-card { display: flex; flex-direction: column; min-width: 0; padding: 1.35rem; border: 1px solid var(--stroke); border-radius: var(--radius2); background: var(--card); }
+  .server-card[hidden] { display: none; }
+  .server-card--preferred { border-color: var(--accent); box-shadow: inset 0 3px 0 var(--accent); }
+  .server-badges { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: .9rem; }
+  .server-badge { font-size: .875rem; padding: .2rem .55rem; border-radius: .4rem; background: var(--card2); border: 1px solid var(--stroke); color: var(--muted); }
+  .server-badge--preferred { color: var(--text); border-color: var(--accent); font-weight: 600; }
+  .server-title-row { display: flex; flex-wrap: wrap; align-items: start; justify-content: space-between; gap: .6rem 1rem; }
+  .server-title-row h3 { font-size: 1.4rem; margin: 0; letter-spacing: -.02em; }
+  .server-plan { margin: .15rem 0 0; color: var(--muted); }
+  .server-price { font-size: 1.15rem; font-weight: 600; margin: .1rem 0 0; max-width: 100%; overflow-wrap: anywhere; }
+  .server-location { margin: .65rem 0 0; color: var(--muted); }
+  .server-specs { margin: 1rem 0; }
+  .server-specs > div { display: grid; grid-template-columns: 5.7rem minmax(0, 1fr); gap: .65rem; padding: .6rem 0; border-top: 1px solid var(--stroke); }
+  .server-specs dt { font-size: .9rem; color: var(--muted); }
+  .server-specs dd { margin: 0; overflow-wrap: anywhere; }
+  .server-caveat { padding: .85rem 1rem; border-radius: .65rem; background: var(--card2); border: 1px solid var(--stroke); }
+  .server-caveat strong { font-size: .9rem; }
+  .server-caveat p { margin: .3rem 0 0; color: var(--muted); }
+  .server-details { margin-top: 1rem; }
+  summary { cursor: pointer; font-weight: 600; padding: .45rem 0; }
+  summary:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 3px; }
+  .server-specs--details > div { grid-template-columns: 7rem minmax(0, 1fr); }
+  .sources-label { margin: 1rem 0 .4rem; font-weight: 600; font-size: .9rem; }
+  .server-sources { margin: 0; padding-left: 1.2rem; }
+  .server-sources li { margin: .45rem 0; }
+  .single-catalog a { color: var(--accent2); text-underline-offset: .2em; overflow-wrap: anywhere; }
+  .server-footer { margin-top: 1.1rem; padding-top: 1rem; border-top: 1px solid var(--stroke); }
+  .provider-link { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: .65rem 1rem; border: 1px solid var(--stroke2); border-radius: .6rem; font-weight: 600; text-decoration: none; }
+  .server-card--preferred .provider-link { border-color: var(--accent); }
+  .server-footer p { margin: .65rem 0 0; color: var(--muted); font-size: .875rem; }
+  .no-results { padding: 1rem; border: 1px solid var(--stroke); border-radius: var(--radius); }
+  .excluded-providers { margin-top: 1.4rem; padding: .7rem 1rem; border: 1px solid var(--stroke); border-radius: var(--radius); background: var(--card); }
+  .excluded-providers ul { list-style: none; padding: 0; margin: .4rem 0; }
+  .excluded-providers li { margin-top: .8rem; }
+  .excluded-providers a { font-weight: 600; margin-right: .7rem; }
+  .excluded-providers span { color: var(--muted); }
+  .catalog-method { margin-top: 1.5rem; max-width: 54rem; }
+  .catalog-method h2 { font-size: 1.1rem; margin: 0 0 .65rem; }
+  .catalog-method p { color: var(--muted); margin: .5rem 0; }
+  @media (max-width: 760px) {
+    .server-grid { grid-template-columns: 1fr; }
+    .server-card { padding: 1.1rem; }
+    .catalog-intro { padding-top: .5rem; }
+  }
+  @media (max-width: 380px) {
+    .server-specs > div { grid-template-columns: 1fr; gap: .2rem; }
+    .catalog-filters label { width: 100%; }
+    .provider-link { width: 100%; }
+  }
+</style>

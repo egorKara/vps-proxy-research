@@ -8,12 +8,19 @@ if (!entry) throw new Error("Missing content: docs/vps-market-research.md");
 const { Content } = await render(entry);
 ---
 
-<BaseLayout title="VPS (EU) — исследование рынка">
+<BaseLayout title="Архив исследования европейских VPS — 3 сентября 2026">
+  <section class="card" style="margin-bottom:16px;">
+    <div class="card__inner">
+      <h1 style="margin:0 0 10px;">Архив исследования VPS в Европе</h1>
+      <p>Ниже сохранён срез <time datetime="2026-09-03">3 сентября 2026 года</time>. Его цены, наличие и рекомендации устарели; возможность оплаты российскими картами тогда не проверялась.</p>
+      <a class="btn btn--primary" href={baseUrl}>Открыть текущий выбор VPS с оплатой из РФ</a>
+    </div>
+  </section>
 	<div class="card">
 		<div class="card__inner">
-			<h1 style="margin:0 0 6px;">VPS (Европа)</h1>
+			<h2 style="margin:0 0 6px;">Исходный документ · 03.09.2026</h2>
 			<p style="margin:0;" class="muted">
-				Полный документ из Obsidian. Для быстрого сравнения — <a href={`${baseUrl}tables/`}>таблицы</a>.
+				Полный документ из Obsidian. <a href={`${baseUrl}tables/#archive`}>Историческая таблица 28 предложений</a> сохранена отдельно от текущего выбора.
 			</p>
 		</div>
 	</div>

@@ -1,11 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SingleServerCatalog from "../components/SingleServerCatalog.astro";
+import singleCatalog from "../data/vps_single.json";
 import vpsEU from "../data/vps_eu.json";
 import proxyUS from "../data/proxy_us.json";
 
 const baseUrl = import.meta.env.BASE_URL;
 const countries = Array.from(new Set(vpsEU.map((x) => x.country))).sort();
 const tiers = ["A", "B", "C", "D"];
+const theHostingNotice = singleCatalog.excluded.find((item) => item.provider.toLowerCase() === "the.hosting");
 
 const countryFlag = (code) => {
 	const normalized = String(code ?? "").trim().toUpperCase();
@@ -29,12 +32,17 @@ const statusClass = (value) => {
 };
 ---
 
-<BaseLayout title="Таблицы — VPS (EU) и Proxy (US)">
+<BaseLayout title="Сравнение европейских VPS — текущий выбор и архив">
+  <SingleServerCatalog heading="Сравнение европейских VPS" />
+  <details class="research-archive" id="archive">
+    <summary>Архив — проверка 3 сентября 2026</summary>
+    <p class="archive-warning">28 исторических предложений сохранены для сравнения. Их цены, наличие и рейтинги относятся к 3 сентября 2026 года и не являются текущей рекомендацией; оплата из РФ в этом срезе не проверялась.</p>
+    {theHostingNotice && <p class="archive-warning"><strong>THE.Hosting:</strong> {theHostingNotice.reason} <a href={theHostingNotice.url} target="_blank" rel="noopener noreferrer">Источник</a>.</p>}
 	<section class="card">
 		<div class="card__inner">
-			<h1 style="margin:0 0 6px;">Таблицы</h1>
+			<h2 style="margin:0 0 6px;">Исторические таблицы</h2>
 			<p style="margin:0;" class="muted">
-				VPS (EU) перепроверены 03.09.2026: 20 старых кандидатов + новые варианты. Tier и verification показывают качество текущей проверки.
+				VPS (EU): 20 прежних кандидатов и 8 новых на дату 03.09.2026. Оценки в таблице сохранены в исходном виде.
 			</p>
 		</div>
 	</section>
@@ -164,6 +172,8 @@ const statusClass = (value) => {
 		</div>
 	</section>
 
+  </details>
+
 	<script is:inline>
 		const $ = (sel) => document.querySelector(sel);
 		const rows = Array.from(document.querySelectorAll("#rows tr"));
@@ -211,3 +221,10 @@ const statusClass = (value) => {
 		tabProxy.addEventListener("click", () => setTab("proxy"));
 	</script>
 </BaseLayout>
+
+<style>
+  .research-archive { margin-top: 2rem; padding: 1rem; border: 1px solid var(--stroke); border-radius: var(--radius); }
+  .research-archive > summary { cursor: pointer; font-size: 1.05rem; font-weight: 600; padding: .4rem 0; }
+  .archive-warning { color: var(--muted); margin: .8rem 0 1rem; }
+  .archive-warning a { color: var(--accent2); }
+</style>
