@@ -600,7 +600,7 @@
       "evidenceIds": [
         "hetzner-status:302a2b8d-443d-46e5-a196-b115d11e58ae"
       ],
-      "sourceUpdatedAt": "2026-11-09T12:12:14.000Z"
+      "sourceUpdatedAt": "2026-11-25T07:15:03.000Z"
     },
     {
       "id": "hetzner-status:343be722-d961-4da8-a004-ad22bc83507e",
@@ -1415,6 +1415,28 @@
         "hetzner-status:9173eb87-01cc-44ac-95f9-b03f4c74a013"
       ],
       "sourceUpdatedAt": "2026-10-02T14:56:41.000Z"
+    },
+    {
+      "id": "hetzner-status:9428fdb1-f1c7-4d80-ac6c-23513bbd40ab",
+      "sourceId": "hetzner-status",
+      "class": "UNKNOWN",
+      "classProvenance": "UNKNOWN",
+      "status": "OPEN",
+      "title": "Object Storage in location NBG, FSN and HEL partly affected",
+      "startedAt": "2026-11-25T12:56:40.000Z",
+      "endedAt": null,
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "Object Storage"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "hetzner-status:9428fdb1-f1c7-4d80-ac6c-23513bbd40ab"
+      ],
+      "sourceUpdatedAt": "2026-11-25T12:58:42.000Z"
     },
     {
       "id": "hetzner-status:98671c93-6ab9-4345-815b-28ce8dbd5f53",
@@ -3447,6 +3469,28 @@
         "ovhcloud-status:wkfw32fl7flj"
       ],
       "sourceUpdatedAt": "2026-09-29T08:47:25.337Z"
+    },
+    {
+      "id": "ovhcloud-status:xrjy3gdsbxx3",
+      "sourceId": "ovhcloud-status",
+      "class": "A",
+      "classProvenance": "INFERRED",
+      "status": "RESOLVED",
+      "title": "[EU-SOUTH-LZ-MAD][Virtual Private Servers] - VPS incident notification",
+      "startedAt": "2026-11-24T16:28:21.000Z",
+      "endedAt": "2026-11-24T16:59:41.168Z",
+      "affected": [
+        {
+          "type": "SERVICE",
+          "value": "EU-WEST-LZ-MAD"
+        }
+      ],
+      "cause": null,
+      "causeProvenance": "UNKNOWN",
+      "evidenceIds": [
+        "ovhcloud-status:xrjy3gdsbxx3"
+      ],
+      "sourceUpdatedAt": "2026-11-24T16:59:41.193Z"
     },
     {
       "id": "ovhcloud-status:xw0nlkdbr47j",
@@ -21821,7 +21865,7 @@
       "id": "hetzner-status:302a2b8d-443d-46e5-a196-b115d11e58ae",
       "sourceId": "hetzner-status",
       "url": "https://status.hetzner.com/incident/302a2b8d-443d-46e5-a196-b115d11e58ae",
-      "observedAt": "2026-11-09T12:12:14.000Z",
+      "observedAt": "2026-11-25T07:15:03.000Z",
       "scope": "Hetzner status: NBG1-DC2",
       "provenance": "CONFIRMED"
     },
@@ -22118,6 +22162,14 @@
       "sourceId": "hetzner-status",
       "url": "https://status.hetzner.com/incident/9173eb87-01cc-44ac-95f9-b03f4c74a013",
       "observedAt": "2026-10-02T14:56:41.000Z",
+      "scope": "Hetzner status: Object Storage",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "hetzner-status:9428fdb1-f1c7-4d80-ac6c-23513bbd40ab",
+      "sourceId": "hetzner-status",
+      "url": "https://status.hetzner.com/incident/9428fdb1-f1c7-4d80-ac6c-23513bbd40ab",
+      "observedAt": "2026-11-25T12:58:42.000Z",
       "scope": "Hetzner status: Object Storage",
       "provenance": "CONFIRMED"
     },
@@ -22791,6 +22843,14 @@
       "url": "https://bare-metal-servers.status-ovhcloud.com/incidents/wkfw32fl7flj",
       "observedAt": "2026-09-29T08:47:25.337Z",
       "scope": "OVHcloud Bare Metal Cloud platform status; VPS titles only, no proof of effect on a future German VM or LIM; provider incident; affected components: ERI, GRA, SBG, LIM, WAW, BHS, SGP, SYD, UK2, US-EAST-LZ-ATL, US-EAST-LZ-DAL, US-EAST-LZ-MIA, US-EAST-LZ-NYC, US-WEST-LZ-PAO, US-WEST-OR, US-EAST-VA, YNM, MIL, EU-WEST-LZ-MRS",
+      "provenance": "CONFIRMED"
+    },
+    {
+      "id": "ovhcloud-status:xrjy3gdsbxx3",
+      "sourceId": "ovhcloud-status",
+      "url": "https://bare-metal-servers.status-ovhcloud.com/incidents/xrjy3gdsbxx3",
+      "observedAt": "2026-11-24T16:59:41.193Z",
+      "scope": "OVHcloud Bare Metal Cloud platform status; VPS titles only, no proof of effect on a future German VM or LIM; provider incident; affected components: EU-WEST-LZ-MAD",
       "provenance": "CONFIRMED"
     },
     {
@@ -26404,7 +26464,7 @@
   ],
   "sourceState": {
     "selectel-status": {
-      "lastAttemptAt": "2026-11-24T13:47:31.943Z",
+      "lastAttemptAt": "2026-11-25T12:59:40.920Z",
       "lastSuccessAt": "2026-11-21T11:08:29.094Z",
       "error": "invalid event dates",
       "nextCursor": null,
@@ -26414,23 +26474,23 @@
       "observedEnd": "2026-11-20T17:28:01.000Z"
     },
     "hetzner-status": {
-      "lastAttemptAt": "2026-11-24T13:47:31.943Z",
-      "lastSuccessAt": "2026-11-24T13:47:31.943Z",
+      "lastAttemptAt": "2026-11-25T12:59:40.920Z",
+      "lastSuccessAt": "2026-11-25T12:59:40.920Z",
       "error": null,
       "nextCursor": null,
       "backfillComplete": false,
       "expectedFrequency": "daily",
       "refreshCursor": null,
-      "observedEnd": "2026-11-24T13:12:46.000Z"
+      "observedEnd": "2026-11-25T12:58:42.000Z"
     },
     "digitalocean-status": {
-      "lastAttemptAt": "2026-11-24T13:47:31.943Z",
-      "lastSuccessAt": "2026-11-24T13:47:31.943Z",
+      "lastAttemptAt": "2026-11-25T12:59:40.920Z",
+      "lastSuccessAt": "2026-11-25T12:59:40.920Z",
       "error": "Official incident detail unavailable: 4v4m8rywbtx2; Official incident detail unavailable: d60xpcw15jqc; Official incident detail unavailable: df2vx9wzqfdz; Official incident detail unavailable: mw0kv1pvk6hm; Official incident detail unavailable: tdz57gsr1j90",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "2",
+      "refreshCursor": "3",
       "historyMarkers": {
         "y3kn2w2qf5s4": "8fb3407c0446fe5034e1336060fe5d9f7ea49d19df9da4cce8cc53e56934ef27",
         "2wql4f4sb13r": "270675dd7de54c0a26509cbc394fa8dc5501668e2f1f4894595270cc8f114076",
@@ -26443,7 +26503,7 @@
         "7jwkcbg34qsp": "36a64f9317cce602c3a61cbbcef92a40174ee76618ce4da1cc4d3cbad6692ea0",
         "3lq0zklcll0k": "ccc02a3dc509395e5a955e50d9ef44e14bc4be90e433feaa8e50c20b8d972d1f"
       },
-      "observedEnd": "2026-11-24T13:47:31.943Z",
+      "observedEnd": "2026-11-25T12:59:40.920Z",
       "unavailableDetails": [
         "4v4m8rywbtx2",
         "d60xpcw15jqc",
@@ -26453,13 +26513,13 @@
       ]
     },
     "ovhcloud-status": {
-      "lastAttemptAt": "2026-11-24T13:47:31.943Z",
-      "lastSuccessAt": "2026-11-24T13:47:31.943Z",
+      "lastAttemptAt": "2026-11-25T12:59:40.920Z",
+      "lastSuccessAt": "2026-11-25T12:59:40.920Z",
       "error": "Official incident detail unavailable: 81m8s8bwnpcs; Official incident detail unavailable: 8y80j6w970h5; Official incident detail unavailable: k4p0k8t330vf; Official incident detail unavailable: mxwv4kcwmw72",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "2",
+      "refreshCursor": "3",
       "historyMarkers": {
         "0yls4rmkpcmq": "5c1159b2d43abbf09488d4dd05d252d24f9815f668dafc6228032ef1e06085dd",
         "33cwgb7hg5j8": "67c48698dd4f85e5f7399373f98639fe2cfb2ace2a590450a0a48666dc62394f",
@@ -26534,9 +26594,10 @@
         "zfl14r5cfwtz": "03c6fac367b7f806d03e4f66f6ce26e09c92661441c01b90613ba8c9ae206ad6",
         "773pnt6fs1tm": "317f94c0421c4cd3f68c513126574cd43d3519585c620e0a192aeab2dff34daa",
         "xxhpg0rt8c6b": "5e726b7b2ec6a4ba8755b392a16ccd3fbede107527d8a50b0bf4a951525ccc52",
-        "k9s7xgc6hxjr": "cbd07d264a05b7777b7c8a580975e21ac45ac310208d03c435bd6eec8de73fe0"
+        "k9s7xgc6hxjr": "cbd07d264a05b7777b7c8a580975e21ac45ac310208d03c435bd6eec8de73fe0",
+        "xrjy3gdsbxx3": "e2806338ddd2a9d5a31ca9446ddc53cd6ff47cfd6e59b9104ec48c31303bea0c"
       },
-      "observedEnd": "2026-11-24T13:47:31.943Z",
+      "observedEnd": "2026-11-25T12:59:40.920Z",
       "unavailableDetails": [
         "81m8s8bwnpcs",
         "8y80j6w970h5",
@@ -26586,9 +26647,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "A",
-      "requestedStart": "2026-05-24T13:47:31.943Z",
+      "requestedStart": "2026-05-25T12:59:40.920Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
-      "observedEnd": "2026-11-24T13:12:46.000Z",
+      "observedEnd": "2026-11-25T12:58:42.000Z",
       "gaps": [
         "Atom feed has no confirmed historical pagination; earlier incidents may be missing",
         "Provider reports do not establish all incidents or coverage of a specific VPS"
@@ -26599,9 +26660,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "B",
-      "requestedStart": "2026-05-24T13:47:31.943Z",
+      "requestedStart": "2026-05-25T12:59:40.920Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
-      "observedEnd": "2026-11-24T13:12:46.000Z",
+      "observedEnd": "2026-11-25T12:58:42.000Z",
       "gaps": [
         "Atom feed has no confirmed historical pagination; earlier incidents may be missing",
         "Provider reports do not establish all incidents or coverage of a specific VPS"
@@ -26612,7 +26673,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "C",
-      "requestedStart": "2026-05-24T13:47:31.943Z",
+      "requestedStart": "2026-05-25T12:59:40.920Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -26624,9 +26685,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "A",
-      "requestedStart": "2026-05-24T13:47:31.943Z",
+      "requestedStart": "2026-05-25T12:59:40.920Z",
       "observedStart": "2026-04-10T20:32:35.016Z",
-      "observedEnd": "2026-11-24T13:47:31.943Z",
+      "observedEnd": "2026-11-25T12:59:40.920Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -26641,9 +26702,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "B",
-      "requestedStart": "2026-05-24T13:47:31.943Z",
+      "requestedStart": "2026-05-25T12:59:40.920Z",
       "observedStart": null,
-      "observedEnd": "2026-11-24T13:47:31.943Z",
+      "observedEnd": "2026-11-25T12:59:40.920Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -26658,7 +26719,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "C",
-      "requestedStart": "2026-05-24T13:47:31.943Z",
+      "requestedStart": "2026-05-25T12:59:40.920Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -26670,9 +26731,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "A",
-      "requestedStart": "2026-05-24T13:47:31.943Z",
+      "requestedStart": "2026-05-25T12:59:40.920Z",
       "observedStart": "2026-03-30T08:53:41.008Z",
-      "observedEnd": "2026-11-24T13:47:31.943Z",
+      "observedEnd": "2026-11-25T12:59:40.920Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -26686,9 +26747,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "B",
-      "requestedStart": "2026-05-24T13:47:31.943Z",
+      "requestedStart": "2026-05-25T12:59:40.920Z",
       "observedStart": "2026-05-19T18:06:18.290Z",
-      "observedEnd": "2026-11-24T13:47:31.943Z",
+      "observedEnd": "2026-11-25T12:59:40.920Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -26702,7 +26763,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "C",
-      "requestedStart": "2026-05-24T13:47:31.943Z",
+      "requestedStart": "2026-05-25T12:59:40.920Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -37126,6 +37187,42 @@
       "at": "2026-11-24T13:47:31.943Z",
       "sourceId": "hetzner-status",
       "id": "hetzner-status:13d672a0-2051-4e9b-a753-c5908f5a2b37",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-25T12:59:40.920Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:302a2b8d-443d-46e5-a196-b115d11e58ae",
+      "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-25T12:59:40.920Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:9428fdb1-f1c7-4d80-ac6c-23513bbd40ab",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-25T12:59:40.920Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:302a2b8d-443d-46e5-a196-b115d11e58ae",
+      "change": "UPDATED"
+    },
+    {
+      "at": "2026-11-25T12:59:40.920Z",
+      "sourceId": "hetzner-status",
+      "id": "hetzner-status:9428fdb1-f1c7-4d80-ac6c-23513bbd40ab",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-25T12:59:40.920Z",
+      "sourceId": "ovhcloud-status",
+      "id": "ovhcloud-status:xrjy3gdsbxx3",
+      "change": "ADDED"
+    },
+    {
+      "at": "2026-11-25T12:59:40.920Z",
+      "sourceId": "ovhcloud-status",
+      "id": "ovhcloud-status:xrjy3gdsbxx3",
       "change": "ADDED"
     }
   ]
