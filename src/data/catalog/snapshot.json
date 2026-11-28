@@ -26584,7 +26584,7 @@
   ],
   "sourceState": {
     "selectel-status": {
-      "lastAttemptAt": "2026-11-27T12:26:55.547Z",
+      "lastAttemptAt": "2026-11-28T11:51:30.018Z",
       "lastSuccessAt": "2026-11-21T11:08:29.094Z",
       "error": "invalid event dates",
       "nextCursor": null,
@@ -26594,23 +26594,23 @@
       "observedEnd": "2026-11-20T17:28:01.000Z"
     },
     "hetzner-status": {
-      "lastAttemptAt": "2026-11-27T12:26:55.547Z",
-      "lastSuccessAt": "2026-11-27T12:26:55.547Z",
+      "lastAttemptAt": "2026-11-28T11:51:30.018Z",
+      "lastSuccessAt": "2026-11-28T11:51:30.018Z",
       "error": null,
       "nextCursor": null,
       "backfillComplete": false,
       "expectedFrequency": "daily",
       "refreshCursor": null,
-      "observedEnd": "2026-11-27T08:14:58.000Z"
+      "observedEnd": "2026-11-26T13:48:26.000Z"
     },
     "digitalocean-status": {
-      "lastAttemptAt": "2026-11-27T12:26:55.547Z",
-      "lastSuccessAt": "2026-11-27T12:26:55.547Z",
+      "lastAttemptAt": "2026-11-28T11:51:30.018Z",
+      "lastSuccessAt": "2026-11-28T11:51:30.018Z",
       "error": "Official incident detail unavailable: 4v4m8rywbtx2; Official incident detail unavailable: d60xpcw15jqc; Official incident detail unavailable: df2vx9wzqfdz; Official incident detail unavailable: mw0kv1pvk6hm; Official incident detail unavailable: tdz57gsr1j90",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "3",
+      "refreshCursor": "2",
       "historyMarkers": {
         "y3kn2w2qf5s4": "8fb3407c0446fe5034e1336060fe5d9f7ea49d19df9da4cce8cc53e56934ef27",
         "2wql4f4sb13r": "270675dd7de54c0a26509cbc394fa8dc5501668e2f1f4894595270cc8f114076",
@@ -26623,7 +26623,7 @@
         "7jwkcbg34qsp": "36a64f9317cce602c3a61cbbcef92a40174ee76618ce4da1cc4d3cbad6692ea0",
         "3lq0zklcll0k": "ccc02a3dc509395e5a955e50d9ef44e14bc4be90e433feaa8e50c20b8d972d1f"
       },
-      "observedEnd": "2026-11-27T12:26:55.547Z",
+      "observedEnd": "2026-11-28T11:51:30.018Z",
       "unavailableDetails": [
         "4v4m8rywbtx2",
         "d60xpcw15jqc",
@@ -26633,13 +26633,13 @@
       ]
     },
     "ovhcloud-status": {
-      "lastAttemptAt": "2026-11-27T12:26:55.547Z",
-      "lastSuccessAt": "2026-11-27T12:26:55.547Z",
+      "lastAttemptAt": "2026-11-28T11:51:30.018Z",
+      "lastSuccessAt": "2026-11-28T11:51:30.018Z",
       "error": "Official incident detail unavailable: 81m8s8bwnpcs; Official incident detail unavailable: 8y80j6w970h5; Official incident detail unavailable: k4p0k8t330vf; Official incident detail unavailable: mxwv4kcwmw72",
       "nextCursor": null,
       "backfillComplete": true,
       "expectedFrequency": "daily",
-      "refreshCursor": "3",
+      "refreshCursor": "2",
       "historyMarkers": {
         "0yls4rmkpcmq": "5c1159b2d43abbf09488d4dd05d252d24f9815f668dafc6228032ef1e06085dd",
         "33cwgb7hg5j8": "67c48698dd4f85e5f7399373f98639fe2cfb2ace2a590450a0a48666dc62394f",
@@ -26717,7 +26717,7 @@
         "k9s7xgc6hxjr": "cbd07d264a05b7777b7c8a580975e21ac45ac310208d03c435bd6eec8de73fe0",
         "xrjy3gdsbxx3": "e2806338ddd2a9d5a31ca9446ddc53cd6ff47cfd6e59b9104ec48c31303bea0c"
       },
-      "observedEnd": "2026-11-27T12:26:55.547Z",
+      "observedEnd": "2026-11-28T11:51:30.018Z",
       "unavailableDetails": [
         "81m8s8bwnpcs",
         "8y80j6w970h5",
@@ -26767,7 +26767,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "A",
-      "requestedStart": "2026-05-27T12:26:55.547Z",
+      "requestedStart": "2026-05-28T11:51:30.018Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
       "observedEnd": "2026-11-27T08:14:58.000Z",
       "gaps": [
@@ -26780,7 +26780,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "B",
-      "requestedStart": "2026-05-27T12:26:55.547Z",
+      "requestedStart": "2026-05-28T11:51:30.018Z",
       "observedStart": "2026-06-12T09:26:02.000Z",
       "observedEnd": "2026-11-27T08:14:58.000Z",
       "gaps": [
@@ -26793,7 +26793,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "hetzner-status",
       "class": "C",
-      "requestedStart": "2026-05-27T12:26:55.547Z",
+      "requestedStart": "2026-05-28T11:51:30.018Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -26805,9 +26805,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "A",
-      "requestedStart": "2026-05-27T12:26:55.547Z",
+      "requestedStart": "2026-05-28T11:51:30.018Z",
       "observedStart": "2026-04-10T20:32:35.016Z",
-      "observedEnd": "2026-11-27T12:26:55.547Z",
+      "observedEnd": "2026-11-28T11:51:30.018Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -26822,9 +26822,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "B",
-      "requestedStart": "2026-05-27T12:26:55.547Z",
+      "requestedStart": "2026-05-28T11:51:30.018Z",
       "observedStart": null,
-      "observedEnd": "2026-11-27T12:26:55.547Z",
+      "observedEnd": "2026-11-28T11:51:30.018Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 4v4m8rywbtx2",
@@ -26839,7 +26839,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "digitalocean-status",
       "class": "C",
-      "requestedStart": "2026-05-27T12:26:55.547Z",
+      "requestedStart": "2026-05-28T11:51:30.018Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
@@ -26851,9 +26851,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "A",
-      "requestedStart": "2026-05-27T12:26:55.547Z",
+      "requestedStart": "2026-05-28T11:51:30.018Z",
       "observedStart": "2026-03-30T08:53:41.008Z",
-      "observedEnd": "2026-11-27T12:26:55.547Z",
+      "observedEnd": "2026-11-28T11:51:30.018Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -26867,9 +26867,9 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "B",
-      "requestedStart": "2026-05-27T12:26:55.547Z",
+      "requestedStart": "2026-05-28T11:51:30.018Z",
       "observedStart": "2026-05-19T18:06:18.290Z",
-      "observedEnd": "2026-11-27T12:26:55.547Z",
+      "observedEnd": "2026-11-28T11:51:30.018Z",
       "gaps": [
         "Provider status history does not prove effects on a particular VPS or full service availability",
         "Official incident detail unavailable: 81m8s8bwnpcs",
@@ -26883,7 +26883,7 @@
       "profileId": "home-spb-rtk-fra-v1",
       "sourceId": "ovhcloud-status",
       "class": "C",
-      "requestedStart": "2026-05-27T12:26:55.547Z",
+      "requestedStart": "2026-05-28T11:51:30.018Z",
       "observedStart": null,
       "observedEnd": null,
       "gaps": [
